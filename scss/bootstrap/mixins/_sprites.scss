@@ -1,0 +1,20 @@
+// Sprite icons png
+
+@mixin cssSprite( $spriteVals ) {
+	width: nth( $spriteVals, 1 );
+	height: nth( $spriteVals, 2 );
+	background-repeat: no-repeat;
+	background-image: url( #{ nth( $spriteVals, 3 ) } );
+	background-position: nth( $spriteVals, 4 ) nth( $spriteVals, 5 );
+}
+$sprite-aj-path: '../images/svg/sprite-aj.svg';
+$see-more-arrow: 10.47092661936506px 9.65999984741211px $sprite-aj-path -125px -2px;
+$arrow-stay: 11px 14px $sprite-aj-path -73px 0px;
+$arrow-down: 13px 10px $sprite-aj-path -107px -2px;
+$arrow-up: 13px 10px $sprite-aj-path -89px -2px;
+$icon-delete: 14px 15px $sprite-aj-path -54px 0px;
+$icon-sort: 15.421052631579187px 13.999999999999899px $sprite-aj-path -33px 0px;
+$icon-share: 11px 16px $sprite-aj-path -17px 0px;
+$icon-save: 12px 15px $sprite-aj-path 0px 0px;
+
+

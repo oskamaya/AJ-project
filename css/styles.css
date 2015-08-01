@@ -1,0 +1,754 @@
+@font-face {
+  font-family: 'AlrightSans';
+  src: url("../fonts/alrightsans/alrightsans-regular.eot");
+  src: url("../fonts/alrightsans/alrightsans-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/alrightsans/alrightsans-regular.woff") format("woff"), url("../fonts/alrightsans/alrightsans-regular.ttf") format("truetype"), url("../fonts/alrightsans/alrightsans-regular.svg#alrightsans-regular") format("svg");
+  font-style: normal; }
+@font-face {
+  font-family: 'AlrightSans';
+  src: url("../fonts/alrightsans/alrightsans-light.eot");
+  src: url("../fonts/alrightsans/alrightsans-light.eot?#iefix") format("embedded-opentype"), url("../fonts/alrightsans/alrightsans-light.woff") format("woff"), url("../fonts/alrightsans/alrightsans-light.ttf") format("truetype"), url("../fonts/alrightsans/alrightsans-light.svg#alrightsans-light") format("svg");
+  font-style: normal;
+  font-weight: 100; }
+@font-face {
+  font-family: 'AlrightSans';
+  src: url("../fonts/alrightsans/alrightsans-bold.eot");
+  src: url("../fonts/alrightsans/alrightsans-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/alrightsans/alrightsans-bold.woff") format("woff"), url("../fonts/alrightsans/alrightsans-bold.ttf") format("truetype"), url("../fonts/alrightsans/alrightsans-bold.svg#alrightsans-bold") format("svg");
+  font-style: normal;
+  font-weight: 500; }
+@font-face {
+  font-family: 'ArnhemPro';
+  src: url("../fonts/arnhemPro/ArnhemPro-Normal.eot");
+  src: url("../fonts/arnhemPro/ArnhemPro-Normal.eot?#iefix") format("embedded-opentype"), url("../fonts/arnhemPro/ArnhemPro-Normal.woff") format("woff"), url("../fonts/arnhemPro/ArnhemPro-Normal.ttf") format("truetype"), url("../fonts/arnhemPro/ArnhemPro-Normal.svg#ArnhemPro-Normal") format("svg");
+  font-style: normal; }
+@font-face {
+  font-family: 'ArnhemPro';
+  src: url("../fonts/arnhemPro/ArnhemPro-Bold.eot");
+  src: url("../fonts/arnhemPro/ArnhemPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/arnhemPro/ArnhemPro-Bold.woff") format("woff"), url("../fonts/arnhemPro/ArnhemPro-Bold.ttf") format("truetype"), url("../fonts/arnhemPro/ArnhemPro-Bold.svg#ArnhemPro-bold") format("svg");
+  font-style: normal;
+  font-weight: bold; }
+@font-face {
+  font-family: 'ArnhemPro';
+  src: url("../fonts/arnhemPro/ArnhemPro-BoldItalic.eot");
+  src: url("../fonts/arnhemPro/ArnhemPro-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/arnhemPro/ArnhemPro-BoldItalic.woff") format("woff"), url("../fonts/arnhemPro/ArnhemPro-BoldItalic.ttf") format("truetype"), url("../fonts/arnhemPro/ArnhemPro-BoldItalic.svg#ArnhemPro-boldItalic") format("svg");
+  font-style: italic;
+  font-weight: bold; }
+body {
+  -webkit-font-smoothing: antialiased;
+  width: auto !important;
+  overflow-x: hidden !important; }
+
+p {
+  font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
+  font-size: 1.571rem; }
+
+h2 a, h2 a:hover, h3 a, h3 a:hover, h4 a, h4 a:hover, h5 a, h5 a:hover {
+  color: #333333; }
+
+.adv {
+  text-align: center; }
+
+.date, #opinion-section article p, #opinion-section div p {
+  font-family: "AlrightSans", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #9B9B9B; }
+
+.sections, .home-subsections, #opinion-section div.top-block div.left-col div.sections-col-left div#editorial h3, #opinion-section div.top-block div.left-col div.sections-col-left div#cartoons h3, #opinion-section div.top-block div.left-col div.sections-col-left div#analisis h3, #opinion-section div.top-block div.right-col div#print-columnists h3, #opinion-section div.top-block div.right-col div#online-columnists h3, #opinion-section div.bottom-block div#etcetera h3, #opinion-section div.bottom-block div.right-col div#blogs h3, #opinion-section div.bottom-block div.right-col div#letters h3, #specials-section div.reviews h3, #specials-section div.bottom-block h3, #opinion-section h1, #specials-section h1 {
+  font-family: "AlrightSans", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase; }
+
+.home-subsections, #opinion-section div.top-block div.left-col div.sections-col-left div#editorial h3, #opinion-section div.top-block div.left-col div.sections-col-left div#cartoons h3, #opinion-section div.top-block div.left-col div.sections-col-left div#analisis h3, #opinion-section div.top-block div.right-col div#print-columnists h3, #opinion-section div.top-block div.right-col div#online-columnists h3, #opinion-section div.bottom-block div#etcetera h3, #opinion-section div.bottom-block div.right-col div#blogs h3, #opinion-section div.bottom-block div.right-col div#letters h3, #specials-section div.reviews h3, #specials-section div.bottom-block h3 {
+  margin-top: 0;
+  font-size: 2.4rem;
+  margin-bottom: 2rem; }
+
+.actions {
+  margin-top: -18px; }
+  .actions b {
+    font-size: 1.25rem;
+    float: left;
+    text-transform: uppercase;
+    padding-right: 10px; }
+    .actions b.to-news {
+      color: #A02A1A; }
+    .actions b.to-opinion {
+      color: #7B6CDC; }
+    .actions b.to-specials {
+      color: #8FB221; }
+    .actions b::after {
+      content: "";
+      float: right;
+      width: 1px;
+      height: 11px;
+      background-color: #777777;
+      position: relative;
+      top: 3px;
+      left: 10px;
+      margin-right: 10px; }
+  .actions .space, .actions span.save::before, .actions span.share::before, .actions span.sort::before, .actions span.delete::before {
+    content: "";
+    float: left;
+    margin-right: 5px;
+    margin-top: -2px; }
+  .actions span {
+    float: left;
+    font-size: 1rem;
+    margin: 1px 10px 0 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #2F6DDC; }
+    .actions span.save::before {
+      width: 12px;
+      height: 15px;
+      background-repeat: no-repeat;
+      background-image: url(../images/svg/sprite-aj.svg);
+      background-position: 0px 0px; }
+    .actions span.share::before {
+      width: 11px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-image: url(../images/svg/sprite-aj.svg);
+      background-position: -17px 0px; }
+    .actions span.sort::before {
+      width: 15.4210526316px;
+      height: 14.0px;
+      background-repeat: no-repeat;
+      background-image: url(../images/svg/sprite-aj.svg);
+      background-position: -33px 0px; }
+    .actions span.delete::before {
+      width: 14px;
+      height: 15px;
+      background-repeat: no-repeat;
+      background-image: url(../images/svg/sprite-aj.svg);
+      background-position: -54px 0px; }
+
+input[type="text"] {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 16px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  padding: 9px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s; }
+
+input[type="text"]:focus {
+  outline: none; }
+
+span.see-more {
+  float: right;
+  position: absolute;
+  top: 23px;
+  right: 30px;
+  font-size: 1.5rem; }
+  span.see-more::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    margin-left: 5px;
+    width: 10.4709266194px;
+    height: 9.6599998474px;
+    background-repeat: no-repeat;
+    background-image: url(../images/svg/sprite-aj.svg);
+    background-position: -125px -2px; }
+
+/*!
+ * Yamm!3 - Yet another megamenu for Bootstrap 3
+ * http://geedmo.github.com/yamm3
+ * 
+ * @geedmo - Licensed under the MIT license
+ */
+.yamm .nav,
+.yamm .collapse,
+.yamm .dropup,
+.yamm .dropdown {
+  position: static; }
+
+.yamm .container {
+  position: relative; }
+
+.yamm .dropdown-menu {
+  left: auto; }
+
+.yamm .yamm-content {
+  padding: 20px 30px; }
+
+.yamm .dropdown.yamm-fw .dropdown-menu {
+  background-color: #EFEFEF;
+  left: 0;
+  right: 0; }
+
+.tabs-left ul.nav-tabs#news-tabs li a {
+  color: white;
+  border: 0;
+  padding: 11px 20px;
+  height: 44px;
+  width: 100%;
+  text-align: left;
+  text-transform: none;
+  font-weight: bold;
+  background-color: #A02A1A; }
+  .tabs-left ul.nav-tabs#news-tabs li a:hover {
+    border: 0;
+    background-color: #EFEFEF;
+    color: #A02A1A; }
+.tabs-left ul.nav-tabs#news-tabs li.active a {
+  background-color: #EFEFEF;
+  color: #A02A1A; }
+.tabs-left ul.nav-tabs#opinion-tabs li a {
+  color: white;
+  border: 0;
+  padding: 11px 20px;
+  height: 44px;
+  width: 100%;
+  text-align: left;
+  text-transform: none;
+  font-weight: bold;
+  background-color: #7B6CDC; }
+  .tabs-left ul.nav-tabs#opinion-tabs li a:hover {
+    border: 0;
+    background-color: #EFEFEF;
+    color: #7B6CDC; }
+.tabs-left ul.nav-tabs#opinion-tabs li.active a {
+  background-color: #EFEFEF;
+  color: #7B6CDC; }
+.tabs-left ul.nav-tabs#specials-tabs li a {
+  color: white;
+  border: 0;
+  padding: 11px 20px;
+  height: 44px;
+  width: 100%;
+  text-align: left;
+  text-transform: none;
+  font-weight: bold;
+  background-color: #8FB221; }
+  .tabs-left ul.nav-tabs#specials-tabs li a:hover {
+    border: 0;
+    background-color: #EFEFEF;
+    color: #8FB221; }
+.tabs-left ul.nav-tabs#specials-tabs li.active a {
+  background-color: #EFEFEF;
+  color: #8FB221; }
+.tabs-left ul.nav-tabs li {
+  float: none;
+  margin: 0; }
+
+.tab-content .tab-pane {
+  display: none;
+  padding: 1.6rem; }
+  .tab-content .tab-pane.news-content h3 {
+    color: #A02A1A; }
+  .tab-content .tab-pane.news-content div.main article h2.news-heading {
+    font-size: 1.75rem;
+    margin: 10px 0 0; }
+  .tab-content .tab-pane.news-content div.others article {
+    margin-bottom: 30px; }
+    .tab-content .tab-pane.news-content div.others article img {
+      float: left; }
+    .tab-content .tab-pane.news-content div.others article div.details {
+      float: right;
+      width: 60%; }
+      .tab-content .tab-pane.news-content div.others article div.details h2.news-heading {
+        font-size: 1.35rem;
+        margin: 0; }
+  .tab-content .tab-pane.opinion-content h3 {
+    color: #7B6CDC; }
+  .tab-content .tab-pane.opinion-content article {
+    margin-top: 3rem; }
+    .tab-content .tab-pane.opinion-content article h2.news-heading {
+      font-size: 1.7rem;
+      margin: 0; }
+  .tab-content .tab-pane.specials-content h3 {
+    color: #8FB221; }
+  .tab-content .tab-pane.specials-content div.report article h2 {
+    font-size: 1.35rem;
+    margin-top: 1rem;
+    margin-bottom: 0; }
+  .tab-content .tab-pane.specials-content div.reviews article {
+    margin-bottom: 3rem; }
+    .tab-content .tab-pane.specials-content div.reviews article h2 {
+      font-size: 1.35rem;
+      margin-top: 0;
+      margin-bottom: 0; }
+    .tab-content .tab-pane.specials-content div.reviews article img {
+      float: left; }
+    .tab-content .tab-pane.specials-content div.reviews article div.details {
+      float: right;
+      width: 70%; }
+  .tab-content .tab-pane.specials-content div.guest h2, .tab-content .tab-pane.specials-content div.figure h2, .tab-content .tab-pane.specials-content div.in-office h2, .tab-content .tab-pane.specials-content div.academy h2, .tab-content .tab-pane.specials-content div.firms h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0; }
+  .tab-content .tab-pane h3 {
+    margin-top: 0;
+    text-transform: uppercase; }
+.tab-content .active {
+  display: block; }
+
+nav.navbar-aj {
+  width: 100%; }
+  nav.navbar-aj div.top {
+    width: 100%;
+    background-color: #2D2D2D; }
+    nav.navbar-aj div.top .date-upload {
+      color: #cedffa;
+      font-size: 1.125rem;
+      float: left;
+      margin-top: 10px; }
+    nav.navbar-aj div.top ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+      display: block;
+      float: right; }
+      nav.navbar-aj div.top ul li {
+        display: inline-block;
+        padding: 0;
+        margin: 0; }
+        nav.navbar-aj div.top ul li.suscription {
+          background-color: #2F6DCC; }
+          nav.navbar-aj div.top ul li.suscription a {
+            border-right: none; }
+        nav.navbar-aj div.top ul li.suscription a, nav.navbar-aj div.top ul li.signup a, nav.navbar-aj div.top ul li.login a {
+          color: white;
+          text-decoration: none;
+          display: block;
+          padding: 11px 20px;
+          font-size: 1.375rem;
+          font-weight: bold;
+          position: relative;
+          border-right: 1px solid #555555; }
+  nav.navbar-aj div.bottom {
+    background-color: #445B7F;
+    width: 100%; }
+    nav.navbar-aj div.bottom nav.navbar {
+      margin-bottom: 0;
+      border: 0; }
+      nav.navbar-aj div.bottom nav.navbar h2.branding {
+        float: left;
+        margin-right: 38px; }
+      nav.navbar-aj div.bottom nav.navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0; }
+        nav.navbar-aj div.bottom nav.navbar ul li a[class*='-btn'] {
+          font-size: 1.5rem;
+          font-weight: bold;
+          text-align: center;
+          display: block;
+          width: 154px;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: white;
+          padding-top: 24px;
+          padding-bottom: 24px; }
+          nav.navbar-aj div.bottom nav.navbar ul li a[class*='-btn'].news-btn {
+            background-color: #A02A1A;
+            border-bottom: 7px solid #741e13; }
+            nav.navbar-aj div.bottom nav.navbar ul li a[class*='-btn'].news-btn:hover {
+              background-color: #741e13; }
+          nav.navbar-aj div.bottom nav.navbar ul li a[class*='-btn'].opinion-btn {
+            background-color: #7B6CDC;
+            border-bottom: 7px solid #5643d2; }
+            nav.navbar-aj div.bottom nav.navbar ul li a[class*='-btn'].opinion-btn:hover {
+              background-color: #5643d2; }
+          nav.navbar-aj div.bottom nav.navbar ul li a[class*='-btn'].specials-btn {
+            background-color: #8FB221;
+            border-bottom: 7px solid #6c8719; }
+            nav.navbar-aj div.bottom nav.navbar ul li a[class*='-btn'].specials-btn:hover {
+              background-color: #6c8719; }
+      nav.navbar-aj div.bottom nav.navbar div#search {
+        float: right;
+        margin-top: 16px; }
+
+div.first-block {
+  margin-top: 5rem; }
+  div.first-block div#get-newsletter {
+    background-color: #445b7F;
+    padding: 20px;
+    margin-bottom: 30px; }
+    div.first-block div#get-newsletter i {
+      float: left;
+      margin-right: 15px;
+      color: #88B7FF; }
+    div.first-block div#get-newsletter h2 {
+      margin-top: 0;
+      color: white;
+      font-weight: 100;
+      font-size: 2.5rem; }
+      div.first-block div#get-newsletter h2 small {
+        font-size: 1.5rem;
+        color: white; }
+    div.first-block div#get-newsletter form {
+      margin: 30px 0 15px 0; }
+      div.first-block div#get-newsletter form input[type="text"] {
+        float: left;
+        width: 72%;
+        margin-right: 15px; }
+    div.first-block div#get-newsletter span {
+      text-transform: uppercase;
+      font-weight: 100;
+      font-size: 2.5rem;
+      color: white;
+      margin-right: 10px; }
+    div.first-block div#get-newsletter a {
+      color: #CEDFFA;
+      margin-right: 10px; }
+      div.first-block div#get-newsletter a:hover {
+        color: white; }
+
+div#news-summary div.nw-3col, div#news-summary div.nw-2col {
+  margin-top: 5rem; }
+  div#news-summary div.nw-3col article.summary, div#news-summary div.nw-2col article.summary {
+    margin-bottom: 5rem; }
+div#news-summary h2.news-heading {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 0; }
+div#news-summary p.summary {
+  font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
+  font-size: 1.571rem; }
+div#news-summary div#tabs-news {
+  margin: 5rem 0; }
+  div#news-summary div#tabs-news ul {
+    border-bottom: 3px solid #12305C; }
+    div#news-summary div#tabs-news ul li {
+      border-right: 10px solid white; }
+      div#news-summary div#tabs-news ul li a {
+        border-radius: 0;
+        background-color: #CEDFFA;
+        font-weight: bold;
+        font-size: 1.714rem;
+        text-transform: uppercase;
+        color: #12305C;
+        height: 69px;
+        border: 0;
+        padding-top: 24px;
+        width: 396.3px; }
+      div#news-summary div#tabs-news ul li.active a, div#news-summary div#tabs-news ul li:hover a {
+        background-color: #12305C;
+        color: white; }
+      div#news-summary div#tabs-news ul li:last-child {
+        border-right: 0; }
+
+div.indicators {
+  background-color: #445b7F;
+  padding: 30px;
+  margin-bottom: 5rem; }
+  div.indicators h2 {
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: white;
+    margin: 0 0 30px 0; }
+  div.indicators .arrow, div.indicators table td.up::after, div.indicators table td.down::after, div.indicators table td.stay::after {
+    content: "";
+    float: right;
+    position: relative;
+    top: 8px; }
+  div.indicators table td {
+    font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
+    color: #CEDFFA;
+    vertical-align: middle; }
+    div.indicators table td.value {
+      font-family: "AlrightSans", Helvetica, Arial, sans-serif;
+      font-weight: normal;
+      color: white;
+      font-size: 1.85rem; }
+    div.indicators table td.up::after {
+      width: 13px;
+      height: 10px;
+      background-repeat: no-repeat;
+      background-image: url(../images/svg/sprite-aj.svg);
+      background-position: -89px -2px; }
+    div.indicators table td.down::after {
+      width: 13px;
+      height: 10px;
+      background-repeat: no-repeat;
+      background-image: url(../images/svg/sprite-aj.svg);
+      background-position: -107px -2px; }
+    div.indicators table td.stay::after {
+      width: 11px;
+      height: 14px;
+      background-repeat: no-repeat;
+      background-image: url(../images/svg/sprite-aj.svg);
+      background-position: -73px 0px; }
+  div.indicators .btn[type="button"] {
+    margin: 0 auto;
+    display: block; }
+
+#opinion-section {
+  background-color: #eeeeee;
+  margin-top: 7rem;
+  width: 100%; }
+  #opinion-section h1 {
+    color: #7B6CDC;
+    font-size: 7rem;
+    margin-bottom: 4rem; }
+    #opinion-section h1::after {
+      content: "";
+      width: 100px;
+      height: 1px;
+      background-color: #7B6CDC;
+      margin-top: 30px;
+      display: block; }
+  #opinion-section hr {
+    border-color: #7B6CDC; }
+  #opinion-section p.date, #opinion-section article p, #opinion-section div p {
+    display: inline-block;
+    color: #777777; }
+  #opinion-section div.top-block {
+    margin-bottom: 5rem; }
+    #opinion-section div.top-block div.left-col div.sections-col-left {
+      background-color: white;
+      border: 1px solid #dddddd; }
+      #opinion-section div.top-block div.left-col div.sections-col-left div#editorial, #opinion-section div.top-block div.left-col div.sections-col-left div#cartoons, #opinion-section div.top-block div.left-col div.sections-col-left div#analisis {
+        position: relative;
+        border-bottom: 1px solid #dddddd;
+        padding: 20px; }
+        #opinion-section div.top-block div.left-col div.sections-col-left div#editorial h3, #opinion-section div.top-block div.left-col div.sections-col-left div#cartoons h3, #opinion-section div.top-block div.left-col div.sections-col-left div#analisis h3 {
+          color: #7B6CDC; }
+        #opinion-section div.top-block div.left-col div.sections-col-left div#editorial h2, #opinion-section div.top-block div.left-col div.sections-col-left div#cartoons h2, #opinion-section div.top-block div.left-col div.sections-col-left div#analisis h2 {
+          margin-top: 5px;
+          font-size: 1.875rem;
+          float: left; }
+        #opinion-section div.top-block div.left-col div.sections-col-left div#editorial article, #opinion-section div.top-block div.left-col div.sections-col-left div#cartoons article, #opinion-section div.top-block div.left-col div.sections-col-left div#analisis article {
+          margin-bottom: 1rem;
+          float: left;
+          border-bottom: 1px solid #dddddd; }
+          #opinion-section div.top-block div.left-col div.sections-col-left div#editorial article:last-child, #opinion-section div.top-block div.left-col div.sections-col-left div#cartoons article:last-child, #opinion-section div.top-block div.left-col div.sections-col-left div#analisis article:last-child {
+            border: none;
+            margin-bottom: 0; }
+          #opinion-section div.top-block div.left-col div.sections-col-left div#editorial article h6, #opinion-section div.top-block div.left-col div.sections-col-left div#cartoons article h6, #opinion-section div.top-block div.left-col div.sections-col-left div#analisis article h6 {
+            font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
+            font-size: 1.5rem;
+            color: #7B6CDC;
+            font-weight: bold;
+            font-style: italic;
+            margin: 0; }
+    #opinion-section div.top-block div.right-col div#print-columnists, #opinion-section div.top-block div.right-col div#online-columnists {
+      position: relative;
+      margin-bottom: 5rem; }
+      #opinion-section div.top-block div.right-col div#print-columnists div.list-columnists, #opinion-section div.top-block div.right-col div#online-columnists div.list-columnists {
+        float: left; }
+        #opinion-section div.top-block div.right-col div#print-columnists div.list-columnists div.columnist, #opinion-section div.top-block div.right-col div#online-columnists div.list-columnists div.columnist {
+          float: left;
+          margin-bottom: 2.5rem; }
+          #opinion-section div.top-block div.right-col div#print-columnists div.list-columnists div.columnist div.th-pic, #opinion-section div.top-block div.right-col div#online-columnists div.list-columnists div.columnist div.th-pic {
+            float: left; }
+          #opinion-section div.top-block div.right-col div#print-columnists div.list-columnists div.columnist div.col-details, #opinion-section div.top-block div.right-col div#online-columnists div.list-columnists div.columnist div.col-details {
+            float: right;
+            width: 67%; }
+            #opinion-section div.top-block div.right-col div#print-columnists div.list-columnists div.columnist div.col-details h6, #opinion-section div.top-block div.right-col div#online-columnists div.list-columnists div.columnist div.col-details h6 {
+              font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
+              color: #777777;
+              font-size: 1.25rem;
+              margin: 0 0 5px 0; }
+            #opinion-section div.top-block div.right-col div#print-columnists div.list-columnists div.columnist div.col-details h2, #opinion-section div.top-block div.right-col div#online-columnists div.list-columnists div.columnist div.col-details h2 {
+              margin: 0 0 5px;
+              font-size: 1.875rem; }
+            #opinion-section div.top-block div.right-col div#print-columnists div.list-columnists div.columnist div.col-details div.actions, #opinion-section div.top-block div.right-col div#online-columnists div.list-columnists div.columnist div.col-details div.actions {
+              margin: 0; }
+      #opinion-section div.top-block div.right-col div#print-columnists h3, #opinion-section div.top-block div.right-col div#online-columnists h3 {
+        color: #7B6CDC; }
+      #opinion-section div.top-block div.right-col div#print-columnists span.see-more, #opinion-section div.top-block div.right-col div#online-columnists span.see-more {
+        top: 10px; }
+  #opinion-section div.bottom-block {
+    margin-bottom: 5rem; }
+    #opinion-section div.bottom-block div#etcetera h3 {
+      color: #7B6CDC; }
+    #opinion-section div.bottom-block div#etcetera span.see-more {
+      top: 10px;
+      right: 30px; }
+    #opinion-section div.bottom-block div#etcetera div.columnists {
+      float: left; }
+      #opinion-section div.bottom-block div#etcetera div.columnists div.columnist {
+        float: left;
+        margin-bottom: 2.5rem; }
+        #opinion-section div.bottom-block div#etcetera div.columnists div.columnist div.th-pic {
+          float: left; }
+        #opinion-section div.bottom-block div#etcetera div.columnists div.columnist div.col-details {
+          float: right;
+          width: 70%; }
+          #opinion-section div.bottom-block div#etcetera div.columnists div.columnist div.col-details h6 {
+            font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
+            font-size: 1.5rem;
+            color: #7B6CDC;
+            font-weight: bold;
+            font-style: italic;
+            margin: 0; }
+          #opinion-section div.bottom-block div#etcetera div.columnists div.columnist div.col-details h5 {
+            font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
+            color: #777777;
+            font-size: 1.25rem;
+            margin: 0 0 5px 0; }
+          #opinion-section div.bottom-block div#etcetera div.columnists div.columnist div.col-details h2 {
+            margin: 0;
+            font-size: 1.875rem; }
+          #opinion-section div.bottom-block div#etcetera div.columnists div.columnist div.col-details div.actions {
+            margin: 0; }
+    #opinion-section div.bottom-block div.right-col div#blogs, #opinion-section div.bottom-block div.right-col div#letters {
+      position: relative;
+      background-color: white;
+      border: 1px solid #dddddd;
+      padding: 20px; }
+      #opinion-section div.bottom-block div.right-col div#blogs:first-child, #opinion-section div.bottom-block div.right-col div#letters:first-child {
+        margin-bottom: 4rem; }
+      #opinion-section div.bottom-block div.right-col div#blogs h3, #opinion-section div.bottom-block div.right-col div#letters h3 {
+        color: #7B6CDC; }
+        #opinion-section div.bottom-block div.right-col div#blogs h3::after, #opinion-section div.bottom-block div.right-col div#letters h3::after {
+          content: "";
+          width: 50px;
+          height: 1px;
+          background-color: #7B6CDC;
+          margin-top: 18px;
+          display: block; }
+      #opinion-section div.bottom-block div.right-col div#blogs article, #opinion-section div.bottom-block div.right-col div#letters article {
+        margin-bottom: 10px;
+        border-bottom: 1px solid #dddddd;
+        padding-bottom: 30px; }
+        #opinion-section div.bottom-block div.right-col div#blogs article:last-child, #opinion-section div.bottom-block div.right-col div#letters article:last-child {
+          margin: 0;
+          padding: 0;
+          border: 0; }
+        #opinion-section div.bottom-block div.right-col div#blogs article h2, #opinion-section div.bottom-block div.right-col div#letters article h2 {
+          margin: 0 0 5px;
+          font-size: 1.875rem; }
+        #opinion-section div.bottom-block div.right-col div#blogs article div.actions, #opinion-section div.bottom-block div.right-col div#letters article div.actions {
+          margin: 0; }
+
+#specials-section hr {
+  border-color: #8FB221; }
+#specials-section h1 {
+  color: #8FB221;
+  font-size: 7rem;
+  margin-bottom: 4rem; }
+  #specials-section h1::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: #8FB221;
+    margin-top: 30px;
+    display: block; }
+#specials-section div#main-articles article {
+  margin-bottom: 5rem; }
+  #specials-section div#main-articles article h3 {
+    font-size: 1.75rem;
+    margin-top: 1rem;
+    margin-bottom: 0; }
+#specials-section div#other-articles article {
+  margin-bottom: 5rem; }
+  #specials-section div#other-articles article h3 {
+    font-size: 1.75rem;
+    margin-top: 1rem;
+    margin-bottom: 0; }
+#specials-section div.reviews {
+  margin-bottom: 5rem; }
+  #specials-section div.reviews h3 {
+    color: #8FB221; }
+  #specials-section div.reviews div.carousel div.carousel-inner div.item img {
+    float: left;
+    margin-right: 40px; }
+  #specials-section div.reviews div.carousel div.carousel-inner div.item div.review-details {
+    float: left;
+    width: 70%; }
+    #specials-section div.reviews div.carousel div.carousel-inner div.item div.review-details h3 {
+      font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
+      color: #445b7F;
+      font-weight: bold;
+      font-style: italic;
+      margin-top: 0; }
+  #specials-section div.reviews div.carousel ol.carousel-indicators-numbers {
+    bottom: 0; }
+    #specials-section div.reviews div.carousel ol.carousel-indicators-numbers li {
+      text-indent: 0;
+      margin: 0 2px;
+      width: 30px;
+      height: 30px;
+      border: 1px solid #8FB221;
+      border-radius: 100%;
+      line-height: 30px;
+      color: #8FB221;
+      background-color: white;
+      transition: all 0.25s ease; }
+      #specials-section div.reviews div.carousel ol.carousel-indicators-numbers li.active, #specials-section div.reviews div.carousel ol.carousel-indicators-numbers li:hover {
+        margin: 0 2px;
+        color: white;
+        width: 30px;
+        height: 30px;
+        background-color: #8FB221; }
+#specials-section div.bottom-block h3 {
+  color: #25559F; }
+#specials-section div.bottom-block div.whats-new {
+  margin-bottom: 50px; }
+  #specials-section div.bottom-block div.whats-new article {
+    border-bottom: 1px solid #777777;
+    padding-bottom: 2rem; }
+    #specials-section div.bottom-block div.whats-new article:nth-child(4) {
+      border: 0; }
+    #specials-section div.bottom-block div.whats-new article h6 {
+      font-size: 1.75rem;
+      margin-top: 1rem;
+      margin-bottom: 0;
+      color: #25559F;
+      text-transform: uppercase; }
+    #specials-section div.bottom-block div.whats-new article h5 {
+      font-size: 1.75rem;
+      margin-top: 1rem;
+      margin-bottom: 0; }
+
+footer {
+  color: white;
+  margin-top: 7rem; }
+  footer div.links {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #2F6DDC; }
+    footer div.links h5 {
+      font-weight: 100;
+      font-size: 1.75rem;
+      text-transform: uppercase;
+      border-bottom: 1px solid white;
+      padding-bottom: 16px;
+      margin-bottom: 16px; }
+    footer div.links ol {
+      margin: 0;
+      padding: 0;
+      list-style-type: none; }
+      footer div.links ol li {
+        margin: 0 0 15px;
+        padding: 0; }
+        footer div.links ol li a {
+          color: white; }
+  footer div.bottom {
+    width: 100%;
+    background-color: #25559F;
+    padding: 16px 0; }
+    footer div.bottom div.social {
+      padding-top: 20px; }
+      footer div.bottom div.social p {
+        font-family: "AlrightSans", Helvetica, Arial, sans-serif;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        float: left;
+        margin-right: 10px; }
+      footer div.bottom div.social a {
+        color: #CEDFFA;
+        margin-right: 10px; }
+        footer div.bottom div.social a:hover {
+          color: white; }
+    footer div.bottom div.legal p {
+      font-family: "AlrightSans", Helvetica, Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 2;
+      float: left;
+      width: 90%;
+      padding-right: 15px; }
+    footer div.bottom div.legal svg {
+      float: right;
+      margin: 7px 0 0; }
