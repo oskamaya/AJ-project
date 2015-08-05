@@ -1,3 +1,5 @@
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
 @font-face {
   font-family: 'AlrightSans';
   src: url("../fonts/alrightsans/alrightsans-regular.eot");
@@ -16,6 +18,12 @@
   font-style: normal;
   font-weight: 500; }
 @font-face {
+  font-family: 'AlrightSans';
+  src: url("../fonts/alrightsans/AlrightSans-BoldItalic.eot");
+  src: url("../fonts/alrightsans/AlrightSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/alrightsans/AlrightSans-BoldItalic.woff") format("woff"), url("../fonts/alrightsans/AlrightSans-BoldItalic.ttf") format("truetype"), url("../fonts/alrightsans/AlrightSans-BoldItalic.svg#alrightsans-bold") format("svg");
+  font-style: italic;
+  font-weight: 500; }
+@font-face {
   font-family: 'ArnhemPro';
   src: url("../fonts/arnhemPro/ArnhemPro-Normal.eot");
   src: url("../fonts/arnhemPro/ArnhemPro-Normal.eot?#iefix") format("embedded-opentype"), url("../fonts/arnhemPro/ArnhemPro-Normal.woff") format("woff"), url("../fonts/arnhemPro/ArnhemPro-Normal.ttf") format("truetype"), url("../fonts/arnhemPro/ArnhemPro-Normal.svg#ArnhemPro-Normal") format("svg");
@@ -32,10 +40,14 @@
   src: url("../fonts/arnhemPro/ArnhemPro-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/arnhemPro/ArnhemPro-BoldItalic.woff") format("woff"), url("../fonts/arnhemPro/ArnhemPro-BoldItalic.ttf") format("truetype"), url("../fonts/arnhemPro/ArnhemPro-BoldItalic.svg#ArnhemPro-boldItalic") format("svg");
   font-style: italic;
   font-weight: bold; }
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
 body {
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   width: auto !important;
-  overflow-x: hidden !important; }
+  overflow-x: hidden !important;
+  padding-top: 113px; }
 
 p {
   font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
@@ -44,53 +56,90 @@ p {
 h2 a, h2 a:hover, h3 a, h3 a:hover, h4 a, h4 a:hover, h5 a, h5 a:hover {
   color: #333333; }
 
+/*------------------------------------------------------------*/
+/* PUSH class adds space between header and first block */
+/*------------------------------------------------------------*/
+div.push {
+  margin-top: 4rem; }
+
+/*------------------------------------------------------------*/
+/* main-content class adds 30px at the end of every child div */
+/*------------------------------------------------------------*/
+.col-8-lt div.main-content > div {
+  margin-bottom: 30px; }
+
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+.col-4-rt div.main-content > div {
+  margin-bottom: 30px; }
+
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
 .adv {
   text-align: center; }
 
-.date, #opinion-section article p, #opinion-section div p {
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+.date {
   font-family: "AlrightSans", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 1rem;
-  color: #9B9B9B; }
+  color: #aaaaaa; }
 
-.sections, .home-subsections, #opinion-section div.top-block div.left-col div.sections-col-left div#editorial h3, #opinion-section div.top-block div.left-col div.sections-col-left div#cartoons h3, #opinion-section div.top-block div.left-col div.sections-col-left div#analisis h3, #opinion-section div.top-block div.right-col div#print-columnists h3, #opinion-section div.top-block div.right-col div#online-columnists h3, #opinion-section div.bottom-block div#etcetera h3, #opinion-section div.bottom-block div.right-col div#blogs h3, #opinion-section div.bottom-block div.right-col div#letters h3, #specials-section div.reviews h3, #specials-section div.bottom-block h3, #opinion-section h1, #specials-section h1 {
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+.caption {
+  font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
+  color: #aaaaaa;
+  margin-top: 0.5rem;
+  line-height: 1.25; }
+
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+.sections, .home-subsections, #opinion-section div.top-block div.left-col div#editorial h3, #opinion-section div.top-block div.left-col div#cartoons h3, #opinion-section div.top-block div.left-col div#analisis h3, #opinion-section div.top-block div.right-col div#print-columnists h3, #opinion-section div.top-block div.right-col div#online-columnists h3, #opinion-section div.bottom-block div#etcetera h3, #opinion-section div.bottom-block div.right-col div#blogs h3, #opinion-section div.bottom-block div.right-col div#letters h3, #specials-section div.reviews h3, #specials-section div.bottom-block h3, #opinion-section h1, #specials-section h1, div.article > div h1[class*='-news'], div.article > div h1[class*='-opinion'], div.article > div h1[class*='-specials'], div#rel-news h3, div#recommended h3, div#top-news h3 {
   font-family: "AlrightSans", Helvetica, Arial, sans-serif;
   font-weight: normal;
   text-transform: uppercase; }
 
-.home-subsections, #opinion-section div.top-block div.left-col div.sections-col-left div#editorial h3, #opinion-section div.top-block div.left-col div.sections-col-left div#cartoons h3, #opinion-section div.top-block div.left-col div.sections-col-left div#analisis h3, #opinion-section div.top-block div.right-col div#print-columnists h3, #opinion-section div.top-block div.right-col div#online-columnists h3, #opinion-section div.bottom-block div#etcetera h3, #opinion-section div.bottom-block div.right-col div#blogs h3, #opinion-section div.bottom-block div.right-col div#letters h3, #specials-section div.reviews h3, #specials-section div.bottom-block h3 {
-  margin-top: 0;
+.home-subsections, #opinion-section div.top-block div.left-col div#editorial h3, #opinion-section div.top-block div.left-col div#cartoons h3, #opinion-section div.top-block div.left-col div#analisis h3, #opinion-section div.top-block div.right-col div#print-columnists h3, #opinion-section div.top-block div.right-col div#online-columnists h3, #opinion-section div.bottom-block div#etcetera h3, #opinion-section div.bottom-block div.right-col div#blogs h3, #opinion-section div.bottom-block div.right-col div#letters h3, #specials-section div.reviews h3, #specials-section div.bottom-block h3 {
   font-size: 2.4rem;
+  margin-top: 0;
   margin-bottom: 2rem; }
 
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+.space, .actions span.save::before, .actions span.share::before, .actions span.sort::before, .actions span.delete::before, div.article > div div.article-actions span.save::before, div.article > div div.article-actions span.share::before, div.article > div div.article-actions span.comments::before, div.article > div div.article-actions span.print::before, div.article > div div.article-actions span.size::before, div.article > div div.article-actions span.reader::before, div#top-news div.tab-content .mod-news div.col-details span.viewed:before {
+  content: "";
+  float: left;
+  margin-right: 5px; }
+
+b[class*='tag-'] {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  padding-right: 10px; }
+  b[class*='tag-'].tag-news {
+    color: #A02A1A; }
+  b[class*='tag-'].tag-opinion {
+    color: #7B6CDC; }
+  b[class*='tag-'].tag-specials {
+    color: #8FB221; }
+
 .actions {
-  margin-top: -18px; }
+  margin: 0;
+  clear: both;
+  min-height: 18px; }
   .actions b {
-    font-size: 1.25rem;
-    float: left;
-    text-transform: uppercase;
-    padding-right: 10px; }
-    .actions b.to-news {
-      color: #A02A1A; }
-    .actions b.to-opinion {
-      color: #7B6CDC; }
-    .actions b.to-specials {
-      color: #8FB221; }
-    .actions b::after {
-      content: "";
-      float: right;
-      width: 1px;
-      height: 11px;
-      background-color: #777777;
-      position: relative;
-      top: 3px;
-      left: 10px;
-      margin-right: 10px; }
-  .actions .space, .actions span.save::before, .actions span.share::before, .actions span.sort::before, .actions span.delete::before {
+    float: left; }
+  .actions b[class*='tag-']::after {
     content: "";
-    float: left;
-    margin-right: 5px;
-    margin-top: -2px; }
+    float: right;
+    width: 1px;
+    height: 11px;
+    background-color: #777777;
+    position: relative;
+    top: 3px;
+    left: 10px;
+    margin-right: 10px; }
   .actions span {
     float: left;
     font-size: 1rem;
@@ -98,31 +147,35 @@ h2 a, h2 a:hover, h3 a, h3 a:hover, h4 a, h4 a:hover, h5 a, h5 a:hover {
     cursor: pointer;
     text-transform: uppercase;
     color: #2F6DDC; }
+    .actions span::before {
+      margin-top: -2px; }
     .actions span.save::before {
       width: 12px;
       height: 15px;
       background-repeat: no-repeat;
       background-image: url(../images/svg/sprite-aj.svg);
-      background-position: 0px 0px; }
+      background-position: 0px -27px; }
     .actions span.share::before {
       width: 11px;
       height: 16px;
       background-repeat: no-repeat;
       background-image: url(../images/svg/sprite-aj.svg);
-      background-position: -17px 0px; }
+      background-position: -17px -26px; }
     .actions span.sort::before {
       width: 15.4210526316px;
       height: 14.0px;
       background-repeat: no-repeat;
       background-image: url(../images/svg/sprite-aj.svg);
-      background-position: -33px 0px; }
+      background-position: -52.8px -28px; }
     .actions span.delete::before {
       width: 14px;
       height: 15px;
       background-repeat: no-repeat;
       background-image: url(../images/svg/sprite-aj.svg);
-      background-position: -54px 0px; }
+      background-position: -33px -28px; }
 
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
 input[type="text"] {
   display: block;
   margin: 0;
@@ -139,12 +192,13 @@ input[type="text"] {
 input[type="text"]:focus {
   outline: none; }
 
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
 span.see-more {
-  float: right;
   position: absolute;
   top: 23px;
   right: 30px;
-  font-size: 1.5rem; }
+  font-size: 1.35rem; }
   span.see-more::after {
     content: "";
     position: absolute;
@@ -154,7 +208,7 @@ span.see-more {
     height: 9.6599998474px;
     background-repeat: no-repeat;
     background-image: url(../images/svg/sprite-aj.svg);
-    background-position: -125px -2px; }
+    background-position: -52px -53px; }
 
 /*!
  * Yamm!3 - Yet another megamenu for Bootstrap 3
@@ -162,6 +216,8 @@ span.see-more {
  * 
  * @geedmo - Licensed under the MIT license
  */
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
 .yamm .nav,
 .yamm .collapse,
 .yamm .dropup,
@@ -251,7 +307,7 @@ span.see-more {
       float: left; }
     .tab-content .tab-pane.news-content div.others article div.details {
       float: right;
-      width: 60%; }
+      width: auto; }
       .tab-content .tab-pane.news-content div.others article div.details h2.news-heading {
         font-size: 1.35rem;
         margin: 0; }
@@ -260,7 +316,7 @@ span.see-more {
   .tab-content .tab-pane.opinion-content article {
     margin-top: 3rem; }
     .tab-content .tab-pane.opinion-content article h2.news-heading {
-      font-size: 1.7rem;
+      font-size: 1.75rem;
       margin: 0; }
   .tab-content .tab-pane.specials-content h3 {
     color: #8FB221; }
@@ -278,7 +334,7 @@ span.see-more {
       float: left; }
     .tab-content .tab-pane.specials-content div.reviews article div.details {
       float: right;
-      width: 70%; }
+      width: auto; }
   .tab-content .tab-pane.specials-content div.guest h2, .tab-content .tab-pane.specials-content div.figure h2, .tab-content .tab-pane.specials-content div.in-office h2, .tab-content .tab-pane.specials-content div.academy h2, .tab-content .tab-pane.specials-content div.firms h2 {
     font-size: 1.5rem;
     margin-top: 0;
@@ -289,6 +345,8 @@ span.see-more {
 .tab-content .active {
   display: block; }
 
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
 nav.navbar-aj {
   width: 100%; }
   nav.navbar-aj div.top {
@@ -366,76 +424,48 @@ nav.navbar-aj {
         float: right;
         margin-top: 16px; }
 
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
 div.first-block {
-  margin-top: 5rem; }
-  div.first-block div#get-newsletter {
-    background-color: #445b7F;
-    padding: 20px;
-    margin-bottom: 30px; }
-    div.first-block div#get-newsletter i {
-      float: left;
-      margin-right: 15px;
-      color: #88B7FF; }
-    div.first-block div#get-newsletter h2 {
-      margin-top: 0;
-      color: white;
-      font-weight: 100;
-      font-size: 2.5rem; }
-      div.first-block div#get-newsletter h2 small {
-        font-size: 1.5rem;
-        color: white; }
-    div.first-block div#get-newsletter form {
-      margin: 30px 0 15px 0; }
-      div.first-block div#get-newsletter form input[type="text"] {
-        float: left;
-        width: 72%;
-        margin-right: 15px; }
-    div.first-block div#get-newsletter span {
-      text-transform: uppercase;
-      font-weight: 100;
-      font-size: 2.5rem;
-      color: white;
-      margin-right: 10px; }
-    div.first-block div#get-newsletter a {
-      color: #CEDFFA;
-      margin-right: 10px; }
-      div.first-block div#get-newsletter a:hover {
-        color: white; }
+  margin-top: 5rem;
+  margin-bottom: 5rem; }
+  div.first-block div#main-article {
+    margin-top: -17px; }
 
-div#news-summary div.nw-3col, div#news-summary div.nw-2col {
-  margin-top: 5rem; }
-  div#news-summary div.nw-3col article.summary, div#news-summary div.nw-2col article.summary {
-    margin-bottom: 5rem; }
+div#news-summary div.nw-3col article.summary, div#news-summary div.nw-2col article.summary {
+  float: left;
+  margin-bottom: 3rem; }
 div#news-summary h2.news-heading {
   font-size: 2rem;
   margin-top: 1rem;
-  margin-bottom: 0; }
+  margin-bottom: 0.5rem; }
 div#news-summary p.summary {
   font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
   font-size: 1.571rem; }
-div#news-summary div#tabs-news {
-  margin: 5rem 0; }
-  div#news-summary div#tabs-news ul {
-    border-bottom: 3px solid #12305C; }
-    div#news-summary div#tabs-news ul li {
-      border-right: 10px solid white; }
-      div#news-summary div#tabs-news ul li a {
-        border-radius: 0;
-        background-color: #CEDFFA;
-        font-weight: bold;
-        font-size: 1.714rem;
-        text-transform: uppercase;
-        color: #12305C;
-        height: 69px;
-        border: 0;
-        padding-top: 24px;
-        width: 396.3px; }
-      div#news-summary div#tabs-news ul li.active a, div#news-summary div#tabs-news ul li:hover a {
-        background-color: #12305C;
-        color: white; }
-      div#news-summary div#tabs-news ul li:last-child {
-        border-right: 0; }
+div#news-summary div#tabs-news ul {
+  border-bottom: 3px solid #12305C;
+  margin-bottom: 3rem; }
+  div#news-summary div#tabs-news ul li {
+    border-right: 10px solid white; }
+    div#news-summary div#tabs-news ul li a {
+      border-radius: 0;
+      background-color: #CEDFFA;
+      font-weight: bold;
+      font-size: 1.714rem;
+      text-transform: uppercase;
+      color: #12305C;
+      height: 69px;
+      border: 0;
+      padding-top: 24px;
+      width: 396.3px; }
+    div#news-summary div#tabs-news ul li.active a, div#news-summary div#tabs-news ul li:hover a {
+      background-color: #12305C;
+      color: white; }
+    div#news-summary div#tabs-news ul li:last-child {
+      border-right: 0; }
 
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
 div.indicators {
   background-color: #445b7F;
   padding: 30px;
@@ -465,30 +495,34 @@ div.indicators {
       height: 10px;
       background-repeat: no-repeat;
       background-image: url(../images/svg/sprite-aj.svg);
-      background-position: -89px -2px; }
+      background-position: -16px -53px; }
     div.indicators table td.down::after {
       width: 13px;
       height: 10px;
       background-repeat: no-repeat;
       background-image: url(../images/svg/sprite-aj.svg);
-      background-position: -107px -2px; }
+      background-position: -34px -53px; }
     div.indicators table td.stay::after {
       width: 11px;
       height: 14px;
       background-repeat: no-repeat;
       background-image: url(../images/svg/sprite-aj.svg);
-      background-position: -73px 0px; }
+      background-position: 0px -51px; }
   div.indicators .btn[type="button"] {
     margin: 0 auto;
     display: block; }
 
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
 #opinion-section {
   background-color: #eeeeee;
   margin-top: 7rem;
+  padding-top: 4rem;
   width: 100%; }
   #opinion-section h1 {
     color: #7B6CDC;
     font-size: 7rem;
+    margin-top: 0;
     margin-bottom: 4rem; }
     #opinion-section h1::after {
       content: "";
@@ -499,61 +533,54 @@ div.indicators {
       display: block; }
   #opinion-section hr {
     border-color: #7B6CDC; }
-  #opinion-section p.date, #opinion-section article p, #opinion-section div p {
-    display: inline-block;
-    color: #777777; }
   #opinion-section div.top-block {
     margin-bottom: 5rem; }
-    #opinion-section div.top-block div.left-col div.sections-col-left {
-      background-color: white;
-      border: 1px solid #dddddd; }
-      #opinion-section div.top-block div.left-col div.sections-col-left div#editorial, #opinion-section div.top-block div.left-col div.sections-col-left div#cartoons, #opinion-section div.top-block div.left-col div.sections-col-left div#analisis {
-        position: relative;
-        border-bottom: 1px solid #dddddd;
-        padding: 20px; }
-        #opinion-section div.top-block div.left-col div.sections-col-left div#editorial h3, #opinion-section div.top-block div.left-col div.sections-col-left div#cartoons h3, #opinion-section div.top-block div.left-col div.sections-col-left div#analisis h3 {
-          color: #7B6CDC; }
-        #opinion-section div.top-block div.left-col div.sections-col-left div#editorial h2, #opinion-section div.top-block div.left-col div.sections-col-left div#cartoons h2, #opinion-section div.top-block div.left-col div.sections-col-left div#analisis h2 {
-          margin-top: 5px;
-          font-size: 1.875rem;
-          float: left; }
-        #opinion-section div.top-block div.left-col div.sections-col-left div#editorial article, #opinion-section div.top-block div.left-col div.sections-col-left div#cartoons article, #opinion-section div.top-block div.left-col div.sections-col-left div#analisis article {
-          margin-bottom: 1rem;
-          float: left;
-          border-bottom: 1px solid #dddddd; }
-          #opinion-section div.top-block div.left-col div.sections-col-left div#editorial article:last-child, #opinion-section div.top-block div.left-col div.sections-col-left div#cartoons article:last-child, #opinion-section div.top-block div.left-col div.sections-col-left div#analisis article:last-child {
-            border: none;
-            margin-bottom: 0; }
-          #opinion-section div.top-block div.left-col div.sections-col-left div#editorial article h6, #opinion-section div.top-block div.left-col div.sections-col-left div#cartoons article h6, #opinion-section div.top-block div.left-col div.sections-col-left div#analisis article h6 {
-            font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
-            font-size: 1.5rem;
-            color: #7B6CDC;
-            font-weight: bold;
-            font-style: italic;
-            margin: 0; }
+    #opinion-section div.top-block div.left-col div#editorial, #opinion-section div.top-block div.left-col div#cartoons, #opinion-section div.top-block div.left-col div#analisis {
+      position: relative;
+      float: left;
+      border-bottom: 1px solid #dddddd;
+      padding: 20px;
+      background-color: white; }
+      #opinion-section div.top-block div.left-col div#editorial h3, #opinion-section div.top-block div.left-col div#cartoons h3, #opinion-section div.top-block div.left-col div#analisis h3 {
+        color: #7B6CDC; }
+      #opinion-section div.top-block div.left-col div#editorial h2, #opinion-section div.top-block div.left-col div#cartoons h2, #opinion-section div.top-block div.left-col div#analisis h2 {
+        font-size: 1.75rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem; }
+      #opinion-section div.top-block div.left-col div#editorial article, #opinion-section div.top-block div.left-col div#cartoons article, #opinion-section div.top-block div.left-col div#analisis article {
+        margin-bottom: 1rem;
+        float: left;
+        border-bottom: 1px solid #dddddd; }
+        #opinion-section div.top-block div.left-col div#editorial article:last-child, #opinion-section div.top-block div.left-col div#cartoons article:last-child, #opinion-section div.top-block div.left-col div#analisis article:last-child {
+          border: none;
+          margin-bottom: 0; }
+        #opinion-section div.top-block div.left-col div#editorial article h6, #opinion-section div.top-block div.left-col div#cartoons article h6, #opinion-section div.top-block div.left-col div#analisis article h6 {
+          font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
+          font-size: 1.5rem;
+          color: #7B6CDC;
+          font-weight: bold;
+          font-style: italic;
+          margin: 0; }
     #opinion-section div.top-block div.right-col div#print-columnists, #opinion-section div.top-block div.right-col div#online-columnists {
       position: relative;
       margin-bottom: 5rem; }
-      #opinion-section div.top-block div.right-col div#print-columnists div.list-columnists, #opinion-section div.top-block div.right-col div#online-columnists div.list-columnists {
-        float: left; }
-        #opinion-section div.top-block div.right-col div#print-columnists div.list-columnists div.columnist, #opinion-section div.top-block div.right-col div#online-columnists div.list-columnists div.columnist {
+      #opinion-section div.top-block div.right-col div#print-columnists div.list-columnists div.columnist, #opinion-section div.top-block div.right-col div#online-columnists div.list-columnists div.columnist {
+        margin-bottom: 2.5rem; }
+        #opinion-section div.top-block div.right-col div#print-columnists div.list-columnists div.columnist figure.th-pic, #opinion-section div.top-block div.right-col div#online-columnists div.list-columnists div.columnist figure.th-pic {
           float: left;
-          margin-bottom: 2.5rem; }
-          #opinion-section div.top-block div.right-col div#print-columnists div.list-columnists div.columnist div.th-pic, #opinion-section div.top-block div.right-col div#online-columnists div.list-columnists div.columnist div.th-pic {
-            float: left; }
-          #opinion-section div.top-block div.right-col div#print-columnists div.list-columnists div.columnist div.col-details, #opinion-section div.top-block div.right-col div#online-columnists div.list-columnists div.columnist div.col-details {
-            float: right;
-            width: 67%; }
-            #opinion-section div.top-block div.right-col div#print-columnists div.list-columnists div.columnist div.col-details h6, #opinion-section div.top-block div.right-col div#online-columnists div.list-columnists div.columnist div.col-details h6 {
-              font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
-              color: #777777;
-              font-size: 1.25rem;
-              margin: 0 0 5px 0; }
-            #opinion-section div.top-block div.right-col div#print-columnists div.list-columnists div.columnist div.col-details h2, #opinion-section div.top-block div.right-col div#online-columnists div.list-columnists div.columnist div.col-details h2 {
-              margin: 0 0 5px;
-              font-size: 1.875rem; }
-            #opinion-section div.top-block div.right-col div#print-columnists div.list-columnists div.columnist div.col-details div.actions, #opinion-section div.top-block div.right-col div#online-columnists div.list-columnists div.columnist div.col-details div.actions {
-              margin: 0; }
+          margin-right: 20px; }
+        #opinion-section div.top-block div.right-col div#print-columnists div.list-columnists div.columnist div.col-details, #opinion-section div.top-block div.right-col div#online-columnists div.list-columnists div.columnist div.col-details {
+          float: left;
+          width: 64%; }
+          #opinion-section div.top-block div.right-col div#print-columnists div.list-columnists div.columnist div.col-details h6, #opinion-section div.top-block div.right-col div#online-columnists div.list-columnists div.columnist div.col-details h6 {
+            font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
+            color: #777777;
+            font-size: 1.25rem;
+            margin: 0 0 5px 0; }
+          #opinion-section div.top-block div.right-col div#print-columnists div.list-columnists div.columnist div.col-details h2, #opinion-section div.top-block div.right-col div#online-columnists div.list-columnists div.columnist div.col-details h2 {
+            font-size: 1.75rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem; }
       #opinion-section div.top-block div.right-col div#print-columnists h3, #opinion-section div.top-block div.right-col div#online-columnists h3 {
         color: #7B6CDC; }
       #opinion-section div.top-block div.right-col div#print-columnists span.see-more, #opinion-section div.top-block div.right-col div#online-columnists span.see-more {
@@ -565,33 +592,33 @@ div.indicators {
     #opinion-section div.bottom-block div#etcetera span.see-more {
       top: 10px;
       right: 30px; }
-    #opinion-section div.bottom-block div#etcetera div.columnists {
-      float: left; }
-      #opinion-section div.bottom-block div#etcetera div.columnists div.columnist {
+    #opinion-section div.bottom-block div#etcetera div.columnists div.columnist {
+      margin-bottom: 2.5rem; }
+      #opinion-section div.bottom-block div#etcetera div.columnists div.columnist figure.th-pic {
         float: left;
-        margin-bottom: 2.5rem; }
-        #opinion-section div.bottom-block div#etcetera div.columnists div.columnist div.th-pic {
-          float: left; }
-        #opinion-section div.bottom-block div#etcetera div.columnists div.columnist div.col-details {
-          float: right;
-          width: 70%; }
-          #opinion-section div.bottom-block div#etcetera div.columnists div.columnist div.col-details h6 {
-            font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
-            font-size: 1.5rem;
-            color: #7B6CDC;
-            font-weight: bold;
-            font-style: italic;
-            margin: 0; }
-          #opinion-section div.bottom-block div#etcetera div.columnists div.columnist div.col-details h5 {
-            font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
-            color: #777777;
-            font-size: 1.25rem;
-            margin: 0 0 5px 0; }
-          #opinion-section div.bottom-block div#etcetera div.columnists div.columnist div.col-details h2 {
-            margin: 0;
-            font-size: 1.875rem; }
-          #opinion-section div.bottom-block div#etcetera div.columnists div.columnist div.col-details div.actions {
-            margin: 0; }
+        margin-right: 20px; }
+      #opinion-section div.bottom-block div#etcetera div.columnists div.columnist div.col-details {
+        float: left;
+        width: 64%; }
+        #opinion-section div.bottom-block div#etcetera div.columnists div.columnist div.col-details h6 {
+          font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
+          font-size: 1.5rem;
+          color: #7B6CDC;
+          font-weight: bold;
+          font-style: italic;
+          margin: 0; }
+        #opinion-section div.bottom-block div#etcetera div.columnists div.columnist div.col-details h5 {
+          font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
+          color: #777777;
+          font-size: 1.25rem;
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem; }
+        #opinion-section div.bottom-block div#etcetera div.columnists div.columnist div.col-details h2 {
+          font-size: 1.75rem;
+          margin-top: 0;
+          margin-bottom: 0.5rem; }
+        #opinion-section div.bottom-block div#etcetera div.columnists div.columnist div.col-details div.actions {
+          margin: 0; }
     #opinion-section div.bottom-block div.right-col div#blogs, #opinion-section div.bottom-block div.right-col div#letters {
       position: relative;
       background-color: white;
@@ -617,91 +644,96 @@ div.indicators {
           padding: 0;
           border: 0; }
         #opinion-section div.bottom-block div.right-col div#blogs article h2, #opinion-section div.bottom-block div.right-col div#letters article h2 {
-          margin: 0 0 5px;
-          font-size: 1.875rem; }
+          font-size: 1.75rem;
+          margin-top: 0;
+          margin-bottom: 0.5rem; }
         #opinion-section div.bottom-block div.right-col div#blogs article div.actions, #opinion-section div.bottom-block div.right-col div#letters article div.actions {
           margin: 0; }
 
-#specials-section hr {
-  border-color: #8FB221; }
-#specials-section h1 {
-  color: #8FB221;
-  font-size: 7rem;
-  margin-bottom: 4rem; }
-  #specials-section h1::after {
-    content: "";
-    width: 100px;
-    height: 1px;
-    background-color: #8FB221;
-    margin-top: 30px;
-    display: block; }
-#specials-section div#main-articles article {
-  margin-bottom: 5rem; }
-  #specials-section div#main-articles article h3 {
-    font-size: 1.75rem;
-    margin-top: 1rem;
-    margin-bottom: 0; }
-#specials-section div#other-articles article {
-  margin-bottom: 5rem; }
-  #specials-section div#other-articles article h3 {
-    font-size: 1.75rem;
-    margin-top: 1rem;
-    margin-bottom: 0; }
-#specials-section div.reviews {
-  margin-bottom: 5rem; }
-  #specials-section div.reviews h3 {
-    color: #8FB221; }
-  #specials-section div.reviews div.carousel div.carousel-inner div.item img {
-    float: left;
-    margin-right: 40px; }
-  #specials-section div.reviews div.carousel div.carousel-inner div.item div.review-details {
-    float: left;
-    width: 70%; }
-    #specials-section div.reviews div.carousel div.carousel-inner div.item div.review-details h3 {
-      font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
-      color: #445b7F;
-      font-weight: bold;
-      font-style: italic;
-      margin-top: 0; }
-  #specials-section div.reviews div.carousel ol.carousel-indicators-numbers {
-    bottom: 0; }
-    #specials-section div.reviews div.carousel ol.carousel-indicators-numbers li {
-      text-indent: 0;
-      margin: 0 2px;
-      width: 30px;
-      height: 30px;
-      border: 1px solid #8FB221;
-      border-radius: 100%;
-      line-height: 30px;
-      color: #8FB221;
-      background-color: white;
-      transition: all 0.25s ease; }
-      #specials-section div.reviews div.carousel ol.carousel-indicators-numbers li.active, #specials-section div.reviews div.carousel ol.carousel-indicators-numbers li:hover {
+#specials-section {
+  padding-top: 4rem; }
+  #specials-section hr {
+    border-color: #8FB221; }
+  #specials-section h1 {
+    color: #8FB221;
+    font-size: 7rem;
+    margin-top: 0;
+    margin-bottom: 4rem; }
+    #specials-section h1::after {
+      content: "";
+      width: 100px;
+      height: 1px;
+      background-color: #8FB221;
+      margin-top: 30px;
+      display: block; }
+  #specials-section div#main-articles article {
+    margin-bottom: 5rem; }
+    #specials-section div#main-articles article h3 {
+      font-size: 1.75rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem; }
+  #specials-section div#other-articles article {
+    margin-bottom: 5rem; }
+    #specials-section div#other-articles article h3 {
+      font-size: 1.75rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem; }
+  #specials-section div.reviews {
+    margin-bottom: 5rem; }
+    #specials-section div.reviews h3 {
+      color: #8FB221; }
+    #specials-section div.reviews div.carousel div.carousel-inner div.item img {
+      float: left;
+      margin-right: 40px; }
+    #specials-section div.reviews div.carousel div.carousel-inner div.item div.review-details {
+      float: left;
+      width: auto; }
+      #specials-section div.reviews div.carousel div.carousel-inner div.item div.review-details h3 {
+        font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
+        color: #445b7F;
+        font-weight: bold;
+        font-style: italic;
+        margin-top: 0; }
+    #specials-section div.reviews div.carousel ol.carousel-indicators-numbers {
+      bottom: 0; }
+      #specials-section div.reviews div.carousel ol.carousel-indicators-numbers li {
+        text-indent: 0;
         margin: 0 2px;
-        color: white;
         width: 30px;
         height: 30px;
-        background-color: #8FB221; }
-#specials-section div.bottom-block h3 {
-  color: #25559F; }
-#specials-section div.bottom-block div.whats-new {
-  margin-bottom: 50px; }
-  #specials-section div.bottom-block div.whats-new article {
-    border-bottom: 1px solid #777777;
-    padding-bottom: 2rem; }
-    #specials-section div.bottom-block div.whats-new article:nth-child(4) {
-      border: 0; }
-    #specials-section div.bottom-block div.whats-new article h6 {
-      font-size: 1.75rem;
-      margin-top: 1rem;
-      margin-bottom: 0;
-      color: #25559F;
-      text-transform: uppercase; }
-    #specials-section div.bottom-block div.whats-new article h5 {
-      font-size: 1.75rem;
-      margin-top: 1rem;
-      margin-bottom: 0; }
+        border: 1px solid #8FB221;
+        border-radius: 100%;
+        line-height: 30px;
+        color: #8FB221;
+        background-color: white;
+        transition: all 0.25s ease; }
+        #specials-section div.reviews div.carousel ol.carousel-indicators-numbers li.active, #specials-section div.reviews div.carousel ol.carousel-indicators-numbers li:hover {
+          margin: 0 2px;
+          color: white;
+          width: 30px;
+          height: 30px;
+          background-color: #8FB221; }
+  #specials-section div.bottom-block h3 {
+    color: #25559F; }
+  #specials-section div.bottom-block div.whats-new {
+    margin-bottom: 50px; }
+    #specials-section div.bottom-block div.whats-new article {
+      border-bottom: 1px solid #777777;
+      padding-bottom: 2rem; }
+      #specials-section div.bottom-block div.whats-new article:nth-child(4) {
+        border: 0; }
+      #specials-section div.bottom-block div.whats-new article h6 {
+        font-size: 1.75rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        color: #25559F;
+        text-transform: uppercase; }
+      #specials-section div.bottom-block div.whats-new article h5 {
+        font-size: 1.75rem;
+        margin-top: 1rem;
+        margin-bottom: 0; }
 
+/*-------------------------------------------------------------------------------*/
 footer {
   color: white;
   margin-top: 7rem; }
@@ -752,3 +784,277 @@ footer {
     footer div.bottom div.legal svg {
       float: right;
       margin: 7px 0 0; }
+
+/*-------------------------------------------------------------------------------*/
+div#get-newsletter {
+  background-color: #445b7F;
+  padding: 20px; }
+  div#get-newsletter i {
+    float: left;
+    margin-right: 15px;
+    color: #88B7FF; }
+  div#get-newsletter h2 {
+    margin-top: 0;
+    color: white;
+    font-weight: 100;
+    font-size: 2.5rem; }
+    div#get-newsletter h2 small {
+      font-size: 1.5rem;
+      color: white; }
+  div#get-newsletter form {
+    margin: 30px 0 15px 0; }
+    div#get-newsletter form input[type="text"] {
+      float: left;
+      width: 71%;
+      margin-right: 15px; }
+  div#get-newsletter span {
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 2.5rem;
+    color: white;
+    margin-right: 10px; }
+  div#get-newsletter a {
+    color: #CEDFFA;
+    margin-right: 10px; }
+    div#get-newsletter a:hover {
+      color: white; }
+
+/*-------------------------------------------------------------------------------*/
+div.article > div h1 {
+  font-size: 4rem;
+  margin-top: 0;
+  margin-bottom: 2rem; }
+  div.article > div h1[class*='-news'] {
+    color: #A02A1A; }
+    div.article > div h1[class*='-news']::after {
+      content: "";
+      width: 100px;
+      height: 1px;
+      background-color: #A02A1A;
+      margin-top: 30px;
+      display: block; }
+  div.article > div h1[class*='-opinion'] {
+    color: #A02A1A; }
+    div.article > div h1[class*='-opinion']::after {
+      content: "";
+      width: 100px;
+      height: 1px;
+      background-color: #A02A1A;
+      margin-top: 30px;
+      display: block; }
+  div.article > div h1[class*='-specials'] {
+    color: #A02A1A; }
+    div.article > div h1[class*='-specials']::after {
+      content: "";
+      width: 100px;
+      height: 1px;
+      background-color: #A02A1A;
+      margin-top: 30px;
+      display: block; }
+  div.article > div h1::after {
+    display: none !important; }
+div.article > div a.all {
+  position: absolute;
+  top: 0px;
+  right: 0; }
+div.article > div h2 {
+  font-size: 3.4rem;
+  margin-top: 0;
+  margin-bottom: 0; }
+div.article > div div.article-actions {
+  height: 30px;
+  margin-top: 20px; }
+  div.article > div div.article-actions span {
+    float: left;
+    font-size: 1rem;
+    margin: 1px 10px 0 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #2F6DDC; }
+    div.article > div div.article-actions span::before {
+      margin-top: -7px; }
+    div.article > div div.article-actions span.save::before {
+      width: 18px;
+      height: 22.5px;
+      background-repeat: no-repeat;
+      background-image: url(../images/svg/sprite-aj.svg);
+      background-position: 0px 0px; }
+    div.article > div div.article-actions span.share::before {
+      width: 16.5px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-image: url(../images/svg/sprite-aj.svg);
+      background-position: -28px 0px; }
+    div.article > div div.article-actions span.comments::before {
+      width: 28px;
+      height: 22px;
+      background-repeat: no-repeat;
+      background-image: url(../images/svg/sprite-aj.svg);
+      background-position: -120.5px -1px; }
+    div.article > div div.article-actions span.print::before {
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-image: url(../images/svg/sprite-aj.svg);
+      background-position: -54.5px 0px; }
+    div.article > div div.article-actions span.size::before {
+      width: 26px;
+      height: 17px;
+      background-repeat: no-repeat;
+      background-image: url(../images/svg/sprite-aj.svg);
+      background-position: -158.5px -3px; }
+    div.article > div div.article-actions span.reader::before {
+      width: 22px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-image: url(../images/svg/sprite-aj.svg);
+      background-position: -88.5px 0px; }
+div.article div.article-body {
+  margin-bottom: 3rem; }
+  div.article div.article-body p.lead-body {
+    font-family: "AlrightSans", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2rem;
+    padding-left: 1.5rem; }
+    div.article div.article-body p.lead-body.news {
+      border-left: 10px solid #A02A1A;
+      border-left: 10px solid #A02A1A;
+      color: #A02A1A; }
+    div.article div.article-body p.lead-body.opinion {
+      border-left: 10px solid #7B6CDC;
+      color: #7B6CDC; }
+    div.article div.article-body p.lead-body.specials {
+      border-left: 10px solid #8FB221;
+      color: #8FB221; }
+  div.article div.article-body figure {
+    max-width: 300px;
+    float: left;
+    margin-right: 20px; }
+div.article div.comments {
+  text-align: center;
+  margin-bottom: 3rem; }
+  div.article div.comments span {
+    display: block;
+    text-align: center;
+    border-top: 1px solid #2F6DDC;
+    margin-bottom: 2rem; }
+    div.article div.comments span::after {
+      content: "";
+      display: block;
+      position: relative;
+      left: 50%;
+      margin-left: -8px;
+      width: 21px;
+      height: 17px;
+      background-repeat: no-repeat;
+      background-image: url(../images/svg/sprite-aj.svg);
+      background-position: -67px -49px; }
+
+/*-------------------------------------------------------------------------------*/
+div#rel-news h3 {
+  color: #A02A1A;
+  font-size: 2.4rem;
+  margin-top: 0;
+  margin-bottom: 2rem; }
+  div#rel-news h3::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: #A02A1A;
+    margin-top: 30px;
+    display: block; }
+  div#rel-news h3::after {
+    margin-top: 20px;
+    width: 50px; }
+div#rel-news div h2 {
+  font-size: 1.35rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+
+div#recommended h3 {
+  color: #8FB221;
+  font-size: 2.4rem;
+  margin-top: 0;
+  margin-bottom: 2rem; }
+  div#recommended h3::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: #8FB221;
+    margin-top: 30px;
+    display: block; }
+  div#recommended h3::after {
+    margin-top: 20px;
+    width: 50px; }
+div#recommended div h2 {
+  font-size: 1.75rem;
+  margin: 10px 0 10px; }
+
+div#top-news {
+  border: 1px solid #dddddd;
+  padding: 20px; }
+  div#top-news h3 {
+    color: #25559F;
+    font-size: 2.4rem;
+    margin-top: 0;
+    margin-bottom: 0; }
+    div#top-news h3::after {
+      content: "";
+      width: 100px;
+      height: 1px;
+      background-color: #25559F;
+      margin-top: 30px;
+      display: block; }
+    div#top-news h3::after {
+      margin-top: 20px;
+      width: 50px; }
+  div#top-news ul {
+    border-bottom: 2px solid #12305C;
+    margin-top: 20px; }
+    div#top-news ul li {
+      border-right: 1px solid white; }
+      div#top-news ul li a {
+        border-radius: 0;
+        background-color: #CEDFFA;
+        font-weight: bold;
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        color: #12305C;
+        height: 39px;
+        border: 0;
+        padding: 13px 8px 8px;
+        width: 109.3px; }
+      div#top-news ul li.active a, div#top-news ul li:hover a {
+        background-color: #12305C;
+        color: white; }
+      div#top-news ul li:last-child {
+        border-right: 0; }
+  div#top-news div.tab-content .mod-news {
+    float: left;
+    margin-bottom: 20px; }
+    div#top-news div.tab-content .mod-news figure {
+      float: left; }
+    div#top-news div.tab-content .mod-news div.col-details {
+      float: right;
+      width: 64%; }
+      div#top-news div.tab-content .mod-news div.col-details h2 {
+        font-size: 1.35rem;
+        margin: 0; }
+      div#top-news div.tab-content .mod-news div.col-details p.date {
+        margin-bottom: 0; }
+      div#top-news div.tab-content .mod-news div.col-details span.viewed {
+        float: left;
+        font-size: 1.125rem;
+        margin: 3px 0;
+        cursor: pointer;
+        color: #2F6DDC; }
+        div#top-news div.tab-content .mod-news div.col-details span.viewed.viewed:before {
+          width: 17px;
+          height: 10px;
+          background-repeat: no-repeat;
+          background-image: url(../images/svg/sprite-aj.svg);
+          background-position: -74px -30px;
+          margin-top: 4px; }
+      div#top-news div.tab-content .mod-news div.col-details div.actions {
+        margin-top: 0; }

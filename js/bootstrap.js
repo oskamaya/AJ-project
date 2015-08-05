@@ -2360,7 +2360,7 @@ if (typeof jQuery === 'undefined') {
     })
   })
 
-  //MEGADROP FUNCTIONS
+  // MEGADROP FUNCTIONS
   // megadrop function to prevent unexpected menu close when using some components (like accordion, forms, etc)
 
   // $(document).on('click', 'ul.dropdown-menu', function(e) {
@@ -2385,5 +2385,7 @@ if (typeof jQuery === 'undefined') {
       
     $(init);
   })();
+
+  
 
 }(jQuery);

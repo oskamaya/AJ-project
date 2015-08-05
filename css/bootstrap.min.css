@@ -3650,7 +3650,7 @@ select[multiple].input-lg,
 .btn {
   display: inline-block;
   margin-bottom: 0;
-  font-weight: normal;
+  font-weight: bold;
   text-align: center;
   vertical-align: middle;
   touch-action: manipulation;
@@ -3666,6 +3666,7 @@ select[multiple].input-lg,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  transition: all 0.3s ease 0s;
 }
 .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
   outline: thin dotted;
@@ -3767,6 +3768,10 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 .btn-primary .badge {
   color: transparent;
+  background-color: #2F6DDC;
+}
+.btn-primary:hover {
+  color: white;
   background-color: #2F6DDC;
 }
 

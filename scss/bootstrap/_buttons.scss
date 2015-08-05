@@ -19,6 +19,8 @@
   white-space: nowrap;
   @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
   @include user-select(none);
+  //hover transitions
+  transition: all 0.3s ease 0s;
 
 
   &,
@@ -72,6 +74,10 @@ a.btn {
 .btn-primary {
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
   @include box-shadow(none);
+  &:hover {
+    color: white;
+    background-color: $aj-blue;
+  }
 }
 .btn-secondary {
   @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);

@@ -8,13 +8,22 @@
 	background-position: nth( $spriteVals, 4 ) nth( $spriteVals, 5 );
 }
 $sprite-aj-path: '../images/svg/sprite-aj.svg';
-$see-more-arrow: 10.47092661936506px 9.65999984741211px $sprite-aj-path -125px -2px;
-$arrow-stay: 11px 14px $sprite-aj-path -73px 0px;
-$arrow-down: 13px 10px $sprite-aj-path -107px -2px;
-$arrow-up: 13px 10px $sprite-aj-path -89px -2px;
-$icon-delete: 14px 15px $sprite-aj-path -54px 0px;
-$icon-sort: 15.421052631579187px 13.999999999999899px $sprite-aj-path -33px 0px;
-$icon-share: 11px 16px $sprite-aj-path -17px 0px;
-$icon-save: 12px 15px $sprite-aj-path 0px 0px;
+$open-comments: 21px 17px $sprite-aj-path -67px -49px;
+$icon-viewed: 17px 10px $sprite-aj-path -74px -30px;
+$icon-sort: 15.421052631579187px 13.999999999999899px $sprite-aj-path -52.8px -28px;
+$icon-delete: 14px 15px $sprite-aj-path -33px -28px;
+$icon-share-xs: 11px 16px $sprite-aj-path -17px -26px;
+$icon-save-xs: 12px 15px $sprite-aj-path 0px -27px;
+$icon-reader: 22px 24px $sprite-aj-path -88.5px 0px;
+$icon-size: 26px 17px $sprite-aj-path -158.5px -3px;
+$icon-print: 24px 24px $sprite-aj-path -54.5px 0px;
+$icon-comment: 28px 22px $sprite-aj-path -120.5px -1px;
+$icon-share: 16.5px 24px $sprite-aj-path -28px 0px;
+$icon-save: 18px 22.5px $sprite-aj-path 0px 0px;
+$see-more-arrow: 10.47092661936506px 9.65999984741211px $sprite-aj-path -52px -53px;
+$arrow-stay: 11px 14px $sprite-aj-path 0px -51px;
+$arrow-down: 13px 10px $sprite-aj-path -34px -53px;
+$arrow-up: 13px 10px $sprite-aj-path -16px -53px;
+
 
 

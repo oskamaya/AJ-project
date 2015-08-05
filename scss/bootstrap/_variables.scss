@@ -33,6 +33,7 @@ $aj-blue-darkest:		#12305C !default;
 $aj-news:				#A02A1A !default;
 $aj-opinion:			#7B6CDC !default;
 $aj-specials:			#8FB221 !default;
+$border-table-color:	lighten($gray-light, 40%);
 
 //== Scaffolding
 //
@@ -172,7 +173,7 @@ $table-border-color:            #ddd !default;
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-font-weight:                normal !default;
+$btn-font-weight:                bold !default;
 
 // $btn-default-color:              #333 !default;
 // $btn-default-bg:                 #fff !default;
