@@ -1,0 +1,170 @@
+/*----------------------------------------------------*/
+// NAVIGATION
+/*----------------------------------------------------*/
+
+/* small desktops (992px to 1199px) */
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max){
+
+	body {
+		padding-top: 105px !important;
+	}
+
+	nav.navbar-aj {
+		
+		position: absolute !important;
+		top: 0 !important;
+		left: 0 !important;
+		
+		//width: 100%;
+		div.bottom {
+			//background-color: #FF9900;
+			nav.navbar {
+				h2.branding {
+					margin-right: 3rem !important;
+					margin-top: 2.3rem !important;
+				}
+				ul{
+					li{
+						a[class*='-btn']{
+							width: 134px !important;
+							padding-top: 20px !important;
+							padding-bottom: 20px !important;
+						}
+					}
+				}
+				div#search {
+					margin-top: 1.3rem !important;
+					margin-left: 38px !important;
+					input[type='text']{
+						width: 300px !important;
+						max-width: 300px !important;
+					}
+				}
+			}
+		}
+	}
+
+  	//TABS NEWS
+
+  	div#news-summary {
+  		div#tabs-news {
+  			ul {
+  				li {
+  					a {
+  						width: 316.3px !important;
+  					}
+  				}
+  			}
+  		} 
+  	}
+
+  	//ECONOMIC INDICATORS
+
+  	div.indicators {
+  		padding: 20px !important;
+  	}
+
+	// FIRST BLOCK HOME
+
+	div.first-block {
+		margin-bottom: 2rem !important;
+		div#main-article {
+			div.heading {
+				div.heading-overlay {
+					h2 {
+						font-size: 2.4rem !important;
+					}
+				}
+			}
+		}
+	}
+
+	div#opinion-section {
+		div.top-block {
+			div.left-col {
+				div#editorial, div#cartoons, div#analisis {
+					h3 {
+						font-size: 2rem !important;
+					}
+				} 
+			}
+			div.right-col {
+				div#print-columnists, div#online-columnists {
+					div.columnist {
+						figure {
+							margin-right: 1rem !important;
+						}
+						div.col-details {
+							width: 60% !important;
+						}
+					}
+				}
+
+			}
+		}
+		div.bottom-block {
+			div.left-col {
+				div.columnist {
+					figure {
+						margin-right: 1rem !important;
+					}
+					div.col-details {
+						width: 60% !important;
+					}
+				}
+			}
+			div.right-col {
+				div#letters {
+					h3 {
+						width: 60% !important;
+					}
+				}
+			}
+		}
+	}
+
+	#specials-section {
+		div.reviews {
+			div.carousel {
+				div.carousel-inner {
+					div.item {
+						figure {
+							float: left;
+							margin-right: 20px;
+						}
+						div.review-details {
+							width: 64% !important;
+						}
+					}
+				}
+			}
+		}
+		div.bottom-block {
+			div.social {
+				div.carousel {
+					div.carousel-inner {
+						div.overlay {
+							width: 55% !important;
+							h4 {
+								font-size: 2rem !important;
+							}
+							p {
+								font-size: 1.25rem !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	footer {
+		div.bottom {
+			div.legal {
+				p {
+					width: 88% !important;
+				}
+			}
+		}
+	}
+}

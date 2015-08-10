@@ -1,77 +1,81 @@
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
+@import "bootstrap/mq767";
+@import "bootstrap/mq768-991";
+@import "bootstrap/mq992-1199";
+
 
 /*----------------------------------------------------*/
 //FONTS
 /*----------------------------------------------------*/
 
 @font-face {
-    font-family: 'AlrightSans';
-    src: url('../fonts/alrightsans/alrightsans-regular.eot');
-    src: url('../fonts/alrightsans/alrightsans-regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/alrightsans/alrightsans-regular.woff') format('woff'),
-         url('../fonts/alrightsans/alrightsans-regular.ttf') format('truetype'),
-         url('../fonts/alrightsans/alrightsans-regular.svg#alrightsans-regular') format('svg');
-    font-style: normal;
+	font-family: 'AlrightSans';
+	src: url('../fonts/alrightsans/alrightsans-regular.eot');
+	src: url('../fonts/alrightsans/alrightsans-regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/alrightsans/alrightsans-regular.woff') format('woff'),
+	url('../fonts/alrightsans/alrightsans-regular.ttf') format('truetype'),
+	url('../fonts/alrightsans/alrightsans-regular.svg#alrightsans-regular') format('svg');
+	font-style: normal;
 }
 @font-face {
-    font-family: 'AlrightSans';
-    src: url('../fonts/alrightsans/alrightsans-light.eot');
-    src: url('../fonts/alrightsans/alrightsans-light.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/alrightsans/alrightsans-light.woff') format('woff'),
-         url('../fonts/alrightsans/alrightsans-light.ttf') format('truetype'),
-         url('../fonts/alrightsans/alrightsans-light.svg#alrightsans-light') format('svg');
-    font-style: normal;
-    font-weight: 100;
+	font-family: 'AlrightSans';
+	src: url('../fonts/alrightsans/alrightsans-light.eot');
+	src: url('../fonts/alrightsans/alrightsans-light.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/alrightsans/alrightsans-light.woff') format('woff'),
+	url('../fonts/alrightsans/alrightsans-light.ttf') format('truetype'),
+	url('../fonts/alrightsans/alrightsans-light.svg#alrightsans-light') format('svg');
+	font-style: normal;
+	font-weight: 100;
 }
 @font-face {
-    font-family: 'AlrightSans';
-    src: url('../fonts/alrightsans/alrightsans-bold.eot');
-    src: url('../fonts/alrightsans/alrightsans-bold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/alrightsans/alrightsans-bold.woff') format('woff'),
-         url('../fonts/alrightsans/alrightsans-bold.ttf') format('truetype'),
-         url('../fonts/alrightsans/alrightsans-bold.svg#alrightsans-bold') format('svg');
-    font-style: normal;
-    font-weight: 500;
+	font-family: 'AlrightSans';
+	src: url('../fonts/alrightsans/alrightsans-bold.eot');
+	src: url('../fonts/alrightsans/alrightsans-bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/alrightsans/alrightsans-bold.woff') format('woff'),
+	url('../fonts/alrightsans/alrightsans-bold.ttf') format('truetype'),
+	url('../fonts/alrightsans/alrightsans-bold.svg#alrightsans-bold') format('svg');
+	font-style: normal;
+	font-weight: 500;
 }
 @font-face {
-    font-family: 'AlrightSans';
-    src: url('../fonts/alrightsans/AlrightSans-BoldItalic.eot');
-    src: url('../fonts/alrightsans/AlrightSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/alrightsans/AlrightSans-BoldItalic.woff') format('woff'),
-         url('../fonts/alrightsans/AlrightSans-BoldItalic.ttf') format('truetype'),
-         url('../fonts/alrightsans/AlrightSans-BoldItalic.svg#alrightsans-bold') format('svg');
-    font-style: italic;
-    font-weight: 500;
+	font-family: 'AlrightSans';
+	src: url('../fonts/alrightsans/AlrightSans-BoldItalic.eot');
+	src: url('../fonts/alrightsans/AlrightSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/alrightsans/AlrightSans-BoldItalic.woff') format('woff'),
+	url('../fonts/alrightsans/AlrightSans-BoldItalic.ttf') format('truetype'),
+	url('../fonts/alrightsans/AlrightSans-BoldItalic.svg#alrightsans-bold') format('svg');
+	font-style: italic;
+	font-weight: 500;
 }
 @font-face {
-    font-family: 'ArnhemPro';
-    src: url('../fonts/arnhemPro/ArnhemPro-Normal.eot');
-    src: url('../fonts/arnhemPro/ArnhemPro-Normal.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/arnhemPro/ArnhemPro-Normal.woff') format('woff'),
-         url('../fonts/arnhemPro/ArnhemPro-Normal.ttf') format('truetype'),
-         url('../fonts/arnhemPro/ArnhemPro-Normal.svg#ArnhemPro-Normal') format('svg');
-    font-style: normal;
+	font-family: 'ArnhemPro';
+	src: url('../fonts/arnhemPro/ArnhemPro-Normal.eot');
+	src: url('../fonts/arnhemPro/ArnhemPro-Normal.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/arnhemPro/ArnhemPro-Normal.woff') format('woff'),
+	url('../fonts/arnhemPro/ArnhemPro-Normal.ttf') format('truetype'),
+	url('../fonts/arnhemPro/ArnhemPro-Normal.svg#ArnhemPro-Normal') format('svg');
+	font-style: normal;
 }
 @font-face {
-    font-family: 'ArnhemPro';
-    src: url('../fonts/arnhemPro/ArnhemPro-Bold.eot');
-    src: url('../fonts/arnhemPro/ArnhemPro-Bold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/arnhemPro/ArnhemPro-Bold.woff') format('woff'),
-         url('../fonts/arnhemPro/ArnhemPro-Bold.ttf') format('truetype'),
-         url('../fonts/arnhemPro/ArnhemPro-Bold.svg#ArnhemPro-bold') format('svg');
-    font-style: normal;
-    font-weight: bold;
+	font-family: 'ArnhemPro';
+	src: url('../fonts/arnhemPro/ArnhemPro-Bold.eot');
+	src: url('../fonts/arnhemPro/ArnhemPro-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/arnhemPro/ArnhemPro-Bold.woff') format('woff'),
+	url('../fonts/arnhemPro/ArnhemPro-Bold.ttf') format('truetype'),
+	url('../fonts/arnhemPro/ArnhemPro-Bold.svg#ArnhemPro-bold') format('svg');
+	font-style: normal;
+	font-weight: bold;
 }
 @font-face {
-    font-family: 'ArnhemPro';
-    src: url('../fonts/arnhemPro/ArnhemPro-BoldItalic.eot');
-    src: url('../fonts/arnhemPro/ArnhemPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/arnhemPro/ArnhemPro-BoldItalic.woff') format('woff'),
-         url('../fonts/arnhemPro/ArnhemPro-BoldItalic.ttf') format('truetype'),
-         url('../fonts/arnhemPro/ArnhemPro-BoldItalic.svg#ArnhemPro-boldItalic') format('svg');
-    font-style: italic;
-    font-weight: bold;
+	font-family: 'ArnhemPro';
+	src: url('../fonts/arnhemPro/ArnhemPro-BoldItalic.eot');
+	src: url('../fonts/arnhemPro/ArnhemPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/arnhemPro/ArnhemPro-BoldItalic.woff') format('woff'),
+	url('../fonts/arnhemPro/ArnhemPro-BoldItalic.ttf') format('truetype'),
+	url('../fonts/arnhemPro/ArnhemPro-BoldItalic.svg#ArnhemPro-boldItalic') format('svg');
+	font-style: italic;
+	font-weight: bold;
 }
 
 /*----------------------------------------------------*/
@@ -82,8 +86,9 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	width: auto !important;
-  overflow-x: hidden !important;
+	overflow-x: hidden !important;
   padding-top: 113px; //navbar height
+  height: 100%;
 }
 
 p {
@@ -102,6 +107,10 @@ h2, h3, h4, h5 {
 div.push {
 	margin-top: 4rem;
 }
+/*------------------------------------------------------------*/
+/* PUSH down rows  */
+/*------------------------------------------------------------*/
+.bottom-buffer { margin-bottom: 3rem; }
 
 /*------------------------------------------------------------*/
 // 8 LEFT COLUMN LAYOUT
@@ -223,16 +232,11 @@ b[class*='tag-'] {
 
 // Styling actions module
 
-.actions {
-	margin: 0;
-	//float: left;
-	clear: both;
-	min-height: 18px;
-	b {
-		float: left;
-	}
+b[class*='tag-'] {
+	float: left;
+	
 	// gray line
-	b[class*='tag-']::after {
+	&::after {
 		content: "";
 		float: right;
 		width: 1px;
@@ -243,6 +247,13 @@ b[class*='tag-'] {
 		left: 10px;
 		margin-right: 10px;
 	}
+}
+
+.actions {
+	//margin: 0;
+	//float: left;
+	//clear: both;
+	min-height: 18px;
 	span {
 		float: left;
 		font-size: 1rem;
@@ -251,7 +262,7 @@ b[class*='tag-'] {
 		text-transform: uppercase;
 		color: $aj-blue;
 		&::before {
-				margin-top: -2px;
+			margin-top: -2px;
 		}
 
 		// save icon
@@ -288,19 +299,19 @@ b[class*='tag-'] {
 
 input[type="text"] {
 	display: block;
-  	margin: 0;
-  	width: 100%;
-  	font-family: sans-serif;
-  	font-size: 16px;
-  	appearance: none;
-  	box-shadow: none;
-  	border-radius: none;
-  	padding: 9px;
-  	border: solid 1px #dcdcdc;
-  	transition: box-shadow 0.3s, border 0.3s;
+	margin: 0;
+	width: 100%;
+	font-family: sans-serif;
+	font-size: 16px;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+	padding: 9px;
+	border: solid 1px #dcdcdc;
+	transition: box-shadow 0.3s, border 0.3s;
 }
 input[type="text"]:focus {
- 	outline: none;
+	outline: none;
 }
 
 /*----------------------------------------------------*/
@@ -309,16 +320,16 @@ input[type="text"]:focus {
 
 span.see-more {
 	position: absolute;
-  top: 23px;
-  right: 30px;
-  font-size: 1.35rem;
-  &::after {
-  	content: "";
-  	position: absolute;
-  	top: 6px;
-  	margin-left: 5px;
-  	@include cssSprite ($see-more-arrow);
-  }
+	top: 20px;
+	right: 30px;
+	font-size: 1.35rem;
+	&::after {
+		content: "";
+		position: absolute;
+		top: 6px;
+		margin-left: 5px;
+		@include cssSprite ($see-more-arrow);
+	}
 }
 
 /*!
@@ -328,7 +339,7 @@ span.see-more {
  * @geedmo - Licensed under the MIT license
  */
 
-/*----------------------------------------------------*/
+ /*----------------------------------------------------*/
 // MEGADROP
 /*----------------------------------------------------*/
 
@@ -336,21 +347,21 @@ span.see-more {
 .yamm .collapse,
 .yamm .dropup,
 .yamm .dropdown {
-  position: static;
+	position: static;
 }
 .yamm .container {
-  position: relative;
+	position: relative;
 }
 .yamm .dropdown-menu {
-  left: auto;
+	left: auto;
 }
 .yamm .yamm-content {
-  padding: 20px 30px;
+	padding: 20px 30px;
 }
 .yamm .dropdown.yamm-fw .dropdown-menu {
 	background-color: #EFEFEF;
-  left: 0;
-  right: 0;
+	left: 0;
+	right: 0;
 }
 
 // Tabs and content
@@ -415,19 +426,19 @@ span.see-more {
 				}
 			}
 		}
-	  li {
-	    float: none;
-	    margin: 0;
-	  }
+		li {
+			float: none;
+			margin: 0;
+		}
 	}
 }
 
 .tab-content {
-  .tab-pane {
-    display: none;
-    padding: 1.6rem;
-    
-    &.news-content {
+	.tab-pane {
+		display: none;
+		padding: 1.6rem;
+
+		&.news-content {
 			h3 {
 				color: $aj-news;
 			}
@@ -449,14 +460,14 @@ span.see-more {
 						float: right;
 						width: auto;
 						h2.news-heading {
-						font-size: 1.35rem;
-						margin: 0;
+							font-size: 1.35rem;
+							margin: 0;
 						}
 					}
 				}
 			}
-    }
-    &.opinion-content {
+		}
+		&.opinion-content {
 			h3 {
 				color: $aj-opinion;
 			}
@@ -467,11 +478,11 @@ span.see-more {
 					margin: 0;
 				}
 			}
-	  }
-	  &.specials-content {
-	  	h3 {
-	  		color: $aj-specials;
-	  	}
+		}
+		&.specials-content {
+			h3 {
+				color: $aj-specials;
+			}
 
 	  	// Informes
 	  	div.report {
@@ -481,7 +492,7 @@ span.see-more {
 	  			}
 	  			h2 {
 	  				$values: 1.35rem 1rem 0;
-		  			@include headingSize($values);
+	  				@include headingSize($values);
 	  			}
 	  		}
 	  	}
@@ -489,18 +500,18 @@ span.see-more {
 	  	div.reviews {
 	  		article {
 	  			margin-bottom: 3rem;
-		  		h2 {
-		  			$values: 1.35rem 0 0;
-		  			@include headingSize($values);
-		  		}
-		  		img {
-	  			float: left;
-		  		}
-		  		div.details {
-		  			float: right;
-						width: auto;
-		  		}
-		  	}
+	  			h2 {
+	  				$values: 1.35rem 0 0;
+	  				@include headingSize($values);
+	  			}
+	  			img {
+	  				float: left;
+	  			}
+	  			div.details {
+	  				float: right;
+	  				width: auto;
+	  			}
+	  		}
 	  	}
 	  	div.guest, div.figure, div.in-office, div.academy, div.firms {
 	  		h2 {
@@ -509,14 +520,14 @@ span.see-more {
 	  		}
 	  	}
 	  }
-    h3 {
-		  margin-top: 0;
-		  text-transform: uppercase;
-		}
-  }
-  .active { 
-  	display: block;
-  }
+	  h3 {
+	  	margin-top: 0;
+	  	text-transform: uppercase;
+	  }
+	}
+	.active { 
+		display: block;
+	}
 }
 
 /*----------------------------------------------------*/
@@ -535,32 +546,32 @@ nav.navbar-aj {
 			margin-top: 10px;
 		}
 		ul {
-		   list-style-type: none;
-		   margin: 0;
-		   padding: 0;
-		   line-height: 1;
-		   display: block;
-    		float: right;
-		  li {
-		   	display: inline-block;
-			   padding: 0;
-			   margin: 0;
-			   &.suscription {
-		   		background-color: #2F6DCC;
-		   		a {
-		   			border-right: none;
-		   		}
-		   	}
-		   	&.suscription a, &.signup a, &.login a {
-		   		color: white;
-		   		text-decoration: none;
-		   		display: block;
-		   		padding: 11px 20px;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			line-height: 1;
+			display: block;
+			float: right;
+			li {
+				display: inline-block;
+				padding: 0;
+				margin: 0;
+				&.suscription {
+					background-color: #2F6DCC;
+					a {
+						border-right: none;
+					}
+				}
+				&.suscription a, &.signup a, &.login a {
+					color: white;
+					text-decoration: none;
+					display: block;
+					padding: 11px 20px;
 					font-size: 1.375rem;
 					font-weight: bold;
 					position: relative;
 					border-right: 1px solid $gray;
-		   	}
+				}
 			}
 		}
 	}
@@ -571,6 +582,7 @@ nav.navbar-aj {
 		nav.navbar {
 			margin-bottom: 0;
 			border: 0;
+			min-height: 30px;
 			h2.branding {
 				float: left;
 				margin-right: 38px;
@@ -578,50 +590,178 @@ nav.navbar-aj {
 
 			// main navigation
 			ul {
-			    list-style-type: none;
-			    margin: 0;
-			    padding: 0;
-			    li {
-				  	a[class*='-btn'] {
-				   	font-size: 1.5rem;
-				   	font-weight: bold;
-				   	text-align: center;
-				   	display: block;
-				   	width: 154px;
-				   	text-decoration: none;
-				   	text-transform: uppercase;
-				   	color: white;
-				   	padding-top: 24px;
-				   	padding-bottom: 24px;
-				   	&.news-btn{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				li {
+					a[class*='-btn'] {
+						font-size: 1.5rem;
+						font-weight: bold;
+						text-align: center;
+						display: block;
+						width: 154px;
+						text-decoration: none;
+						text-transform: uppercase;
+						color: white;
+						padding-top: 24px;
+						padding-bottom: 24px;
+						&.news-btn{
 							background-color: $aj-news;
 							border-bottom: 7px solid darken($aj-news, 10%);
 							&:hover {
 								background-color: darken($aj-news, 10%);
 							}
-				   	}
-				   	&.opinion-btn{
-				   		background-color: $aj-opinion;
-				   		border-bottom: 7px solid darken($aj-opinion, 10%);
-				   		&:hover {
+						}
+						&.opinion-btn{
+							background-color: $aj-opinion;
+							border-bottom: 7px solid darken($aj-opinion, 10%);
+							&:hover {
 								background-color: darken($aj-opinion, 10%);
 							}
-				   	}
-				   	&.specials-btn{
-				   		background-color: $aj-specials;
-				   		border-bottom: 7px solid darken($aj-specials, 10%);
-				   		&:hover {
+						}
+						&.specials-btn{
+							background-color: $aj-specials;
+							border-bottom: 7px solid darken($aj-specials, 10%);
+							&:hover {
 								background-color: darken($aj-specials, 10%);
 							}
-				   	}
-				  }
+						}
+					}
 				}
 			}
 			div#search {
 				float: right;
 				margin-top: 16px;
+				input[type='text']{
+					width: 366px;
+					max-width: 366px;
+				}
 			}
 		}
+	}
+}
+
+/*----------------------------------------------------*/
+// MENU FOR MOBILE AND TABLETS
+/*----------------------------------------------------*/
+
+div.menu-sm {
+	background-color: $aj-blue-darker;
+	div.container-fluid {
+		a.navbar-brand {
+			position: relative;
+			height: 80px;
+			left: 30px;
+			top: 20px;
+			padding: 0;
+		}
+		div#search {
+			float: right;
+			margin-top: 1.8rem;
+			input[type='text']{
+				width: 300px;
+				max-width: 300px;
+			}
+		}
+	}	
+}
+
+// Set Menu width
+$menu-width: 250px;
+
+// main menu
+
+#menu {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: $menu-width;
+	left: -$menu-width;
+	height: 100%;
+	background-color: $gray-darker;
+	-webkit-transform: translate(0px, 0px);
+	-moz-transform: translate(0px, 0px);
+	-o-transform: translate(0px, 0px);
+	-ms-transform: translate(0px, 0px);
+	transform: translate(0px, 0px);
+	-webkit-transition: 0.15s ease;
+	-moz-transition: 0.15s ease;
+	-o-transition: 0.15s ease;
+	transition: 0.15s ease;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			border-bottom: 1px solid #4A4A4A;
+			@mixin arrowItem {
+				&::after {
+					content: "";
+					float: right;
+					@include cssSprite ($icon-arrow-right);
+				}
+			}
+			a {
+				font-size: 2rem;
+				font-weight: 100;
+				display: block;
+				padding: 1rem 2rem;
+				text-transform: uppercase;
+				color: white;
+				text-decoration: none;
+				&.base {
+					border-left: 10px solid $gray;
+				}
+				&.news {
+					border-left: 10px solid $aj-news;
+					@include arrowItem;
+				}
+				&.opinion {
+					border-left: 10px solid $aj-opinion;
+					@include arrowItem;
+				}
+				&.specials {
+					border-left: 10px solid $aj-specials;
+					@include arrowItem;
+				}
+			}
+		}
+	}
+}
+
+#menu.active {
+	-webkit-transform: translate($menu-width, 0px);
+	-moz-transform: translate($menu-width, 0px);
+	-o-transform: translate($menu-width, 0px);
+	-ms-transform: translate($menu-width, 0px);
+	transform: translate($menu-width, 0px);
+}
+.side-collapse-container {
+	-webkit-transform: translate(0px, 0px);
+	-moz-transform: translate(0px, 0px);
+	-o-transform: translate(0px, 0px);
+	-ms-transform: translate(0px, 0px);
+	transform: translate(0px, 0px);
+	-webkit-transition: 0.15s ease;
+	-moz-transition: 0.15s ease;
+	-o-transition: 0.15s ease;
+	transition: 0.15s ease;  
+}
+
+.side-collapse-container.active {
+	-webkit-transform: translate($menu-width, 0px);
+	-moz-transform: translate($menu-width, 0px);
+	-o-transform: translate($menu-width, 0px);
+	-ms-transform: translate($menu-width, 0px);
+	transform: translate($menu-width, 0px);
+}
+.menu-link {
+	float: left;
+	color: white;
+	margin-top: 20px;
+	&:active {
+		color: white;
 	}
 }
 
@@ -634,7 +774,23 @@ div.first-block {
 	margin-bottom: 5rem;
 	// Main artcle
 	div#main-article {
-		margin-top: -17px; //in order to put same right content top place  
+		margin-top: -17px; //in order to put same right content top place
+		div.heading {
+			position: relative;
+			div.heading-overlay {
+				width: 100%;
+				background: rgba(0, 0, 0, .5);
+				position: absolute;
+				bottom: 0;
+				padding: 20px;
+				h2 {
+					color: white;
+					$values: 3rem 0 0;
+					@include headingSize($values);
+					width: 80%;
+				}
+			}
+		}
 	}
 }
 
@@ -652,7 +808,7 @@ div#news-summary {
 	}
 	p.summary {
 		font-family: $font-family-serif;
-		font-size: 1.571rem;
+		//font-size: 1.571rem;
 	}
 	// Filter news tabs
 	div#tabs-news {
@@ -736,8 +892,8 @@ div.indicators {
 		}
 	}
 	.btn[type="button"]{
-    margin: 0 auto;
-  	display: block;
+		margin: 0 auto;
+		display: block;
 	}
 }
 
@@ -767,15 +923,17 @@ div.indicators {
 
 		// Left column
 		div.left-col{
+			background-color: white;
+			overflow: hidden;
 			
 			// Editorial, cartoons and analisis modules
 
 			div#editorial, div#cartoons, div#analisis {
 				position: relative;
 				float: left;
-				border-bottom: 1px solid $border-table-color;
 				padding: 20px;
-				background-color: white;
+				border-bottom: 1px solid $border-table-color;
+				
 				//border: 1px solid $border-table-color;
 				h3 {
 					@extend .home-subsections;
@@ -805,44 +963,49 @@ div.indicators {
 			}
 		}
 
-			
+
 		div.right-col {
 			
-			// Printed and online columnists
+			// Print and online columnists
 
-			div#print-columnists, div#online-columnists {
-				position: relative;
-				//padding-left: 40px;
-				margin-bottom: 5rem;
-				div.list-columnists {
-					
-					div.columnist {
-						margin-bottom: 2.5rem;
-						figure.th-pic {
-							float: left;
-							margin-right: 20px;
-						}
-						div.col-details{
-							h6 {
-								font-family: $font-family-serif;
-								color: $gray-light;
-								font-size: 1.25rem;
-								margin: 0 0 5px 0;
+			// div#print-columnists, div#online-columnists {
+				div[id*='-columnists'] {	
+					position: relative;;
+					margin-bottom: 5rem;
+
+					div.list-columnists {
+
+						div.columnist {
+							margin-bottom: 2.5rem;
+							figure.th-pic {
+								float: left;
+								margin-right: 20px;
 							}
-							h2 {
-								$values: 1.75rem 0 0.5rem; 
-								@include headingSize($values);
+							div.col-details{
+								h6 {
+									font-family: $font-family-serif;
+									color: $gray-light;
+									font-size: 1.25rem;
+									margin: 0 0 5px 0;
+								}
+								h2 {
+									$values: 1.75rem 0 0.5rem; 
+									@include headingSize($values);
+								}
+								float: left;
+								width: 64%;
 							}
-							float: left;
-							width: 64%;
 						}
 					}
-				}
-				h3 {
-					@extend .home-subsections;
-					color: $aj-opinion;
-				}
-				span.see-more {
+					h3 {
+						@extend .home-subsections;
+						color: $aj-opinion;
+					}
+					span.see-more {
+						a {
+							overflow: hidden;
+							position: relative;
+						}
 					//position: absolute;
 					top: 10px;
 				}			
@@ -864,8 +1027,13 @@ div.indicators {
 				color: $aj-opinion;
 			}
 			span.see-more {
+				position: absolute;
 				top: 10px;
-				right: 30px;
+				//right: 30px;
+				a {
+					overflow: hidden;
+					position: relative;
+				}
 			}
 			div.columnists {
 				div.columnist {
@@ -968,7 +1136,7 @@ div.indicators {
 			margin-bottom: 5rem;
 			h3 {
 				$values: 1.75rem 1rem 0.5rem;
-		  	@include headingSize($values);
+				@include headingSize($values);
 			}
 		}
 	}
@@ -977,7 +1145,7 @@ div.indicators {
 			margin-bottom: 5rem;
 			h3 {
 				$values: 1.75rem 1rem 0.5rem;
-		  	@include headingSize($values);
+				@include headingSize($values);
 			}
 		}
 	}
@@ -991,44 +1159,45 @@ div.indicators {
 		div.carousel {
 			div.carousel-inner {
 				div.item {
-					img {
+					figure {
 						float: left;
 						margin-right: 40px;
 					}
 					div.review-details {
 						float: left;
-						width: auto;
+						width: 70%;
 						h3 {
 							font-family: $font-family-serif;
 							color: $aj-blue-darker;
 							font-weight: bold;
 							font-style: italic;
 							margin-top: 0;
+							text-transform: initial
 						}
 					}
 				}
 			}
 			ol.carousel-indicators-numbers {
-				bottom: 0;
-		  	li {
-		      text-indent: 0;
-		      margin: 0 2px;
-		      width: 30px;
-		      height: 30px;
-		      border: 1px solid $aj-specials;
-		      border-radius: 100%;
-		      line-height: 30px;
-		      color: $aj-specials;
-		      background-color: white;
-		      transition: all 0.25s ease;
-		      &.active, &:hover {
-		        margin: 0 2px;
-		        color: white;
-		        width: 30px;
-		        height: 30px;
-		        background-color: $aj-specials;        
-		      }
-		  	}
+				bottom: -60px;
+				li {
+					text-indent: 0;
+					margin: 0 2px;
+					width: 30px;
+					height: 30px;
+					border: 1px solid $aj-specials;
+					border-radius: 100%;
+					line-height: 30px;
+					color: $aj-specials;
+					background-color: white;
+					transition: all 0.25s ease;
+					&.active, &:hover {
+						margin: 0 2px;
+						color: white;
+						width: 30px;
+						height: 30px;
+						background-color: $aj-specials;        
+					}
+				}
 			}
 		}
 	}
@@ -1040,8 +1209,47 @@ div.indicators {
 		div.social {
 			
 			// Carousel
-			div.social-carousel {
-				// Here it goes slider style's definitions
+			div#social-carousel {
+				div.carousel-inner {
+
+					div.item {
+						div.overlay {
+							width: 50%;
+							background: rgba(0, 0, 0, .8);
+							position: absolute;
+							top:0;
+							bottom: 0;
+							right: 0;
+							padding: 20px;
+							h4 {
+								color: white;
+								$values: 2.4rem 0 2rem;
+								@include headingSize($values);
+								font-weight: 100;
+								width: 90%;
+							}
+							p {
+								color: white;
+								width: 90%;
+							}
+							a {
+								color: $aj-blue-lighter;
+								text-decoration: underline;
+								font-size: 2rem;
+							}
+						}
+					}
+				}
+				a[class*='left']{
+					span {
+						margin-left: -40px;
+					}
+				}
+				a[class*='right']{
+					span {
+						margin-right: -40px;
+					}
+				}
 			}
 		}
 		// What's new
@@ -1083,7 +1291,7 @@ footer {
 			text-transform: uppercase;
 			border-bottom: 1px solid white;
 			padding-bottom: 16px;
-    	margin-bottom: 16px;
+			margin-bottom: 16px;
 		}
 		ol {
 			margin: 0;
@@ -1112,8 +1320,8 @@ footer {
 				margin-right: 10px;
 			}
 			a {
-			color: $aj-blue-lighter;
-			margin-right: 10px;
+				color: $aj-blue-lighter;
+				margin-right: 10px;
 				&:hover {
 					color: white;	
 				}
@@ -1143,10 +1351,10 @@ div#get-newsletter {
 	background-color: $aj-blue-darker;
 	padding: 20px;
 	//margin-left: -14px;
-	i {
+	i.fa-envelope-o {
 		float: left;
- 		margin-right: 15px;
- 		color: $aj-blue-light;
+		margin-right: 15px;
+		color: $aj-blue-light;
 	}
 	h2 {
 		margin-top: 0;
@@ -1159,25 +1367,30 @@ div#get-newsletter {
 		}
 	}
 	form {
-		margin: 30px 0 15px 0;
+		margin-top: 3rem;
+		margin-bottom: 1.5rem;
 		input[type="text"] {
 			float: left;
 			width: 71%;
 			margin-right: 15px;
 		}
 	}
-	span {
+	p {
+		font-family: $font-family-sans-serif;
 		text-transform: uppercase;
 		font-weight: 100;
 		font-size: 2.5rem;
 		color: white;
-		margin-right: 10px;
+		float: left;
+		margin: 0 10px 0 0;
 	}
-	a {
-		color: $aj-blue-lighter;
-		margin-right: 10px;
-		&:hover {
-			color: white;	
+	div.social {
+		a {
+			color: $aj-blue-lighter;
+			margin-right: 10px;
+			&:hover {
+				color: white;	
+			}
 		}
 	}
 }
@@ -1204,8 +1417,8 @@ div.article {
 		}
 		a.all {
 			position: absolute;
-    	top: 0px;
-    	right: 0;
+			top: 0px;
+			right: 0;
 		}
 		h2 {
 			$values: 3.4rem 0 0;
@@ -1215,8 +1428,8 @@ div.article {
 		// Article actions
 
 		div.article-actions {
-    	height: 30px;
-    	margin-top: 20px;
+			height: 30px;
+			margin-top: 20px;
 			span {
 				float: left;
 				font-size: 1rem;
@@ -1273,24 +1486,24 @@ div.article {
 		margin-bottom: 3rem;
 		@mixin colorLead($color) {
 			border-left: 10px solid $color;
-    	color: $color;
+			color: $color;
 		}
 		p.lead-body {
 			font-family: $font-family-sans-serif;
 			font-weight: bold;
 			font-style: italic;
 			font-size: 2rem;
-    	padding-left: 1.5rem;
-    	&.news {
-    		border-left: 10px solid $aj-news;
-    		@include colorLead($aj-news)
-    	}
-    	&.opinion {
-    		@include colorLead($aj-opinion)
-    	}
-    	&.specials {
-    		@include colorLead($aj-specials)
-    	}
+			padding-left: 1.5rem;
+			&.news {
+				border-left: 10px solid $aj-news;
+				@include colorLead($aj-news)
+			}
+			&.opinion {
+				@include colorLead($aj-opinion)
+			}
+			&.specials {
+				@include colorLead($aj-specials)
+			}
 			
 		}
 		figure {
@@ -1301,8 +1514,8 @@ div.article {
 	}
 
 	div.comments {
-			text-align: center;
-			margin-bottom: 3rem;
+		text-align: center;
+		margin-bottom: 3rem;
 		span {
 			display: block;
 			text-align: center; 
@@ -1438,3 +1651,29 @@ div#top-news {
 		}
 	}
 }
+
+// Redefining select style {
+.bootstrap-select.btn-group button {
+	width: 100%;
+	background-color: white;
+  color: $gray-light;
+  background-color: transparent;
+  border-color: $gray-light;
+  font-weight: 100;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .caret {
+    // position: absolute;
+    // top: 50%;
+    // right: 12px;
+    // margin-top: -2px;
+    // vertical-align: middle;
+    content: "";
+    position: absolute;
+		top: 40%;
+		margin-left: 5px;
+		@include cssSprite ($arrow-select);
+		right: 10px;
+		border: none;
+}
+

@@ -2360,32 +2360,39 @@ if (typeof jQuery === 'undefined') {
     })
   })
 
-  // MEGADROP FUNCTIONS
-  // megadrop function to prevent unexpected menu close when using some components (like accordion, forms, etc)
+}(jQuery);
 
-  // $(document).on('click', 'ul.dropdown-menu', function(e) {
-  //   e.stopPropagation()
-  // })
+/* HERE BEGINS EXTRA FUNCTIONS */
 
-    //Megadrop Vertical tabs
-  var tabsFn = (function() {
-  
-    function init() {
-      setHeight();
-    }
+// MEGADROP FUNCTIONS
+
+$(document).on('click', 'ul.dropdown-menu', function(e) {
+  e.stopPropagation()
+})
+
+// NAVIGATION FOR TABLET AND MOBILE DEVICES
+
++function ($) {
+  // 'use strict'
+  var sideslider = $('[data-toggle=collapse-side]');
+  var sel = sideslider.attr('data-target');
+  var sel2 = sideslider.attr('data-target-2');
+  sideslider.click(function(event){
+      $(sel).toggleClass('in');
+      $(sel2).toggleClass('out');
+  });
+  $(".menu-link").click(function(){
+      $("#menu").toggleClass("active");
+      $(".side-collapse-container").toggleClass("active");
+  });
+
+  // SELECT TABS FOR NEWS {
     
-    function setHeight() {
-      var $tabPane = $('.tab-pane'),
-          tabsHeight = $('.nav-tabs').height();
-      
-      $tabPane.css({
-        height: tabsHeight
-      });
-    }
-      
-    $(init);
-  })();
-
-  
+  }
 
 }(jQuery);
+
+
+
+
+

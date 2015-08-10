@@ -1,0 +1,204 @@
+/* Small devices (tablets, 768px to 991px) */
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){	
+	body {
+		padding-top: 0 !important;
+	}
+
+	h3 {
+		line-height: 1.2 !important;
+	}
+
+	hr {
+		margin-top: 0;
+	}
+
+	// NEWSLETTER
+
+	div#get-newsletter {
+		overflow: hidden;
+		form {
+			margin: 0 !important;
+			width: 55%;
+			float: left;
+			//margin: 0 !important;
+		}
+		div.social {
+			float: right !important;
+			margin-top: 0.3rem;
+			//margin-left: 0 !important;
+		}
+	}
+
+
+	//TABS NEWS
+
+	div#news-summary {
+		div#tabs-news {
+			ul {
+				border-bottom: 2px;
+				li {
+					border-right: 5px solid white !important;
+					a {
+						font-size: 1.4rem !important;
+						height: 50px !important;
+						padding-top: 15px !important;
+						width: 246.3px !important; // tablet
+					}
+				}
+			}
+		} 
+	}
+
+	// FIRST BLOCK HOME
+
+	div.first-block {
+		margin-bottom: 2rem !important;
+		div#main-article {
+
+		div.heading {
+
+			div.heading-overlay {
+
+				h2 {
+					font-size: 2.4rem !important;
+					width: 100% !important;
+				}
+			}
+		}
+	}
+}
+
+	/*----------------------------------------------------*/
+	// ECONOMIC INDICATORS
+	/*----------------------------------------------------*/
+
+	div.indicators {
+		padding: 20px !important;
+		h2 {
+			font-size: 2.1rem !important;
+		}
+	}
+
+	/*----------------------------------------------------*/
+	// OPINION SECTION
+	/*----------------------------------------------------*/
+
+	#opinion-section {
+		margin-top: 0 !important;
+		h1 {
+			font-size: 6rem !important;
+		}
+		h3 {
+			font-size: 2rem !important;
+		}
+		div.top-block {
+			
+			// Left column
+			div.left-col{
+				margin-bottom: 3rem;
+				// Editorial, cartoons and analisis modules
+
+				div[id='analisis'] {
+					margin-top: -110px !important;
+					border-bottom: none !important;
+				}
+				// Editorial, cartoons and analisis modules
+
+				div#editorial, div#cartoons, div#analisis {
+					border-bottom: 1px solid $border-table-color;
+					padding: 0 0 20px !important;
+					margin: 20px 0 0 20px;
+					width: 46%;
+					span.see-more {
+						top: 0 !important;
+						right: 15px !important;
+					}
+				}
+			}
+			div.right-col {
+				div[id*='-columnists'] {
+					div.list-columnists {
+						div.columnist {
+							figure {
+								margin-right: 10px !important;
+							}
+						}
+					}
+				}
+			}
+		}
+		div.bottom-block {
+			div#etcetera {
+				div.columnists {
+					div.columnist {
+						figure {
+							margin-right: 15px !important;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/*----------------------------------------------------*/
+	// SPECIALS SECTION
+	/*----------------------------------------------------*/
+	
+	#specials-section {
+		h1{
+			font-size: 6rem !important;
+		}
+		div#other-articles {
+			article {
+				h3 {
+					font-size: 1.45rem !important;				
+				}
+				b {
+					&::after {
+						content: none !important;
+					}
+				}
+				div.actions {
+					float: left !important;
+				}
+			}
+			
+		}
+		div.reviews {
+			margin-bottom: 8rem !important;
+			div.carousel {
+				ol 
+				div.carousel-inner {
+					div.item {
+						figure {
+							margin-right: 20px !important;
+						}
+						div.review-details {
+							width: 70% !important;
+						}
+					}
+				}
+			}
+		}
+	}
+	footer {
+		margin-top: 0 !important;
+		div.links {
+			padding: 20px 0 !important;
+		}
+		div.bottom {
+			div.social {
+				padding-top: 0 !important;
+				p {
+					width: 100%;
+				}
+			}
+			div.legal {
+				p {
+					width: 89% !important;
+				}
+			}
+		}
+	}
+}
