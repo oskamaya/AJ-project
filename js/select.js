@@ -1001,9 +1001,11 @@
 
       this.$menu.on('click', 'li a', function (e) {
         var $this = $(this),
-            clickedIndex = $this.parent().data('originalIndex'),
+            clickedIndex = $this.parent().data('originalIndex'), 
             prevValue = that.$element.val(),
             prevIndex = that.$element.prop('selectedIndex');
+
+        //console.log (prevIndex);
 
         // Don't close on multi choice menu
         if (that.multiple) {

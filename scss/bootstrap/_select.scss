@@ -1,11 +1,10 @@
-// Mixins
-@mixin cursordisabled {
-  cursor: not-allowed;
-  // .cursor-disabled() {
-    
-  // }
-} 
+@import "variables-select";
 
+// Mixins
+@mixin cursor-disabled()
+{
+  cursor: not-allowed;
+}
 
 // Rules
 .bootstrap-select {
@@ -89,8 +88,7 @@
 
   &.disabled,
   > .disabled {
-    @include cursordisabled;
-    //.cursor-disabled();
+    @include cursor-disabled();
 
     &:focus {
       outline: none !important;
@@ -106,13 +104,13 @@
       text-align: left;
     }
 
-    // .caret {
-    //   position: absolute;
-    //   top: 50%;
-    //   right: 12px;
-    //   margin-top: -2px;
-    //   vertical-align: middle;
-    // }
+    .caret {
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      margin-top: -2px;
+      vertical-align: middle;
+    }
   }
 
   &[class*="col-"] .dropdown-toggle {
@@ -143,8 +141,7 @@
       }
 
       &.disabled a {
-        @include cursordisabled;
-        //.cursor-disabled();
+        @include cursor-disabled();
       }
 
       a {

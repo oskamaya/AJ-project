@@ -59,6 +59,16 @@
 }
 @font-face {
 	font-family: 'ArnhemPro';
+	src: url('../fonts/arnhemPro/ArnhemPro-NormalItalic.eot.eot');
+	src: url('../fonts/arnhemPro/ArnhemPro-NormalItalic.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/arnhemPro/ArnhemPro-NormalItalic.woff') format('woff'),
+	url('../fonts/arnhemPro/ArnhemPro-NormalItalic.ttf') format('truetype'),
+	url('../fonts/arnhemPro/ArnhemPro-NormalItalic.svg#ArnhemPro-Normal') format('svg');
+	font-style: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'ArnhemPro';
 	src: url('../fonts/arnhemPro/ArnhemPro-Bold.eot');
 	src: url('../fonts/arnhemPro/ArnhemPro-Bold.eot?#iefix') format('embedded-opentype'),
 	url('../fonts/arnhemPro/ArnhemPro-Bold.woff') format('woff'),
@@ -95,9 +105,14 @@ p {
 	font-family: $font-family-serif;
 	font-size: 1.571rem;
 }
-h2, h3, h4, h5 {
+h1, h2, h3, h4, h5 {
 	a, a:hover {
 		color: $gray-dark;
+	}
+	&.section {
+		//font-family: $font-family-sans-serif;
+		font-weight: normal;
+		text-transform: uppercase;
 	}
 }
 
@@ -108,44 +123,41 @@ div.push {
 	margin-top: 4rem;
 }
 /*------------------------------------------------------------*/
-/* PUSH down rows  */
+/* PUSH down and top rows  */
 /*------------------------------------------------------------*/
-.bottom-buffer { margin-bottom: 3rem; }
+.top-buffer-2 { margin-top: 2rem; }
+.top-buffer-3 { margin-top: 3rem; }
+.top-buffer-5 { margin-top: 5rem; }
+.bottom-buffer-1 { margin-bottom: 1rem; }
+.bottom-buffer-2 { margin-bottom: 2rem; }
+.bottom-buffer-3 { margin-bottom: 3rem; }
+.bottom-buffer-4 { margin-bottom: 4rem; }
+.bottom-buffer-5 { margin-bottom: 5rem; }
 
 /*------------------------------------------------------------*/
-// 8 LEFT COLUMN LAYOUT
-/* main-content class adds 30px at the end of every child div */
+// PADDING 0
+/* Some divs needs padding 0 to set 100% width*/
 /*------------------------------------------------------------*/
-.col-8-lt {
-	div.main-content > div {
-		margin-bottom: 30px;
-	}
-}
+.pd0 { padding: 0; }
 
-/*----------------------------------------------------*/
-// 4 RIGHT COLUMN LAYOUT 
-/*----------------------------------------------------*/
-
-.col-4-rt {
-	div.main-content > div {
-		margin-bottom: 30px;
-	}
-}
+/*------------------------------------------------------------*/
+// MARGIN 0
+/* Some cases you will need set margin 0 for footer and other divs
+/*------------------------------------------------------------*/
+.mg0 { margin: 0; }
 
 /*----------------------------------------------------*/
 // CENTERED ALIGN FOR BANNERS
 /*----------------------------------------------------*/
-.adv {
-	text-align: center;
-}
+.adv { text-align: center; }
 
 /*----------------------------------------------------*/
 // PUBLICATION DATE 
 /*----------------------------------------------------*/
-.date {
+p.releaseDate {
 	font-family: $font-family-sans-serif;
-	font-weight: bold;
-	font-size: 1rem;
+	font-weight: bold !important;
+	font-size: 1rem !important;
 	color: lighten($gray-light,20%);
 }
 
@@ -160,16 +172,67 @@ div.push {
 }
 
 /*----------------------------------------------------*/
-// Setting headings appearance
+// SOCIAL BUTTONS APPAREANCE
 /*----------------------------------------------------*/
-
-.sections {
-	font-family: $font-family-sans-serif;
-	font-weight: normal;
-	text-transform: uppercase;
+.socialBtns {
+	a, a:hover, a:active {
+		position: relative;
+		color: white;
+		font-size: $size8;
+		text-align: left;
+		border-radius: 3px;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		display: inline-block;
+		&.fb-btn {
+			background: #3B5998;
+			&:hover {
+				background-color: darken(#3B5998,10%);
+			}
+		}
+		&.gp-btn {
+			background: #DF4930;
+			&:hover {
+				background-color: darken(#DF4930,10%);
+			}
+		}
+		&.tw-btn {
+			background: #64CCF1;
+			&:hover {
+				background-color: darken(#64CCF1,10%);
+			}
+		}
+		&.ln-btn {
+			background: #0077B5;
+			&:hover {
+				background-color: darken(#0077B5,10%);
+			}
+		}
+		i {
+			margin-right: 0.1rem !important;
+		}
+		span {
+			margin-left: 4px;
+			position: relative;
+			top: 4px;
+		}
+	}
 }
 
-// Customize size and margins headings
+
+/*----------------------------------------------------*/
+// These are all heading sizes for AJ project
+/*----------------------------------------------------*/
+
+$size1: 7rem;
+$size2: 4rem;
+$size4: 2.4rem;
+$size5: 2rem;
+$size6: 1.75rem;
+$size7: 1.5rem;
+$size8: 1.35rem;
+
+// Setting heading size and margin
 
 @mixin headingSize($headingVars) {
 	font-size: nth( $headingVars, 1 );
@@ -177,27 +240,49 @@ div.push {
 	margin-bottom: nth( $headingVars, 3 );
 }
 
-// Setting headings color
+// Setting heading color 
 
 @mixin headingSection ( $headingColor ) {
-	@extend .sections;
 	color: $headingColor;
+}
 
+// bottom lines for headings
+
+@mixin bottomLine ($lineColorVars) {
 	&::after {
 		content: "";
 		width: 100px;
 		height: 1px;
-		background-color: $headingColor;
-		margin-top: 30px;
+		background-color: nth($lineColorVars, 1);
+		margin-top: nth($lineColorVars, 2); 
 		display: block;
 	}
 }
 
+.subhead {
+	$values: $size2 0 3rem; 
+	@include headingSize($values);
+	color: $aj-blue-dark;
+	font-weight: 100;
+
+	&.opinion {
+		color: $aj-opinion;
+	}
+}
+
+
 .home-subsections {
-	@extend .sections;
 
 	$values: 2.4rem 0 2rem; 
 	@include headingSize($values);
+}
+
+
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
 }
 
 /*----------------------------------------------------*/
@@ -216,7 +301,6 @@ div.push {
 
 b[class*='tag-'] {
 	font-size: 1.25rem;
-	//float: left;
 	text-transform: uppercase;
 	padding-right: 10px;
 	&.tag-news {
@@ -250,15 +334,11 @@ b[class*='tag-'] {
 }
 
 .actions {
-	//margin: 0;
-	//float: left;
-	//clear: both;
 	min-height: 18px;
-	span {
+	a {
 		float: left;
 		font-size: 1rem;
 		margin: 1px 10px 0 0;
-		cursor: pointer;
 		text-transform: uppercase;
 		color: $aj-blue;
 		&::before {
@@ -288,6 +368,16 @@ b[class*='tag-'] {
 			@extend .space;
 			@include cssSprite ($icon-delete);
 		}
+
+		// edit icon
+		&.edit::before {
+			@extend .space;
+			@include cssSprite ($icon-edit);
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
 	}
 }
 
@@ -304,14 +394,66 @@ input[type="text"] {
 	font-family: sans-serif;
 	font-size: 16px;
 	appearance: none;
-	box-shadow: none;
+	//box-shadow: none;
 	border-radius: none;
-	padding: 9px;
+	padding: 9px 14px;
 	border: solid 1px #dcdcdc;
 	transition: box-shadow 0.3s, border 0.3s;
 }
 input[type="text"]:focus {
 	outline: none;
+}
+textarea {
+	width: 100%;
+	border: solid 1px #dcdcdc;
+}
+
+/*----------------------------------------------------*/
+// MODALS
+/*----------------------------------------------------*/
+div.modal {
+	div.modal-dialog {
+		width: 500px;
+		div.modal-content {
+			div.modal-header {
+				background-color: $aj-blue-lighter;
+				h4 {
+					color: $aj-blue-darker;
+				}
+			}
+			div.modal-body {
+				p {
+					font-family: $font-family-sans-serif;
+					color: $aj-blue-darker;
+				}
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------*/
+// POPOVERS
+/*----------------------------------------------------*/
+
+div[id*="popover"] {
+	min-width: 400px;
+	a.addFolder {
+		display: block;
+		font-size: $size7;
+		margin-top: 2rem;
+		&::before {
+			content: "";
+			display: block;
+			float: left;
+			margin-right: 10px;
+			margin-top: -0.7rem;
+			@include cssSprite ($icon-add-folder-lg);
+		}
+	}
+	a.btn {
+		display: inline-block;
+		margin-top: 12px;
+	}
 }
 
 /*----------------------------------------------------*/
@@ -360,6 +502,7 @@ span.see-more {
 }
 .yamm .dropdown.yamm-fw .dropdown-menu {
 	background-color: #EFEFEF;
+	border: 1px solid darken($gray-lighter,10%);
 	left: 0;
 	right: 0;
 }
@@ -369,7 +512,7 @@ span.see-more {
 @mixin colorTabs($byColor) {
 	color: white;
 	border: 0;
-	padding: 11px 20px;
+	padding: 11px 13px;
 	height: 44px;
 	width: 100%;
 	text-align: left;
@@ -384,7 +527,11 @@ span.see-more {
 	}
 }
 
-.tabs-left { 
+$leftTabsWidth: 200px;
+
+div.leftTabs { 
+	width: $leftTabsWidth;
+	float: left;
 	ul.nav-tabs {
 		&#news-tabs {
 			li {
@@ -396,7 +543,6 @@ span.see-more {
 						background-color: #EFEFEF;
 						color: $aj-news;
 					}
-					
 				}
 			}
 		}
@@ -433,63 +579,59 @@ span.see-more {
 	}
 }
 
-.tab-content {
-	.tab-pane {
-		display: none;
-		padding: 1.6rem;
-
-		&.news-content {
-			h3 {
-				color: $aj-news;
-			}
-			div.main {
-				article {
-					h2.news-heading {
-						font-size: 1.75rem;
-						margin: 10px 0 0;
+div.linksCont {
+	margin-left: $leftTabsWidth + 10px;;
+	div.tab-content {
+		padding-top: 3rem;
+		div.tab-pane {
+			&.news-content {
+				h3 {
+					color: $aj-news;
+				}
+				div.main {
+					article {
+						h2.news-heading {
+							font-size: 1.75rem;
+							margin: 10px 0 0;
+						}
 					}
 				}
-			}
-			div.others {
-				article {
-					margin-bottom: 30px;
-					img {
-						float: left;
-					}
-					div.details {
-						float: right;
-						width: auto;
-						h2.news-heading {
-							font-size: 1.35rem;
-							margin: 0;
+				div.others {
+					article {
+						margin-bottom: 30px;
+						figure {
+							float: left;
+						}
+						div.details {
+							margin-left: 120px;
+							h2.news-heading {
+								font-size: 1.35rem;
+								margin: 0;
+							}
 						}
 					}
 				}
 			}
-		}
-		&.opinion-content {
-			h3 {
-				color: $aj-opinion;
-			}
-			article {
-				margin-top: 3rem;
-				h2.news-heading {
-					font-size: 1.75rem;
-					margin: 0;
+			&.opinion-content {
+				h3 {
+					color: $aj-opinion;
+				}
+				article {
+					margin-top: 3rem;
+					h2.news-heading {
+						font-size: 1.75rem;
+						margin: 0;
+					}
 				}
 			}
-		}
-		&.specials-content {
-			h3 {
-				color: $aj-specials;
-			}
+			&.specials-content {
+				h3 {
+					color: $aj-specials;
+				}
 
 	  	// Informes
 	  	div.report {
 	  		article {
-	  			img {
-
-	  			}
 	  			h2 {
 	  				$values: 1.35rem 1rem 0;
 	  				@include headingSize($values);
@@ -504,12 +646,11 @@ span.see-more {
 	  				$values: 1.35rem 0 0;
 	  				@include headingSize($values);
 	  			}
-	  			img {
+	  			figure {
 	  				float: left;
 	  			}
 	  			div.details {
-	  				float: right;
-	  				width: auto;
+	  				margin-left: 80px;
 	  			}
 	  		}
 	  	}
@@ -529,6 +670,8 @@ span.see-more {
 		display: block;
 	}
 }
+}
+
 
 /*----------------------------------------------------*/
 // NAVBAR AMBITO JURIDICO
@@ -760,14 +903,18 @@ $menu-width: 250px;
 	float: left;
 	color: white;
 	margin-top: 20px;
-	&:active {
+	&:hover, &:active {
 		color: white;
 	}
 }
 
 /*----------------------------------------------------*/
-// NEWS SUMMARY
+// HOME - index.html
 /*----------------------------------------------------*/
+
+
+// News summary
+/*----------------------------*/
 
 div.first-block {
 	margin-top: 5rem;
@@ -794,54 +941,82 @@ div.first-block {
 	}
 }
 
-div#news-summary {
-	div.nw-3col, div.nw-2col {
-		//margin-top: 3rem;
-		article.summary {
-			float: left;
-			margin-bottom: 3rem;
-		}
-	}
-	h2.news-heading {
-		$values: 2rem 1rem 0.5rem;
-		@include headingSize($values);
-	}
-	p.summary {
-		font-family: $font-family-serif;
-		//font-size: 1.571rem;
-	}
-	// Filter news tabs
-	div#tabs-news {
-		ul {
-			border-bottom: 3px solid $aj-blue-darkest;
-			margin-bottom: 3rem;
-			li {
-				border-right: 10px solid white;
-				a {
-					border-radius: 0;
-					background-color: $aj-blue-lighter;
-					font-weight: bold;
-					font-size: 1.714rem;
-					text-transform: uppercase;
-					color: $aj-blue-darkest;
-					//width: 
-					height: 69px;
-					border: 0;
-					padding-top: 24px;
-					width: 396.3px; // desktop
-				}
-				&.active, &:hover {
-					a {
-						background-color: $aj-blue-darkest;
-						color: white;
-					}
-				}
-				&:last-child {
-					border-right: 0;
-				}
+/*----------------------------------------------------*/
+// TABS FOR AJ PROJECT
+/*----------------------------------------------------*/
+
+
+ul.ajTabs {
+	border-bottom: 4px solid $aj-blue-darkest !important;
+	//margin-bottom: 3rem;
+	table-layout: fixed;
+	display: table;
+	li {
+		border-right: 10px solid white;
+		width: 100% !important;
+		a {
+			border-radius: 0;
+			border:0 !important;
+			background-color: $aj-blue-lighter;
+			font-weight: bold;
+			font-size: $size7;
+			text-transform: uppercase;
+			color: $aj-blue-darkest;
+			height: 69px;
+			border: 0;
+			padding: 0.5rem !important;
+			width: 100%; // desktop
+			&:hover {
+				background-color: $aj-blue-darkest;
+				color: white;
+				border:0 !important;
+			}
+			span {
+				@include transform(translateY(-50%));
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 100%;
 			}
 		}
-	} 
+		&.active {
+			a {
+				background-color: $aj-blue-darkest !important;
+				color: white !important;
+				border: 0 !important;
+			}
+		}
+		&:last-child {
+			border-right: 0 !important;
+		}
+	}
+}
+
+div#news-summary {
+	div.tab-content {
+		padding-top: 3rem;
+		div.tab-pane {
+			display: none;
+			div.nw-3col, div.nw-2col {
+				article.summary {
+					float: left;
+					margin-bottom: 3rem;
+				}
+			}
+			h2.news-heading {
+				$values: 2rem 1rem 0.5rem;
+				@include headingSize($values);
+			}
+			p.summary {
+				font-family: $font-family-serif;
+			}
+			&.active {
+				display: block;
+			}
+		}
+		
+	}
+// Filter news tabs
 }
 
 /*----------------------------------------------------*/
@@ -864,6 +1039,7 @@ div.indicators {
 		float: right;
 		position: relative;
 		top: 8px;
+		margin-left: 1rem;
 	}
 	table {
 		td {
@@ -875,6 +1051,8 @@ div.indicators {
 				font-weight: normal;
 				color: white;
 				font-size: 1.85rem;
+				text-align: right;
+				min-width: 95px;
 			}
 			
 			&.up::after {
@@ -908,8 +1086,10 @@ div.indicators {
 	width: 100%;
 	h1 {
 		@include headingSection($aj-opinion);
-		$values: 7rem 0 4rem;
+		$values: $size1 0 4rem;
 		@include headingSize($values);
+		$valuesLine: $aj-opinion, 1rem;
+		@include bottomLine($valuesLine);
 	}
 
 	// Styling all hr tags for Opinion section
@@ -926,9 +1106,9 @@ div.indicators {
 			background-color: white;
 			overflow: hidden;
 			
-			// Editorial, cartoons and analisis modules
+			// Editorial, cartoons and analysis modules
 
-			div#editorial, div#cartoons, div#analisis {
+			div#editorial, div#cartoons, div#analysis {
 				position: relative;
 				float: left;
 				padding: 20px;
@@ -973,30 +1153,6 @@ div.indicators {
 					position: relative;;
 					margin-bottom: 5rem;
 
-					div.list-columnists {
-
-						div.columnist {
-							margin-bottom: 2.5rem;
-							figure.th-pic {
-								float: left;
-								margin-right: 20px;
-							}
-							div.col-details{
-								h6 {
-									font-family: $font-family-serif;
-									color: $gray-light;
-									font-size: 1.25rem;
-									margin: 0 0 5px 0;
-								}
-								h2 {
-									$values: 1.75rem 0 0.5rem; 
-									@include headingSize($values);
-								}
-								float: left;
-								width: 64%;
-							}
-						}
-					}
 					h3 {
 						@extend .home-subsections;
 						color: $aj-opinion;
@@ -1037,16 +1193,9 @@ div.indicators {
 			}
 			div.columnists {
 				div.columnist {
-					margin-bottom: 2.5rem;
-					figure.th-pic {
-						float: left;
-						margin-right: 20px;
-					}
+					
 					div.col-details{
-						float: left;
-						width: 64%;
 						h6 {
-							font-family: $font-family-serif;
 							font-size: 1.5rem;
 							color: $aj-opinion;
 							font-weight: bold;
@@ -1057,10 +1206,6 @@ div.indicators {
 							font-family: $font-family-serif;
 							color: $gray-light;
 							$values: 1.25rem 0.5rem 0.5rem; 
-							@include headingSize($values);
-						}
-						h2 {
-							$values: 1.75rem 0 0.5rem; 
 							@include headingSize($values);
 						}
 						div.actions {
@@ -1117,7 +1262,9 @@ div.indicators {
 	}
 }
 
-// SPECIALS SECTION
+/*----------------------------------------------------*/
+// SPECIALS EDITION
+/*----------------------------------------------------*/
 
 #specials-section {
 	padding-top: 4rem;
@@ -1130,6 +1277,8 @@ div.indicators {
 		@include headingSection($aj-specials);
 		$values: 7rem 0 4rem;
 		@include headingSize($values);
+		$valuesLine: $aj-specials, 1rem;
+		@include bottomLine($valuesLine);
 	}
 	div#main-articles {
 		article {
@@ -1143,7 +1292,13 @@ div.indicators {
 	div#other-articles {
 		article {
 			margin-bottom: 5rem;
+			figure {
+				float: left;
+				position: relative;
+				width: 100%;
+			}
 			h3 {
+				float: left;
 				$values: 1.75rem 1rem 0.5rem;
 				@include headingSize($values);
 			}
@@ -1254,7 +1409,6 @@ div.indicators {
 		}
 		// What's new
 		div.whats-new {
-			margin-bottom: 50px;
 			article {
 				border-bottom: 1px solid $gray-light;
 				padding-bottom: 2rem;
@@ -1276,8 +1430,10 @@ div.indicators {
 	}
 }
 
-/*-------------------------------------------------------------------------------*/
+/*----------------------------------------------------*/
 // FOOTER
+/*----------------------------------------------------*/
+
 footer {
 	color: white;
 	margin-top: 7rem;
@@ -1344,8 +1500,9 @@ footer {
 	}
 }
 
-/*-------------------------------------------------------------------------------*/
+/*----------------------------------------------------*/
 // NEWSLETTER MODULE SUSCRIPTION -- DESKTOP
+/*----------------------------------------------------*/
 
 div#get-newsletter {
 	background-color: $aj-blue-darker;
@@ -1394,186 +1551,562 @@ div#get-newsletter {
 		}
 	}
 }
-/*-------------------------------------------------------------------------------*/
-// ARTICLES DETAILS
 
-div.article {	
-	& > div {
-		h1 {
-			$values: 4rem 0 2rem;
-			@include headingSize($values);
-			&[class*='-news'] {
-				@include headingSection($aj-news);
+/*----------------------------------------------------*/
+// COLUMNISTS MODULES
+/*----------------------------------------------------*/
+
+div.columnist {
+	margin-bottom: 2.5rem;
+	figure {
+		float: left;
+	}
+	div.col-details{
+		margin-left: 120px;
+		h6 {
+			font-family: $font-family-serif;
+			color: $gray-light;
+
+			font-size: 1.25rem;
+			margin: 0 0 5px 0;
+			&.subject {
+				font-size: $size8;
+				margin: 0 0 5px 0;
+				font-weight: bold;
+				font-style: italic;
+				color: $aj-opinion;
 			}
-			&[class*='-opinion'] {
-				@include headingSection($aj-news);
+			&.blog {
+				font-family: $font-family-sans-serif;
+				font-style: normal;
+				text-transform: uppercase;
+
 			}
-			&[class*='-specials'] {
-				@include headingSection($aj-news);
+			&.name {
+
 			}
-			&::after {
-				display: none !important;
-			}
-		}
-		a.all {
-			position: absolute;
-			top: 0px;
-			right: 0;
 		}
 		h2 {
-			$values: 3.4rem 0 0;
+			$values: $size6 0 0.5rem; 
 			@include headingSize($values);
 		}
-
-		// Article actions
-
-		div.article-actions {
-			height: 30px;
-			margin-top: 20px;
-			span {
-				float: left;
-				font-size: 1rem;
-				margin: 1px 10px 0 0;
-				cursor: pointer;
-				text-transform: uppercase;
-				color: $aj-blue;
-
-				// save icon
-				&::before {
-					margin-top: -7px;
-				}
-				&.save::before {
-					@extend .space;
-					@include cssSprite ($icon-save);
-				}
-				
-				// share icon 
-				&.share::before {
-					@extend .space;
-					@include cssSprite ($icon-share);
-				}
-
-				// comment icon
-				&.comments::before {
-					@extend .space;
-					@include cssSprite ($icon-comment);
-				}
-				
-				// print icon 
-				&.print::before {
-					@extend .space;
-					@include cssSprite ($icon-print);
-				}
-
-				// size icon
-				&.size::before {
-					@extend .space;
-					@include cssSprite ($icon-size);
-				}
-				
-				// reader icon 
-				&.reader::before {
-					@extend .space;
-					@include cssSprite ($icon-reader);
-				}
-			}
-		}
-
-
 	}
-
-	div.article-body {
-		margin-bottom: 3rem;
-		@mixin colorLead($color) {
-			border-left: 10px solid $color;
-			color: $color;
-		}
-		p.lead-body {
-			font-family: $font-family-sans-serif;
-			font-weight: bold;
-			font-style: italic;
-			font-size: 2rem;
-			padding-left: 1.5rem;
-			&.news {
-				border-left: 10px solid $aj-news;
-				@include colorLead($aj-news)
-			}
-			&.opinion {
-				@include colorLead($aj-opinion)
-			}
-			&.specials {
-				@include colorLead($aj-specials)
-			}
-			
-		}
-		figure {
-			max-width: 300px;
-			float: left;
-			margin-right: 20px;
-		}
-	}
-
-	div.comments {
-		text-align: center;
-		margin-bottom: 3rem;
-		span {
-			display: block;
-			text-align: center; 
-			border-top: 1px solid $aj-blue;
-			margin-bottom: 2rem;
-			&::after {
-				content: "";
-				display: block;
-				position: relative;
-				left: 50%;
-				margin-left: -8px;
-				@include cssSprite ($open-comments);
-			}	
-		}
+	div.summary {
+		clear: both;
+		padding-top: 10px;
 	}
 }
 
-/*-------------------------------------------------------------------------------*/
-// RELATED NEWS
+/*----------------------------------------------------*/
+// CARTOONS
+/*----------------------------------------------------*/
 
-div#rel-news {
-	h3{
-		@include headingSection($aj-news);
-		$values: 2.4rem 0 2rem;
+div.main-cartoon {
+	background-color: $gray-dark;
+	overflow: hidden;
+	h2 {
+		$values: $size2 0 2rem; 
 		@include headingSize($values);
-		&::after {
-			margin-top: 20px;
-			width: 50px;
-		}
-		
+		color: white;
+		font-weight: 100;
 	}
 	div {
+		figure {
+			margin-bottom: 1rem;
+		}
+		p.releaseDate {
+			float: left;
+		}
+		div.actions {
+			float: right;
+			span {
+				color: white;
+			}
+		}
+	}
+	&.detail {
+		figure {
+			display: inline-block;
+			width: 70%;
+			margin-bottom: 0;
+		}
+	}
+}
+
+div.cartoon {
+	figure {
+
+	}
+	div.col-details{
+		h6 {
+			color: $aj-opinion;
+			$values: $size8 1rem 0.5rem; 
+			@include headingSize($values);
+		}
 		h2 {
-			$values: 1.35rem 0.5rem 0.5rem; 
+			$values: $size6 0 0.5rem; 
 			@include headingSize($values);
 		}
 	}
 }
-// Recommended news
+
+
+/*----------------------------------------------------*/
+// HEADINGS BY SECTION
+/*----------------------------------------------------*/
+
+h1[class*='head'] {
+	$values: $size2 0 4rem;
+	@include headingSize($values);
+	&[class*='-news'] {
+		@include headingSection($aj-news);
+	}
+	&[class*='-opinion'] {
+		@include headingSection($aj-opinion);
+	}
+	&[class*='-specials'] {
+		@include headingSection($aj-specials);
+	}
+	&[class*='-base'] {
+		@include headingSection($aj-blue-dark);
+	}
+	&::after {
+		display: none !important;
+	}
+	& ~ a{
+		margin-left: 20px;
+		margin-top: 4px;
+		&.all {
+			float: right;
+		}
+	}
+}
+
+/*----------------------------------------------------*/
+// SHARED MODULES 
+/*----------------------------------------------------*/
+
+
+@mixin headingSharedMod($colorHSM) {
+	@include headingSection($colorHSM);
+	$values: $size4 0 2rem;
+	@include headingSize($values);
+	$values: $colorHSM 2rem;
+	@include bottomLine($values);
+	// &::after {
+	// 	margin-top: 20px;
+	// 	width: 50px;
+	// }
+}
+
+// Recommended reading
+// -------------------
 
 div#recommended {
 	h3 {
-		@include headingSection($aj-specials);
-		$values: 2.4rem 0 2rem;
-		@include headingSize($values);
-		&::after {
-			margin-top: 20px;
-			width: 50px;
+		&.news {
+			@include headingSharedMod($aj-news);
 		}
+		&.opinion {
+			@include headingSharedMod($aj-opinion);
+		}
+		&.specials {
+			@include headingSharedMod($aj-specials);
+		}
+		
 	}
-	div {
+	article {
 		h2 {
 			font-size: 1.75rem;
 			margin: 10px 0 10px;
 		}
 	}
+	&.bdr-1 {
+		border: 1px solid $border-table-color;
+		padding:20px;
+	}
 }
-//TABS TOP NEWS
+
+// Related articles and news
+// ------------
+
+div.related {
+	h3{
+		text-transform: uppercase;
+		font-weight: normal;
+		&.news {
+			@include headingSharedMod($aj-news);
+		}
+		&.opinion {
+			@include headingSharedMod($aj-opinion);
+		}
+		&.specials {
+			@include headingSharedMod($aj-specials);
+		}
+		&.base {
+			@include headingSharedMod($aj-blue-dark);
+		}
+	}
+
+	article {
+		figure {
+			width: 100% !important;
+			clear: both;
+		}
+		&.col-md-4 {
+			h2 {
+				$values: 1.35rem 0.5rem 0.5rem; 
+				@include headingSize($values);
+			}
+		}
+		&.col-md-6 {
+			h2 {
+				$values: $size6 1rem 1rem;
+				@include headingSize($values);
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------*/
+// ARTICLES LIST
+/*----------------------------------------------------*/
+
+div.articles-list {
+	article.top {
+		h2 {
+			$values: 3.4rem 0 0; 
+			@include headingSize($values);
+		}
+	}
+	div.list {
+		article {
+			h2 {
+				$values: $size6 0.5rem 0.5rem; 
+				@include headingSize($values);
+			}
+			p.date {
+				//padding-bottom: 0 !important;
+			}
+			&.top {
+				p.summary {
+					margin-top: 2rem;
+				}
+			}
+		}
+		&#list-editorial {
+			.left {
+				float: left;
+			}
+			.right {
+				float: right;
+			}
+			article {
+				p.date {
+					float: left;
+					&::after {
+						content: "";
+						float: right;
+						width: 1px;
+						height: 11px;
+						background-color: $gray-light;
+						position: relative;
+						top: 3px;
+						left: 10px;
+						margin-right: 10px;
+					}
+				}
+				div.actions {
+					float: left;
+					margin-left: 10px;
+				}
+				p.summary {
+					clear: both;
+				}
+				&.main {
+					h2 {
+						$values: $size2 0 2rem; 
+						@include headingSize($values);
+					}
+				}
+				
+				$values: $aj-opinion 3rem;
+				@include bottomLine($values);
+
+				// &::after {
+				// 	$values: $aj-opinion 3rem;
+				// 	@include bottomLine($values);
+				// }
+			}
+		}
+	}
+}
+/*----------------------------------------------------*/
+// ANALISIS JURISPRUDENCIAL 
+/*----------------------------------------------------*/
+
+
+
+
+/*----------------------------------------------------*/
+// ANALISIS JURISPRUDENCIAL MODULE IN ANALYSIS TEMPLATE
+/*----------------------------------------------------*/
+
+div#jurisprudential {
+	div.top {
+		div.clearfix {
+			padding-top: 3rem;
+			border-top: 8px solid $aj-blue-lighter;
+		}
+		
+		p.definition {
+			font-size: 2rem;
+			font-style: italic;
+			color: lighten($gray-light, 10%);
+		}
+		h6{
+			font-family: $font-family-serif;
+			$values: $size4 0 0;
+			@include headingSize($values);
+
+			small {
+				color: $aj-blue;
+			}
+		}
+		&::after {
+			$values: $aj-opinion 3rem;
+			@include bottomLine($values);
+		}
+	}
+}
+// ----------------------------------------------------
+// ARTICLES DETAILS
+
+//  	Here applies these templates:
+
+// 		> detalle-noticia.html
+// 		> detalle-editoriales.html
+// 		> detalle-columnistas.html
+// 		> detalle-analisis.html
+// 		> detalle-jurisprudencial.html
+
+// ----------------------------------------------------
+
+
+div.article {
+
+	h2.heading {
+		$values: 4rem 0 0;
+		@include headingSize($values);
+	}
+
+	// Article actions
+
+	div.article-actions {
+		height: 30px;
+		margin-top: 20px;
+		span {
+			float: left;
+			font-size: 1rem;
+			margin: 1px 10px 0 0;
+			cursor: pointer;
+			text-transform: uppercase;
+			color: $aj-blue;
+
+			// save icon
+			&::before {
+				margin-top: -7px;
+			}
+			&.save::before {
+				@extend .space;
+				@include cssSprite ($icon-save);
+			}
+			
+			// share icon 
+			&.share::before {
+				@extend .space;
+				@include cssSprite ($icon-share);
+			}
+
+			// comment icon
+			&.comments::before {
+				@extend .space;
+				@include cssSprite ($icon-comment);
+			}
+			
+			// print icon 
+			&.print::before {
+				@extend .space;
+				@include cssSprite ($icon-print);
+			}
+
+			// size icon
+			&.size::before {
+				@extend .space;
+				@include cssSprite ($icon-size);
+			}
+			
+			// reader icon 
+			&.reader::before {
+				@extend .space;
+				@include cssSprite ($icon-reader);
+			}
+		}
+	}
+
+	div.profile {
+		padding: 20px 0;
+		overflow: hidden;
+		figure{
+			float: left;
+		}
+		div.details {
+			margin-left: 120px;
+			h6 {
+				&.first {
+					color: $aj-blue;
+					$values: $size8 0 0.3rem;
+					@include headingSize($values);
+				}
+				&.name {
+					font-family: $font-family-serif;
+					$values: $size4 0 0;
+					@include headingSize($values);
+				}
+				&.occupation {
+					color: lighten($gray-light, 10%);
+					$values: $size6 0 0.5rem;
+					@include headingSize($values);
+				}
+				&.email {
+					$values: $size8 0 0.3rem;
+					@include headingSize($values);
+					&::before {
+						content: "";
+						display: inline-block;
+						margin-bottom: -3px;
+						margin-right: 5px;
+						@include cssSprite ($icon-email);
+					} 
+				}
+			}
+		}
+		.clearfix {
+			clear: both;
+			&::after {
+				$values: $aj-opinion 3rem;
+				@include bottomLine($values);
+			}
+		}
+		&.no-photo {
+			div.details {
+				margin-left: 0;
+			}
+		}
+	}
+
+	div.article-body {
+		margin-bottom: 3rem;
+
+		.border {
+			border-bottom: 8px solid $aj-blue-lighter;
+			margin-top: 3rem;
+			margin-bottom: 3rem;
+
+		}
+
+	// Styling paragraphs
+	@mixin colorLead($color) {
+		border-left: 10px solid $color;
+		color: $color;
+	}
+	h4 {
+		font-family: $font-family-serif;
+		$values: $size5 5rem 2rem;
+		@include headingSize($values);
+		font-weight: bold;
+	}
+	p:not(.caption) {
+		font-size: $size6;
+	}
+	p.lead-body {
+		font-family: $font-family-sans-serif;
+		font-weight: bold;
+		font-style: italic;
+		font-size: 2rem;
+		padding-left: 1.5rem;
+		margin: 20px 0;
+		&.news {
+			border-left: 10px solid $aj-news;
+			@include colorLead($aj-news)
+		}
+		&.opinion {
+			@include colorLead($aj-opinion)
+		}
+		&.specials {
+			@include colorLead($aj-specials)
+		}
+		
+	}
+	p.quote {
+		font-size: 2.2rem;
+		color: lighten($gray-light, 10%);
+		font-style: italic;
+		text-align: center;
+		&::before {
+			content: "";
+			display: block;
+			margin-bottom: 3rem;
+			@include cssSprite ($quote-up);
+		}
+		&::after {
+			content: "";
+			display: block;
+			margin-top: 2rem;
+			@include cssSprite ($quote-bottom);
+		}
+	}
+	p.reference {
+		color: lighten($gray-light,20%);
+		font-size: 1.25rem;
+	}
+	figure {
+		max-width: 300px;
+		float: left;
+		margin-right: 20px;
+	} 
+}
+
+div.comments {
+	text-align: center;
+	margin-bottom: 3rem;
+	span {
+		display: block;
+		text-align: center; 
+		border-top: 1px solid $aj-blue;
+		margin-bottom: 2rem;
+		&::after {
+			content: "";
+			display: block;
+			position: relative;
+			left: 50%;
+			margin-left: -8px;
+			@include cssSprite ($open-comments);
+		}	
+	}
+}
+}
+
+.load-more {
+
+}
+
+
+/*----------------------------------------------------*/
+// RIGHT MODULE ARTICLES SECTIONS
+/*----------------------------------------------------*/
+
+//Container top news
 
 div#top-news {
 	border: 1px solid $border-table-color;
@@ -1587,11 +2120,17 @@ div#top-news {
 			width: 50px;
 		}
 	}
-	ul{
+
+	// Tabs top news 
+
+	ul.nav-justified{
 		border-bottom: 2px solid $aj-blue-darkest;
 		margin-top: 20px;
+		table-layout: fixed;
+		display: table;
 		li{
 			border-right: 1px solid white;
+			width: 100%;
 			a{
 				border-radius: 0;
 				background-color: $aj-blue-lighter;
@@ -1602,7 +2141,14 @@ div#top-news {
 				height: 39px;
 				border: 0;
 				padding:13px 8px 8px;
-				width: 109.3px; // desktop
+				width: 100%;
+				span {
+					@include transform(translateY(-50%));
+					position: absolute;
+					top: 50%;
+					left: 0;
+					width: 100%;
+				}
 			}
 			&.active, &:hover {
 				a {
@@ -1611,11 +2157,12 @@ div#top-news {
 				}
 			}
 			&:last-child {
-				border-right: 0;
+				border-right: 0 !important;
 			}
 		}
 	}
 	div.tab-content {
+		margin-top: 2rem;
 		.mod-news {
 			float: left;
 			margin-bottom: 20px;
@@ -1623,8 +2170,9 @@ div#top-news {
 				float: left;
 			}
 			div.col-details {
-				float: right;
-				width: 64%;
+				margin-left: 120px;
+				//float: right;
+				//width: 64%;
 				h2 {
 					font-size: 1.35rem;
 					margin: 0;
@@ -1650,30 +2198,766 @@ div#top-news {
 			}
 		}
 	}
+	div.actions {
+		float: left;
+	}
+}
+/*----------------------------------------------------*/
+// "LO NUEVO EN" TEMPLATE 
+/*----------------------------------------------------*/
+
+div#latest-news {
+	article {
+		h6 {
+			$values: $size8 0 0.5rem; 
+			@include headingSize($values);
+			text-transform: uppercase;
+			color: $aj-blue-dark;
+		}
+		h2 {
+			$values: $size2 0 0.5rem; 
+			@include headingSize($values);
+		}
+		p {
+			&.reference {
+				font-size: $size6;
+				font-style: italic;
+				color: lighten($gray-light, 10%);
+			}
+		}
+		.clearfix {
+			padding-bottom: 5rem;
+			border-bottom: 8px solid $aj-blue-lighter;
+		}
+		
+	}
 }
 
-// Redefining select style {
-.bootstrap-select.btn-group button {
-	width: 100%;
-	background-color: white;
-  color: $gray-light;
-  background-color: transparent;
-  border-color: $gray-light;
-  font-weight: 100;
+/*----------------------------------------------------*/
+// REVIEWS
+/*----------------------------------------------------*/
+
+div#reviews {
+	$maxImgWidth: 173px;
+	article {
+		margin-bottom: 3rem;
+		figure {
+			float: left;
+			max-width: $maxImgWidth;
+		}
+		div.col-details {
+			margin-left: $maxImgWidth + 20px;
+			h6 {
+				font-family: $font-family-serif;
+				font-weight: bold;
+				font-style: italic;
+				$values: $size4 0 1rem; 
+				@include headingSize($values);
+				color: $aj-blue-darker;
+			}
+		}
+	}
 }
 
-.bootstrap-select.btn-group .dropdown-toggle .caret {
-    // position: absolute;
-    // top: 50%;
-    // right: 12px;
-    // margin-top: -2px;
-    // vertical-align: middle;
-    content: "";
-    position: absolute;
-		top: 40%;
-		margin-left: 5px;
-		@include cssSprite ($arrow-select);
-		right: 10px;
-		border: none;
+
+/*----------------------------------------------------*/
+// NEW SELECTS FOR PROJECT
+/*----------------------------------------------------*/
+
+// Redefining select style 
+
+.bootstrap-select {
+	&.btn-group {
+		button {
+			width: 100%;
+			background-color: white;
+			color: $gray-light;
+			border: solid 1px #dcdcdc;
+			font-weight: 100;
+			&.dropdown-toggle{
+				background-color: #FFF;
+				&:hover {
+					background-color: #FFF;
+				}
+				span.filter-option{
+					width: auto;
+				}
+				span.caret {
+					content: "";
+					position: absolute;
+					top: 40%;
+					margin-left: 5px;
+					@include cssSprite ($arrow-select);
+					right: 10px;
+					border: none;
+				}
+			}
+		}	
+	}
+	&.open {
+		div.dropdown-menu.open {
+			margin: 0;
+		}
+	}
 }
 
+/*----------------------------------------------------*/
+// SEARCH RESULTS
+/*----------------------------------------------------*/
+
+ol.searchResultsList {
+	margin-left: 0;
+	list-style: none;
+	padding-left: 0;
+	li {
+		border-bottom: 1px solid darken($gray-lighter, 10%);
+		margin-bottom: 2rem;
+		padding-bottom: 2rem;
+		figure {
+			float: left;
+		}
+		div.resultDetail {
+			$values: $size7 0 1rem;
+			h2 {
+				@include headingSize($values);	
+			}
+			p.date {
+				float: left;
+				margin-right: 20px;
+			}
+		}
+
+		&.news, &.columnist {
+			div.resultDetail {
+				margin-left: 120px;
+			}
+		}
+		&.columnist {
+			h5 {
+				font-family: $font-family-serif;
+				$values: $size7 0 0.5rem;
+				@include headingSize($values);	
+				color: $gray-light;
+			}
+		}
+		&.editorial {
+			div.resultDetail {
+				margin-left: 0;
+			}
+		}
+	}
+	&.checkOpt {
+		div.checkboxCol {
+			float: left;
+			margin-right: 13px;
+			position: relative;
+			top: 40px;
+		}
+		li.news, li.columnist {
+			div.resultDetail {
+				margin-left: 150px;
+			}
+		}
+		li.editorial {
+			div.resultDetail {
+				margin-left: 27px;
+			}
+		}
+		li.alerts {
+			div.resultDetail {
+				margin-left: 30px;
+			}
+		}
+	}
+}
+
+div#filterOptions {
+	padding: 20px;
+	background-color: lighten($border-table-color,5%);
+	border: 1px solid darken($border-table-color, 10%);
+	h3 {
+		$values: $size4 0 0;
+		@include headingSize($values);
+		
+		&.news {
+			@include headingSection($aj-news);
+			$values: $aj-news 1.4rem;
+			@include bottomLine($values);
+		}
+		&.opinion {
+			@include headingSection($aj-opinion);
+			$values: $aj-opinion 1.4rem;
+			@include bottomLine($values);
+		}
+		&.specials {
+			@include headingSection($aj-specials);
+			$values: $aj-specials 1.4rem;
+			@include bottomLine($values);
+		}
+		&.base {
+			@include headingSection($aj-blue-dark);
+			$values: $aj-blue-dark 1.4rem;
+			@include bottomLine($values);
+			&.filter {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+	ul.listLinks {
+		font-family: $font-family-serif;
+		font-size: $size8;
+		list-style-type: none;
+		padding-left: 0;
+		margin-top: 1rem;
+		li {
+			margin-top: 0.5rem;
+		}
+	}
+	form {
+		label {
+			font-weight: normal;
+		}
+	}
+}
+
+/*----------------------------------------------------*/
+// SUSCRIPTION
+/*----------------------------------------------------*/
+
+div.suscription {
+	header.imgBgSuscription {
+		background: url("../images/jpg/img-header-suscription.jpg") no-repeat center center scroll;
+		height: 479px;
+		padding-top: 5rem;
+		h1 {
+			font-size: $size1;
+			font-weight: 100;
+			color: white;
+			text-transform: uppercase
+		}
+		h2 {
+			font-size: $size4;
+			color: white;
+			width: 50%;
+			line-height: 1.5;
+		}
+	}
+	ul.benefits {
+		padding-left: 0;
+		margin-left: 2rem;
+		list-style-type: none;
+		color: $aj-blue-darker;
+		li {
+			i {
+				float: left;
+				margin-left: -2rem;
+				margin-right: 1.4rem;
+			}
+			h4 {
+				display: inline-block;
+				margin-bottom: 0;
+				margin-top: 0;
+			}
+			p {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+	div.bgSuscription {
+		background-color: lighten($border-table-color,5%);
+		div#printOnline, div#online {
+			padding: 20px;
+			display: table-cell;
+			vertical-align: top;
+			float: none;
+			h2 {
+				$values: $size2 0 2rem;
+				@include headingSize($values);
+				color: $aj-blue;
+				font-weight: 100;
+			}
+			h3 {
+				$values: $size4 0 2rem;
+				@include headingSize($values);
+				text-transform: uppercase;
+				color: $aj-blue-dark;
+				font-weight: 100;
+				$values: $aj-blue-dark 2rem;
+				@include bottomLine($values);
+			}
+		}
+		table.prices {
+			width: 100%;
+			border: 1px solid darken($aj-blue-darker, 10%);
+			tr {
+				td {
+					vertical-align: middle;
+					width: 33.3%;
+					border: 1px solid darken($aj-blue-darker, 10%);
+					padding: 10px;
+				}
+			}
+			background-color: $aj-blue-darker;
+			p.plan {
+				font-family: $font-family-sans-serif;
+				color: $aj-blue-lighter;
+				font-size: 1.5rem;
+			}
+			h5 {
+				color: white;
+				$values: $size3 0 2rem;
+				@include headingSize($values);
+			}
+		}
+		p.finePrint {
+			font-family: $font-family-sans-serif;
+			font-size: 1.15rem;
+			color: $gray-light;
+		}
+		form {
+			fieldset {
+				legend {
+					color: $aj-blue;
+					padding-bottom: 1rem;
+					margin-bottom: 0;
+					border-bottom: 1px solid $aj-blue;
+				}
+			}
+		}
+	}
+	div.bgOnline {
+		background-color: $aj-blue-lighter;
+	}
+	div.bgSuscriber {
+		background-color: $aj-blue-dark;
+		padding: 50px 0;
+		h2 {
+			margin-top: 0;
+			color: white;
+			small {
+				color: white;
+			}
+		}
+		form.form-inline {
+			div.form-group {
+				div.input-group {
+					min-width: 576px;
+				}
+			}
+		}
+	}
+	div.others {
+		div.left {
+			h4 {
+				$values: $size8 1rem 0;
+				@include headingSize($values);
+				color: $aj-blue;
+			}
+			div.price1year {
+				background-color: $aj-blue-darker;
+				padding: 20px;
+				overflow: hidden;
+				position: relative;
+				p {
+					font-family: $font-family-sans-serif;
+					font-weight: bold;
+
+					&.plan {
+						font-size: $size8;
+						color: $aj-blue-lighter;
+						float: left;
+						margin-bottom: 0;
+					}
+				}
+				h5.price {
+					$values: $size2 0 0;
+					@include headingSize($values);
+					color: white;
+					float: left;
+					clear: both;
+				}
+				a {
+					float: right;
+					top: 32px;
+					right: 20px;
+					position: absolute;
+				}
+			}
+		}
+		div.right {
+			h4 {
+				margin-bottom: 3rem;
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------*/
+// SIGN UP 
+/*----------------------------------------------------*/
+
+div.formContainer {
+	div[class*='head'] {
+		h2 {
+			$values: $size4 0 0;
+			@include headingSize($values);
+			font-size: $size4;
+			color: $aj-blue-darker;
+		}
+		h3 {
+			font-weight: normal;
+			color: $aj-blue-darker;
+			$values: $size6 1rem 3rem;
+			@include headingSize($values);
+		}
+	}
+	div[class*='Login'] {
+		h2 {
+			float: left;
+			margin-right: 10px;
+		}
+		a {
+			vertical-align: sub;
+		}
+	}
+	div.right {
+		div.socialBtns {
+			border-left: 1px solid darken($gray-lighter,10%);
+			h4 {
+				$values: $size5 0 3rem;
+				@include headingSize($values);
+			}
+		}
+	}
+	// list fixed for 2x icons
+	div.benefits {
+		h4 {
+			font-size: $size5;
+		}
+		ul {
+			color: $aj-blue-darker;
+			margin-left: 18px;
+			li {
+				left: 6px;
+				margin-bottom: 10px;
+				i {
+					text-align: left;
+					width: 0.5em;
+					left: -22px;
+					top: -5px;
+				}
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------*/
+// SOCIALES Y PROFESIONALES
+/*----------------------------------------------------*/
+#socialPro {
+	div.carousel {
+		background-color: $gray-lighter;
+	}
+}
+
+/*----------------------------------------------------*/
+// CONTACT
+/*----------------------------------------------------*/
+div.contactInfo {
+	margin-top: 3rem;
+	h2 {
+		color: $aj-blue-darker;
+		$values: $size5 0 2rem;
+		@include headingSize($values);
+	}
+}
+div.contactDetails {
+	background-color: $gray-lighter;
+	padding: 20px;
+	ul.fa-ul{
+		margin-left: 1.4em;
+		li{
+			height: 40px;
+		}
+	}
+	h3 {
+		$values: $size7 0 1rem;
+		@include headingSize($values);
+	}
+	p {
+		font-family: $font-family-sans-serif;
+		margin-bottom: 0;
+	}
+}
+
+/*----------------------------------------------------*/
+// FAQ
+/*----------------------------------------------------*/
+
+div.searchTerms {
+	background-color: $aj-blue-dark;
+	padding: 20px;
+	p {
+		font-family: $font-family-sans-serif;
+		color: white;
+		margin-top: 10px;
+		margin-bottom: 0;
+		a {
+			color: white;
+			text-decoration: underline;
+		}
+	}
+}
+
+div.qtList {
+	h2 {
+		$values: $size4 0 1.5rem;
+		@include headingSize($values);
+		color: $aj-blue-dark;
+	}
+	ul {
+		li {
+			margin-bottom: 1.5rem;
+		}
+	}
+}
+
+div.listByQt {
+	h3, h4 {
+		color: $aj-blue-dark;
+	}
+	div.list {
+		h3 {
+			$values: $size3 0 3rem;
+			@include headingSize($values);
+		}
+		div.question {
+			margin-bottom: 3rem;
+		}
+	}
+	div.qtResponse {
+		h2 {
+			$values: $size3 0 3rem;
+			@include headingSize($values);
+		}
+	}
+}
+
+div.otherSubjects, div.relatedQuestions {
+	background-color: $gray-lighter;
+	padding: 20px;
+	h3 {
+		$values: $size4 0 2rem;
+		@include headingSize($values);
+	}
+	ul {
+		li {
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+/*----------------------------------------------------*/
+// TERMS AND CONDITIONS
+/*----------------------------------------------------*/
+
+div.termsBody {
+	p {
+		&.title {
+			font-weight: bold;
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+		}
+	}
+	li {
+		font-family: $font-family-serif;
+	}
+}
+
+/*----------------------------------------------------*/
+// ADVERTSING PROMOTION (PAUTE CON NOSOTROS)
+/*----------------------------------------------------*/
+div.advPromotion {
+	h5.description {
+		color: $aj-blue-dark;
+		line-height: 1.5;
+	}
+}
+
+/*----------------------------------------------------*/
+// USER ACCOUNT
+/*----------------------------------------------------*/
+
+div.userAccount {
+	div.userName {
+		figure {
+			width: 64px;
+			height: 64px;
+			float: left;
+		}
+		.name {
+			margin-left: 80px;
+			font-weight: 100;
+			color: $aj-blue-darker;
+		}
+	}
+	div.tab-content {
+		padding-top: 4rem;
+
+		div.tab-pane {
+			display: none;
+			&.active {
+				display: block;
+			}
+		}
+
+		// Styles for profile tab
+		div#profile {
+			h3 {
+				font-weight: normal;
+				$values: 2.4rem 0rem 2rem; 
+				@include headingSize($values);
+				@include headingSection($aj-blue-darker);
+				$valuesLine: $aj-blue-darker, 1rem;
+				@include bottomLine($valuesLine);
+			}
+			.changePass {
+				margin-top: 3.5rem;
+			}
+			div.userInfo {
+				div[class*='col-md'] {
+					margin-bottom: 2rem;
+				}
+				label {
+					font-weight: normal;
+					color: $gray-light;
+				}
+				a.addInfo{
+					&::before {
+						content: "";
+						float: left;
+						margin-right: 10px;
+						margin-top: -1px;
+						@include cssSprite ($icon-add-info);
+					}
+				}
+			}
+			div.newsletters {
+				label {
+					font-weight: normal;
+					margin-bottom: 2rem;
+				}
+			}
+			div.alert {
+				i {
+					margin-top: -5px;
+				}
+			}
+		}
+
+	// Styles for saveContents tab
+
+	div#saveContents {
+		a[class*= 'Folder'] {
+			margin-right: 10px;
+			font-size: 1.3rem;
+		}
+		a[class*='Folder']::before {
+			content: "";
+			display: inline-block;
+			margin-right: 5px;
+			position: relative;
+			top: 9px;
+		}
+		a[class*='create']::before {
+			@include cssSprite ($icon-add-folder);
+		}
+		a[class*='remove']::before {
+			@include cssSprite ($icon-remove-folder);
+		}
+		div.checkboxCol {
+			&.buttons {
+				top: 10px;
+			}
+		}
+	}
+	div#myEvents {
+		div.results {
+			ol li {
+				div.resultDetail {
+					div.tags {
+						margin-bottom: 10px;
+						a {
+							font-size: 1rem;
+							font-weight: 100;
+							background-color: $aj-blue-lighter;
+							text-transform: uppercase;
+							margin-right: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+	div#myAlerts {
+		div.checkboxCol {
+			&.buttons {
+				top: 10px;
+			}
+		}
+		div.resultDetail {
+			p {
+				font-family: $font-family-sans-serif;
+			}
+		}
+	}
+	div#myThemes {
+		h3 {
+			font-weight: normal;
+			$values: 2.4rem 0rem 2rem; 
+			@include headingSize($values);
+			@include headingSection($aj-blue-darker);
+			$valuesLine: $aj-blue-darker, 1rem;
+			@include bottomLine($valuesLine);
+		}
+		p {
+			font-family: $font-family-sans-serif;
+		}
+		ul.followed, ul.toFollow {
+			li {
+				color: $aj-blue-dark;
+				text-transform: uppercase;
+				margin-right: 10px;
+				a {
+					&::before {
+						content: "";
+						display: inline-block;
+						margin-right: 5px;
+						position: relative;
+						top: 6px;
+					}
+				}
+			}
+		}
+		ul.followed {
+			li a {
+				&::before {
+					@include cssSprite ($icon-selected-ok);
+				}
+			}
+		}
+		ul.toFollow {
+			li a {
+				&::before {
+					@include cssSprite ($icon-add-info);				
+				}
+			}
+		}
+	}
+	div.checkboxCol {
+		float: left;
+		margin-right: 13px;
+		position: relative;
+	}
+}
+}

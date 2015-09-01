@@ -6,6 +6,15 @@
 	background-position: nth( $spriteVals, 4 ) nth( $spriteVals, 5 );
 }
 $sprite-aj-path: '../images/svg/sprite-aj.svg';
+$icon-selected-ok: 24px 24px $sprite-aj-path -209px -80px;
+$icon-add-info: 24px 24px $sprite-aj-path -175px -80px;
+$icon-remove-folder: 29.548842105263162px 27.377368421052637px $sprite-aj-path -138px -80px;
+$icon-add-folder-lg: 37.99136842105264px 35.19947368421053px $sprite-aj-path -99.00431578947368px -118px;
+$icon-add-folder: 30.210526315789473px 28px $sprite-aj-path -99px -80px;
+$icon-edit: 15px 15px $sprite-aj-path -125px -28px;
+$icon-email: 19.444444444444443px 14px $sprite-aj-path -96px -28px;
+$quote-bottom: 100% 30px $sprite-aj-path -200px -40px;
+$quote-up: 100% 30px $sprite-aj-path -200px 0px;
 $btn-slider-right: 41px 80px $sprite-aj-path -46px -80px;
 $btn-slider-left: 41px 80px $sprite-aj-path 0px -80px;
 $arrow-select: 22px 11px $sprite-aj-path -110px -52px;

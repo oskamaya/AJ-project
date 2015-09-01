@@ -13,9 +13,20 @@
 		margin-top: 0;
 	}
 
+	.pd0-sm {
+		padding: 0;
+	}
+
+
 	// NEWSLETTER
 
 	div#get-newsletter {
+
+		h2 {
+			font-size: $size5 !important;
+			margin-bottom: 1rem;
+		}
+
 		overflow: hidden;
 		form {
 			margin: 0 !important;
@@ -30,6 +41,9 @@
 		}
 	}
 
+	// TABS
+
+	ul.ajTabs li { border-right: 1px solid white !important; }
 
 	//TABS NEWS
 
@@ -56,18 +70,18 @@
 		margin-bottom: 2rem !important;
 		div#main-article {
 
-		div.heading {
+			div.heading {
 
-			div.heading-overlay {
+				div.heading-overlay {
 
-				h2 {
-					font-size: 2.4rem !important;
-					width: 100% !important;
+					h2 {
+						font-size: 2.4rem !important;
+						width: 100% !important;
+					}
 				}
 			}
 		}
 	}
-}
 
 	/*----------------------------------------------------*/
 	// ECONOMIC INDICATORS
@@ -97,15 +111,15 @@
 			// Left column
 			div.left-col{
 				margin-bottom: 3rem;
-				// Editorial, cartoons and analisis modules
+				// Editorial, cartoons and analysis modules
 
-				div[id='analisis'] {
+				div[id='analysis'] {
 					margin-top: -110px !important;
 					border-bottom: none !important;
 				}
-				// Editorial, cartoons and analisis modules
+				// Editorial, cartoons and analysis modules
 
-				div#editorial, div#cartoons, div#analisis {
+				div#editorial, div#cartoons, div#analysis {
 					border-bottom: 1px solid $border-table-color;
 					padding: 0 0 20px !important;
 					margin: 20px 0 0 20px;
@@ -183,7 +197,7 @@
 		}
 	}
 	footer {
-		margin-top: 0 !important;
+		//margin-top: 0 !important;
 		div.links {
 			padding: 20px 0 !important;
 		}
@@ -199,6 +213,178 @@
 					width: 89% !important;
 				}
 			}
+		}
+	}
+
+	/*----------------------------------------------------*/
+	// ARTICLES
+	/*----------------------------------------------------*/
+
+	div.article {
+		div.rel-news {
+			article {
+				b.tag-news {
+					&::after {
+						content: none;	
+					}
+				}
+			}
+		}
+	}
+
+	/*----------------------------------------------------*/
+	// ARTICLES LIST
+	/*----------------------------------------------------*/
+
+	div.articles-list {
+		div.top-article {
+			article.top {
+				h2 {
+					font-size: 2.4rem !important;
+				}
+			}
+		}
+		
+		div#list-news {
+			div.actions {
+				clear: both !important;
+			}
+
+			article {
+				figure {
+					margin-bottom: 1rem !important;
+				}
+			}
+			b[class*='tag-'] {
+				margin-bottom: 0.5rem !important;
+				&::after {
+					content: none !important;
+				}
+			}
+		}
+	}
+	
+	/*----------------------------------------------------*/
+	// "LO NUEVO EN" TEMPLATE
+	/*----------------------------------------------------*/
+
+	div#latest-news {
+		article {
+			h2 {
+				font-size: $size4 !important;
+				margin-bottom: 2rem !important;
+			}
+		}
+	}
+
+	/*----------------------------------------------------*/
+	// REVIEWS
+	/*----------------------------------------------------*/
+
+	div#reviews {
+		$maxImgWidth: 90px;
+		article {
+			figure {
+				max-width: $maxImgWidth !important;
+			}
+			div.col-details {
+				margin-left: $maxImgWidth + 20px !important;
+			}
+		}
+	}
+
+	/*----------------------------------------------------*/
+	// RIGHT MODULE ARTICLES SECTIONS
+	/*----------------------------------------------------*/
+
+	div#top-news {
+
+		ul {
+			li {
+				border-right: 4px solid white !important;
+				a {
+					height: 50px !important;
+					font-size: 1.1rem !important;
+					padding: 18px 8px 8px !important;
+				}
+			}
+		}
+		div.mod-news {
+			//padding: 0 !important;
+			figure {
+				max-width: 86px !important;
+			}
+			div.col-details {
+				margin-left: 100px !important;
+				//width: 70% !important;
+			}
+		}
+
+	}
+	/*----------------------------------------------------*/
+	// SUSCRIPTION
+	/*----------------------------------------------------*/
+
+	header.imgBgSuscription {
+		max-height: 256px !important;
+		background-size: 100% auto !important;
+		background-y-position: top !important;
+		padding-top: 1rem !important;
+		h1 {
+			font-size: $size2 !important;
+		}
+		h2 {
+			font-size: $size6 !important;
+			width: 60% !important;
+		}
+	}
+	div.bgSuscription {
+		div#printOnline, div#online {
+			display: inherit !important;
+			vertical-align: inherit !important;
+		}
+	}
+	div.bgSuscriber {
+		padding: 30px 0 !important;
+		form.form-inline {
+			div.form-group {
+				div.input-group {
+					min-width: 508px !important;
+				}
+			}
+		}
+		h2 {
+			font-size: $size4 !important;
+		}
+	}
+	div.others {
+		div.left, div.right {
+			h3.subhead {
+				font-size: 3rem !important;
+			}
+		}
+	}
+
+	/*----------------------------------------------------*/
+	// FAQ
+	/*----------------------------------------------------*/
+
+	div.searchTerms {
+		p {
+			margin-top: 0 !important;
+			margin-bottom: 0 !important;
+		}
+	}
+
+	/*----------------------------------------------------*/
+	// USER ACCOUNT
+	/*----------------------------------------------------*/
+
+	div#saveContents {
+		a[class*='Folder'] {
+			text-indent: -9999px;
+			font-size:0 !important;
+			line-height:0
 		}
 	}
 }

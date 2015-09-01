@@ -10,6 +10,52 @@
 		padding-top: 105px !important;
 	}
 
+	div#get-newsletter {
+		padding: 15px !important;
+		h2 {
+			margin-top: 8px !important;
+			font-size: 2.2rem !important;
+		}
+		p {
+			font-size: 2.15rem !important;
+		}
+		form {
+			input {
+				width: 68% !important;
+				margin-right: 5px !important;
+			}
+		}
+	}
+
+	div#top-news, div#recommended {
+		h3 {
+			font-size: 2.3rem !important;
+		}
+	}
+
+	div#top-news {
+		padding: 15px !important;
+		ul{
+			li {
+				a{
+					padding-top: 5px !important;
+					padding-bottom: 10px !important;
+					height: 39px !important;
+				}
+			}
+		}
+		.tab-content {
+			.mod-news {
+				div.col-details {
+					margin-left: 90px !important;
+				}
+			}
+		}
+		figure {
+			max-width: 80px;
+		}
+	}
+
 	nav.navbar-aj {
 		
 		position: absolute !important;
@@ -45,24 +91,59 @@
 		}
 	}
 
-  	//TABS NEWS
+	/*----------------------------------------------------*/
+	// ARTICLES LIST
+	/*----------------------------------------------------*/
 
-  	div#news-summary {
-  		div#tabs-news {
-  			ul {
-  				li {
-  					a {
-  						width: 316.3px !important;
-  					}
-  				}
-  			}
-  		} 
-  	}
+	div.articles-list {
+
+		
+		div#list-news {
+
+			div.actions {
+				clear: both !important;
+			}
+
+			b[class*='tag-'] {
+				margin-bottom: 0.5rem !important;
+				&::after {
+					content: none !important;
+				}
+			}
+		}
+	}
+
+	/*----------------------------------------------------*/
+	// COLUMNISTS MODULES
+	/*----------------------------------------------------*/
+
+	div.columnist {
+		margin-bottom: 2.5rem;
+		div.col-details{
+			margin-left: 120px !important;
+		}
+	}
+
 
   	//ECONOMIC INDICATORS
 
   	div.indicators {
-  		padding: 20px !important;
+  		padding: 20px 10px !important;
+  		h2 {
+  			font-size: 1.8rem !important
+  		}
+  		table {
+  			tr {
+  				td {
+  					&.item {
+  						width: 66%;
+  					}
+  					&.value {
+  						width: 33%;
+  					}
+  				}
+  			}
+  		}
   	}
 
 	// FIRST BLOCK HOME
@@ -89,31 +170,8 @@
 					}
 				} 
 			}
-			div.right-col {
-				div#print-columnists, div#online-columnists {
-					div.columnist {
-						figure {
-							margin-right: 1rem !important;
-						}
-						div.col-details {
-							width: 60% !important;
-						}
-					}
-				}
-
-			}
 		}
 		div.bottom-block {
-			div.left-col {
-				div.columnist {
-					figure {
-						margin-right: 1rem !important;
-					}
-					div.col-details {
-						width: 60% !important;
-					}
-				}
-			}
 			div.right-col {
 				div#letters {
 					h3 {
@@ -163,6 +221,20 @@
 			div.legal {
 				p {
 					width: 88% !important;
+				}
+			}
+		}
+	}
+
+	/*----------------------------------------------------*/
+	// SUSCRIPTION
+	/*----------------------------------------------------*/
+
+	div.bgSuscriber {
+		form.form-inline {
+			div.form-group {
+				div.input-group {
+					min-width: 416px !important;
 				}
 			}
 		}
