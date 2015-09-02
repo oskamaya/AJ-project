@@ -103,7 +103,7 @@ body {
 
 p {
 	font-family: $font-family-serif;
-	font-size: 1.571rem;
+	font-size: 1.371rem;
 }
 h1, h2, h3, h4, h5 {
 	a, a:hover {
@@ -579,6 +579,17 @@ div.leftTabs {
 	}
 }
 
+// This is for all tabs content
+
+div.tab-content {
+	div.tab-pane {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+}
+
 div.linksCont {
 	margin-left: $leftTabsWidth + 10px;;
 	div.tab-content {
@@ -996,7 +1007,6 @@ div#news-summary {
 	div.tab-content {
 		padding-top: 3rem;
 		div.tab-pane {
-			display: none;
 			div.nw-3col, div.nw-2col {
 				article.summary {
 					float: left;
@@ -1010,13 +1020,8 @@ div#news-summary {
 			p.summary {
 				font-family: $font-family-serif;
 			}
-			&.active {
-				display: block;
-			}
 		}
-		
 	}
-// Filter news tabs
 }
 
 /*----------------------------------------------------*/
@@ -1802,7 +1807,7 @@ div.articles-list {
 				float: right;
 			}
 			article {
-				p.date {
+				p.releaseDate {
 					float: left;
 					&::after {
 						content: "";
@@ -2804,13 +2809,6 @@ div.userAccount {
 	div.tab-content {
 		padding-top: 4rem;
 
-		div.tab-pane {
-			display: none;
-			&.active {
-				display: block;
-			}
-		}
-
 		// Styles for profile tab
 		div#profile {
 			h3 {
@@ -2880,6 +2878,24 @@ div.userAccount {
 				top: 10px;
 			}
 		}
+		div.resultDetail {
+			div.options {
+				p.releaseDate {
+					float: left;
+					&:after {
+						content: "";
+						float: right;
+						width: 1px;
+						height: 11px;
+						background-color: #777777;
+						position: relative;
+						top: 3px;
+						left: 10px;
+						margin-right: 20px;
+					}
+				}
+			}
+		}
 	}
 	div#myEvents {
 		div.results {
@@ -2895,11 +2911,36 @@ div.userAccount {
 							margin-right: 5px;
 						}
 					}
+					div.options {
+						p.releaseDate {
+							float: left;
+							&:after {
+								content: "";
+								float: right;
+								width: 1px;
+								height: 11px;
+								background-color: #777777;
+								position: relative;
+								top: 3px;
+								left: 10px;
+								margin-right: 20px;
+							}
+						}
+					}
 				}
 			}
 		}
 	}
 	div#myAlerts {
+		a {
+			color: $brand-primary;	
+		}
+		hr {
+			width: 100%;
+			color: darken($gray-lighter, 10%);
+			height: 1px;
+			background-color:darken($gray-lighter, 10%);
+		}
 		div.checkboxCol {
 			&.buttons {
 				top: 10px;

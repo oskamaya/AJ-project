@@ -37,11 +37,13 @@
   /*----------------------------------------------------*/
   h1[class*='head'] {
     font-size: 2.4rem !important;
-    margin-right: 10px !important; }
+    margin-right: 10px !important;
+    margin-bottom: 2rem !important; }
     h1[class*='head'] ~ a.all {
       margin-left: 0 !important;
       margin-top: -9px !important;
-      float: right !important; }
+      margin-bottom: 2rem !important;
+      float: left !important; }
 
   .subhead {
     font-size: 2.4rem !important;
@@ -774,7 +776,7 @@ body {
 
 p {
   font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
-  font-size: 1.571rem; }
+  font-size: 1.371rem; }
 
 h1 a, h1 a:hover, h2 a, h2 a:hover, h3 a, h3 a:hover, h4 a, h4 a:hover, h5 a, h5 a:hover {
   color: #333333; }
@@ -1133,6 +1135,11 @@ div.leftTabs {
     float: none;
     margin: 0; }
 
+div.tab-content div.tab-pane {
+  display: none; }
+  div.tab-content div.tab-pane.active {
+    display: block; }
+
 div.linksCont {
   margin-left: 210px; }
   div.linksCont div.tab-content {
@@ -1446,19 +1453,15 @@ ul.ajTabs {
 
 div#news-summary div.tab-content {
   padding-top: 3rem; }
-  div#news-summary div.tab-content div.tab-pane {
-    display: none; }
-    div#news-summary div.tab-content div.tab-pane div.nw-3col article.summary, div#news-summary div.tab-content div.tab-pane div.nw-2col article.summary {
-      float: left;
-      margin-bottom: 3rem; }
-    div#news-summary div.tab-content div.tab-pane h2.news-heading {
-      font-size: 2rem;
-      margin-top: 1rem;
-      margin-bottom: 0.5rem; }
-    div#news-summary div.tab-content div.tab-pane p.summary {
-      font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif; }
-    div#news-summary div.tab-content div.tab-pane.active {
-      display: block; }
+  div#news-summary div.tab-content div.tab-pane div.nw-3col article.summary, div#news-summary div.tab-content div.tab-pane div.nw-2col article.summary {
+    float: left;
+    margin-bottom: 3rem; }
+  div#news-summary div.tab-content div.tab-pane h2.news-heading {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem; }
+  div#news-summary div.tab-content div.tab-pane p.summary {
+    font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif; }
 
 /*----------------------------------------------------*/
 /*----------------------------------------------------*/
@@ -2044,9 +2047,9 @@ div.articles-list div.list#list-editorial .left {
   float: left; }
 div.articles-list div.list#list-editorial .right {
   float: right; }
-div.articles-list div.list#list-editorial article p.date {
+div.articles-list div.list#list-editorial article p.releaseDate {
   float: left; }
-  div.articles-list div.list#list-editorial article p.date::after {
+  div.articles-list div.list#list-editorial article p.releaseDate::after {
     content: "";
     float: right;
     width: 1px;
@@ -2793,10 +2796,6 @@ div.userAccount div.userName .name {
   color: #445b7F; }
 div.userAccount div.tab-content {
   padding-top: 4rem; }
-  div.userAccount div.tab-content div.tab-pane {
-    display: none; }
-    div.userAccount div.tab-content div.tab-pane.active {
-      display: block; }
   div.userAccount div.tab-content div#profile h3 {
     font-weight: normal;
     font-size: 2.4rem;
@@ -2855,6 +2854,18 @@ div.userAccount div.tab-content {
     background-position: -138px -80px; }
   div.userAccount div.tab-content div#saveContents div.checkboxCol.buttons {
     top: 10px; }
+  div.userAccount div.tab-content div#saveContents div.resultDetail div.options p.releaseDate {
+    float: left; }
+    div.userAccount div.tab-content div#saveContents div.resultDetail div.options p.releaseDate:after {
+      content: "";
+      float: right;
+      width: 1px;
+      height: 11px;
+      background-color: #777777;
+      position: relative;
+      top: 3px;
+      left: 10px;
+      margin-right: 20px; }
   div.userAccount div.tab-content div#myEvents div.results ol li div.resultDetail div.tags {
     margin-bottom: 10px; }
     div.userAccount div.tab-content div#myEvents div.results ol li div.resultDetail div.tags a {
@@ -2863,6 +2874,25 @@ div.userAccount div.tab-content {
       background-color: #CEDFFA;
       text-transform: uppercase;
       margin-right: 5px; }
+  div.userAccount div.tab-content div#myEvents div.results ol li div.resultDetail div.options p.releaseDate {
+    float: left; }
+    div.userAccount div.tab-content div#myEvents div.results ol li div.resultDetail div.options p.releaseDate:after {
+      content: "";
+      float: right;
+      width: 1px;
+      height: 11px;
+      background-color: #777777;
+      position: relative;
+      top: 3px;
+      left: 10px;
+      margin-right: 20px; }
+  div.userAccount div.tab-content div#myAlerts a {
+    color: #337ab7; }
+  div.userAccount div.tab-content div#myAlerts hr {
+    width: 100%;
+    color: #d5d5d5;
+    height: 1px;
+    background-color: #d5d5d5; }
   div.userAccount div.tab-content div#myAlerts div.checkboxCol.buttons {
     top: 10px; }
   div.userAccount div.tab-content div#myAlerts div.resultDetail p {

@@ -50,11 +50,13 @@
 	h1[class*='head'] {
 		font-size: 2.4rem !important;
 		margin-right: 10px !important;
+		margin-bottom: 2rem !important;
 
 		& ~ a.all {
 			margin-left: 0 !important;
 			margin-top: -9px !important;
-			float: right !important;
+			margin-bottom: 2rem !important;
+			float: left !important;
 		}
 	}
 
