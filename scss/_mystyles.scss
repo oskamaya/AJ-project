@@ -435,8 +435,8 @@ div.modal {
 // POPOVERS
 /*----------------------------------------------------*/
 
+// Save popover
 div[id*="popover"] {
-	min-width: 400px;
 	a.addFolder {
 		display: block;
 		font-size: $size7;
@@ -1014,7 +1014,7 @@ div#news-summary {
 				}
 			}
 			h2.news-heading {
-				$values: 2rem 1rem 0.5rem;
+				$values: $size6 1rem 0.5rem;
 				@include headingSize($values);
 			}
 			p.summary {
@@ -1910,7 +1910,7 @@ div.article {
 	div.article-actions {
 		height: 30px;
 		margin-top: 20px;
-		span {
+		a {
 			float: left;
 			font-size: 1rem;
 			margin: 1px 10px 0 0;

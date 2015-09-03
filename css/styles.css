@@ -217,6 +217,10 @@
   /*----------------------------------------------------*/
   div.article h2.heading {
     font-size: 2.4rem !important; }
+  div.article div.article-actions a {
+    text-indent: -9999px;
+    font-size: 0 !important;
+    line-height: 0; }
   div.article div.article-body p.quote::before {
     background-position: -442px 0px !important; }
   div.article div.article-body p.quote::after {
@@ -902,7 +906,7 @@ p.releaseDate {
 
 /*----------------------------------------------------*/
 /*----------------------------------------------------*/
-.space, .actions a.save::before, .actions a.share::before, .actions a.sort::before, .actions a.delete::before, .actions a.edit::before, div.article div.article-actions span.save::before, div.article div.article-actions span.share::before, div.article div.article-actions span.comments::before, div.article div.article-actions span.print::before, div.article div.article-actions span.size::before, div.article div.article-actions span.reader::before, div#top-news div.tab-content .mod-news div.col-details span.viewed:before {
+.space, .actions a.save::before, .actions a.share::before, .actions a.sort::before, .actions a.delete::before, .actions a.edit::before, div.article div.article-actions a.save::before, div.article div.article-actions a.share::before, div.article div.article-actions a.comments::before, div.article div.article-actions a.print::before, div.article div.article-actions a.size::before, div.article div.article-actions a.reader::before, div#top-news div.tab-content .mod-news div.col-details span.viewed:before {
   content: "";
   float: left;
   margin-right: 5px; }
@@ -1009,26 +1013,24 @@ div.modal div.modal-dialog {
 
 /*----------------------------------------------------*/
 /*----------------------------------------------------*/
-div[id*="popover"] {
-  min-width: 400px; }
-  div[id*="popover"] a.addFolder {
+div[id*="popover"] a.addFolder {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 2rem; }
+  div[id*="popover"] a.addFolder::before {
+    content: "";
     display: block;
-    font-size: 1.5rem;
-    margin-top: 2rem; }
-    div[id*="popover"] a.addFolder::before {
-      content: "";
-      display: block;
-      float: left;
-      margin-right: 10px;
-      margin-top: -0.7rem;
-      width: 37.9913684211px;
-      height: 35.1994736842px;
-      background-repeat: no-repeat;
-      background-image: url(../images/svg/sprite-aj.svg);
-      background-position: -99.0043157895px -118px; }
-  div[id*="popover"] a.btn {
-    display: inline-block;
-    margin-top: 12px; }
+    float: left;
+    margin-right: 10px;
+    margin-top: -0.7rem;
+    width: 37.9913684211px;
+    height: 35.1994736842px;
+    background-repeat: no-repeat;
+    background-image: url(../images/svg/sprite-aj.svg);
+    background-position: -99.0043157895px -118px; }
+div[id*="popover"] a.btn {
+  display: inline-block;
+  margin-top: 12px; }
 
 /*----------------------------------------------------*/
 /*----------------------------------------------------*/
@@ -1457,7 +1459,7 @@ div#news-summary div.tab-content {
     float: left;
     margin-bottom: 3rem; }
   div#news-summary div.tab-content div.tab-pane h2.news-heading {
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin-top: 1rem;
     margin-bottom: 0.5rem; }
   div#news-summary div.tab-content div.tab-pane p.summary {
@@ -2109,46 +2111,46 @@ div.article h2.heading {
 div.article div.article-actions {
   height: 30px;
   margin-top: 20px; }
-  div.article div.article-actions span {
+  div.article div.article-actions a {
     float: left;
     font-size: 1rem;
     margin: 1px 10px 0 0;
     cursor: pointer;
     text-transform: uppercase;
     color: #2F6DDC; }
-    div.article div.article-actions span::before {
+    div.article div.article-actions a::before {
       margin-top: -7px; }
-    div.article div.article-actions span.save::before {
+    div.article div.article-actions a.save::before {
       width: 18px;
       height: 22.5px;
       background-repeat: no-repeat;
       background-image: url(../images/svg/sprite-aj.svg);
       background-position: 0px 0px; }
-    div.article div.article-actions span.share::before {
+    div.article div.article-actions a.share::before {
       width: 16.5px;
       height: 24px;
       background-repeat: no-repeat;
       background-image: url(../images/svg/sprite-aj.svg);
       background-position: -28px 0px; }
-    div.article div.article-actions span.comments::before {
+    div.article div.article-actions a.comments::before {
       width: 28px;
       height: 22px;
       background-repeat: no-repeat;
       background-image: url(../images/svg/sprite-aj.svg);
       background-position: -120.5px -1px; }
-    div.article div.article-actions span.print::before {
+    div.article div.article-actions a.print::before {
       width: 24px;
       height: 24px;
       background-repeat: no-repeat;
       background-image: url(../images/svg/sprite-aj.svg);
       background-position: -54.5px 0px; }
-    div.article div.article-actions span.size::before {
+    div.article div.article-actions a.size::before {
       width: 26px;
       height: 17px;
       background-repeat: no-repeat;
       background-image: url(../images/svg/sprite-aj.svg);
       background-position: -158.5px -3px; }
-    div.article div.article-actions span.reader::before {
+    div.article div.article-actions a.reader::before {
       width: 22px;
       height: 24px;
       background-repeat: no-repeat;

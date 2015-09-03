@@ -2390,8 +2390,7 @@ window.addEventListener('resize', orderTop, true);
 $(document).ready(function() {
 
   // Construct popover
-
-  $('[data-toggle="popover"]').popover({
+  $('[rel="savePop"]').popover({
     html: true,
     container: 'body',
     content: function() {
@@ -2402,23 +2401,42 @@ $(document).ready(function() {
     }
   });
 
-  // Displaying popover
+  // Construct popover for font-size 
+  $('[rel="sizeFont"]').popover({
+    html: true,
+    container: 'body',
+    content : '<div class="text-center"><a class="btn btn-primary" href="#" id="incfont"><i class="fa fa-plus"></i></a>
+    <a class="btn btn-primary" href="#" id="decfont"><i class="fa fa-minus"></i></a></div>'
+  });
 
-  $("[data-toggle='popover']").on('show.bs.popover', function(){
+  // INCREASE FONT SIZE ON ARTICLES
+
+  $('#incfont').click(function(){  
+    alert("hola"); 
+    curSize= parseInt($('.article-body p').css('font-size')) + 2;
+    if(curSize<=20)
+      $('.article-body p').css('font-size', curSize);
+  }); 
+  $('#decfont').click(function(){   
+    curSize= parseInt($('.article-body p').css('font-size')) - 2;
+    if(curSize>=12)
+      $('.article-body p').css('font-size', curSize);
+  });
+
+  // Displaying popover
+  $('[rel="savePop"]').on('show.bs.popover', function(){
     //alert('The popover is now fully shown.');
-    $('.selectpicker').selectpicker('hide');
+    //$('.selectpicker').selectpicker('destroy');
     // $('.selectpicker').selectpicker('render');
   });
 
-  $("[data-toggle='popover']").on('shown.bs.popover', function(){
+  $('[rel="savePop"]').on('shown.bs.popover', function(){
     //alert('The popover is now fully shown.');
-    //$('.selectpicker').selectpicker('hide');
+    //$('.selectpicker').selectpicker('destroy');
+
     $('.selectpicker').selectpicker('render');
     //$('.selectpicker').selectpicker('show');
   });
-
-
-
 
   // Main article change position
   if ( $(window).width() > 768) {
@@ -2469,6 +2487,24 @@ $(document).on('click', 'li.yamm-fw > ul.dropdown-menu', function(e) {
   });
 
 }(jQuery);
+
+// FUNCTION FOR PRINT ARTICLES
+
+function printDiv(divName) {
+ var printContents = document.getElementById(divName).innerHTML;
+ var originalContents = document.body.innerHTML;
+
+ document.body.innerHTML = printContents;
+
+ window.print();
+
+ document.body.innerHTML = originalContents;
+}
+
+
+
+
+
 
 
 

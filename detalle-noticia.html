@@ -1159,28 +1159,19 @@
 							<div class="col-md-8 col-ms-12">
 								<div class="row">
 									<!-- Article -->
-									<div class="col-md-12">
-										<div>
+									<div class="col-md-12" id="printableArea">
+										<h2 class="heading">Mintrabajo presenta su propuesta de decreto único reglamentario del sector</h2>
+										<p class="releaseDate">02 mayo - 11:10 am</p>
 
-											<h2 class="heading">Mintrabajo presenta su propuesta de decreto único reglamentario del sector</h2>
-											<p class="releaseDate">02 mayo - 11:10 am</p>
-											<div class="article-actions hidden-xs">
-												<span class="save">Guardar</span>
-												<span class="share">Compartir</span>
-												<span class="comments">Comentarios</span>
-												<span class="print">Imprimir</span>
-												<span class="size">Aumentar</span>
-												<span class="reader">Lector</span>
-											</div>
-											<div class="article-actions visible-xs">
-												<span class="save"></span>
-												<span class="share"></span>
-												<span class="comments"></span>
-												<span class="print"></span>
-												<span class="size"></span>
-												<span class="reader"></span>
-											</div>
+										<div class="article-actions">
+											<a class="save">Guardar</a>
+											<a class="share">Compartir</a>
+											<a class="comments">Comentarios</a>
+											<a class="print" onclick="printDiv('printableArea')" value="print a div!">Imprimir</a>
+											<a class="size" data-toggle="popover" rel="sizeFont" data-placement="top" tabindex="0" data-trigger="click" title="Tamaño de fuente">Aumentar</a>
+											<a class="reader">Lector</a>
 										</div>
+										
 										<div class="photo-article">
 											<figure>
 												<img src="images/jpg/img-main-article.jpg" height="406" width="813" alt="" class="img-responsive">
@@ -1189,7 +1180,6 @@
 												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.<br><em>Foto: Juan Pérez</em>
 											</p>
 										</div>
-
 										<div class="article-body">
 
 											<p>El Ministerio del Trabajo presentó el que sería el decreto único reglamentario del sector. Se trata de una propuesta compilatoria de asuntos como el contrato de trabajo; las sanciones disciplinarias al empleado; el contrato de aprendizaje; las jornada de trabajo, descanso obligatorio, vacaciones y recreación; el teletrabajo; la afiliación de conductores de taxi; la mano de obra local en proyectos de hidrocarburos; los trabajadores que laboran por periodos inferiores a un mes; los sindicatos; el sistema de riesgos laborales; las juntas de calificación de invalidez y la protección al cesante, entre otros temas.</p>
@@ -1221,10 +1211,10 @@
 											<p>Por tratarse de un estatuto compilatorio de normas reglamentarias preexistentes, estas no requieren de consulta previa, aclaró el ministerio.</p>
 
 											<p><a href="#">(Ministerio del Trabajo, Proyecto de norma, abr. 15/15)</a></p>
-
 										</div>
-
-										<!-- Comments -->
+									</div>
+									<!-- Comments -->
+									<div class="col-md-12">
 										<div class="comments">
 											<span class="indicator"></span>
 											<a href="" class="btn btn-primary btn-sm">Mostrar 10 comentarios</a>
@@ -1292,7 +1282,7 @@
 												<b class="tag-specials">Informe</b>
 												<div class="actions">
 													<a href="#" class="save">Guardar</a>
-												<a href="#" class="share">Compartir</a>
+													<a href="#" class="share">Compartir</a>
 												</div>
 												<figure><img src="images/jpg/img-recom-articles.jpg" alt="" class="img-responsive"></figure>
 												<h2>Justicia en jaque: ¿Cómo recuperar la credibilidad?</h2>
@@ -1302,7 +1292,7 @@
 												<b class="tag-specials">Informe</b>
 												<div class="actions">
 													<a href="#" class="save">Guardar</a>
-												<a href="#" class="share">Compartir</a>
+													<a href="#" class="share">Compartir</a>
 												</div>
 												<figure><img src="images/jpg/img-recom-articles.jpg" alt="" class="img-responsive"></figure>
 												<h2>Justicia en jaque: ¿Cómo recuperar la credibilidad?</h2>

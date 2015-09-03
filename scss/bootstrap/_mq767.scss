@@ -380,6 +380,13 @@
 		h2.heading {
 			font-size: 2.4rem !important;
 		}
+		div.article-actions {
+			a {
+				text-indent: -9999px;
+				font-size: 0 !important;
+				line-height: 0;
+			}
+		}
 		div.article-body {
 			p.quote {
 				&::before {
