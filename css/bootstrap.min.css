@@ -4389,7 +4389,7 @@ a.thumbnail.active {
     margin-top: 0;
     color: inherit; }
   .alert .alert-link {
-    font-weight: bold; }
+    font-weight: 500; }
   .alert > p,
   .alert > ul {
     margin-bottom: 0; }
