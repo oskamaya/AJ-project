@@ -761,13 +761,13 @@
   src: url("../fonts/arnhemPro/ArnhemPro-Bold.eot");
   src: url("../fonts/arnhemPro/ArnhemPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/arnhemPro/ArnhemPro-Bold.woff") format("woff"), url("../fonts/arnhemPro/ArnhemPro-Bold.ttf") format("truetype"), url("../fonts/arnhemPro/ArnhemPro-Bold.svg#ArnhemPro-bold") format("svg");
   font-style: normal;
-  font-weight: bold; }
+  font-weight: 500; }
 @font-face {
   font-family: 'ArnhemPro';
   src: url("../fonts/arnhemPro/ArnhemPro-BoldItalic.eot");
   src: url("../fonts/arnhemPro/ArnhemPro-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/arnhemPro/ArnhemPro-BoldItalic.woff") format("woff"), url("../fonts/arnhemPro/ArnhemPro-BoldItalic.ttf") format("truetype"), url("../fonts/arnhemPro/ArnhemPro-BoldItalic.svg#ArnhemPro-boldItalic") format("svg");
   font-style: italic;
-  font-weight: bold; }
+  font-weight: 500; }
 /*----------------------------------------------------*/
 /*----------------------------------------------------*/
 body {
@@ -787,6 +787,9 @@ h1 a, h1 a:hover, h2 a, h2 a:hover, h3 a, h3 a:hover, h4 a, h4 a:hover, h5 a, h5
 h1.section, h2.section, h3.section, h4.section, h5.section {
   font-weight: normal;
   text-transform: uppercase; }
+
+b, strong {
+  font-weight: 500; }
 
 /*------------------------------------------------------------*/
 /* PUSH class adds space between header and first block */
@@ -1090,7 +1093,7 @@ div.leftTabs {
     width: 100%;
     text-align: left;
     text-transform: none;
-    font-weight: bold;
+    font-weight: 500;
     background-color: #A02A1A; }
     div.leftTabs ul.nav-tabs#news-tabs li a:hover {
       border: 0;
@@ -1107,7 +1110,7 @@ div.leftTabs {
     width: 100%;
     text-align: left;
     text-transform: none;
-    font-weight: bold;
+    font-weight: 500;
     background-color: #7B6CDC; }
     div.leftTabs ul.nav-tabs#opinion-tabs li a:hover {
       border: 0;
@@ -1124,7 +1127,7 @@ div.leftTabs {
     width: 100%;
     text-align: left;
     text-transform: none;
-    font-weight: bold;
+    font-weight: 500;
     background-color: #8FB221; }
     div.leftTabs ul.nav-tabs#specials-tabs li a:hover {
       border: 0;
@@ -1226,7 +1229,7 @@ nav.navbar-aj {
           display: block;
           padding: 11px 20px;
           font-size: 1.375rem;
-          font-weight: bold;
+          font-weight: 500;
           position: relative;
           border-right: 1px solid #555555; }
   nav.navbar-aj div.bottom {
@@ -1245,7 +1248,7 @@ nav.navbar-aj {
         padding: 0; }
         nav.navbar-aj div.bottom nav.navbar ul li a[class*='-btn'] {
           font-size: 1.5rem;
-          font-weight: bold;
+          font-weight: 500;
           text-align: center;
           display: block;
           width: 154px;
@@ -1420,17 +1423,16 @@ ul.ajTabs {
   display: table; }
   ul.ajTabs li {
     border-right: 10px solid white;
-    width: 100% !important; }
+    width: 33.3333333333% !important; }
     ul.ajTabs li a {
       border-radius: 0;
       border: 0 !important;
       background-color: #CEDFFA;
-      font-weight: bold;
+      font-weight: 500;
       font-size: 1.5rem;
       text-transform: uppercase;
       color: #12305C;
       height: 69px;
-      border: 0;
       padding: 0.5rem !important;
       width: 100%; }
       ul.ajTabs li a:hover {
@@ -1564,7 +1566,7 @@ div.indicators {
             font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
             font-size: 1.5rem;
             color: #7B6CDC;
-            font-weight: bold;
+            font-weight: 500;
             font-style: italic;
             margin: 0; }
     #opinion-section div.top-block div.right-col div[id*='-columnists'] {
@@ -1590,7 +1592,7 @@ div.indicators {
     #opinion-section div.bottom-block div#etcetera div.columnists div.columnist div.col-details h6 {
       font-size: 1.5rem;
       color: #7B6CDC;
-      font-weight: bold;
+      font-weight: 500;
       font-style: italic;
       margin: 0; }
     #opinion-section div.bottom-block div#etcetera div.columnists div.columnist div.col-details h5 {
@@ -1680,7 +1682,7 @@ div.indicators {
       #specials-section div.reviews div.carousel div.carousel-inner div.item div.review-details h3 {
         font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
         color: #445b7F;
-        font-weight: bold;
+        font-weight: 500;
         font-style: italic;
         margin-top: 0;
         text-transform: initial; }
@@ -1854,7 +1856,7 @@ div.columnist {
       div.columnist div.col-details h6.subject {
         font-size: 1.35rem;
         margin: 0 0 5px 0;
-        font-weight: bold;
+        font-weight: 500;
         font-style: italic;
         color: #7B6CDC; }
       div.columnist div.col-details h6.blog {
@@ -2214,12 +2216,12 @@ div.article div.article-body {
     font-size: 2rem;
     margin-top: 5rem;
     margin-bottom: 2rem;
-    font-weight: bold; }
+    font-weight: 500; }
   div.article div.article-body p:not(.caption) {
     font-size: 1.75rem; }
   div.article div.article-body p.lead-body {
     font-family: "AlrightSans", Helvetica, Arial, sans-serif;
-    font-weight: bold;
+    font-weight: 500;
     font-style: italic;
     font-size: 2rem;
     padding-left: 1.5rem;
@@ -2298,38 +2300,14 @@ div#top-news {
       margin-top: 20px;
       width: 50px; }
   div#top-news ul.nav-justified {
-    border-bottom: 2px solid #12305C;
-    margin-top: 20px;
-    table-layout: fixed;
-    display: table; }
+    border-bottom: 2px solid #12305C !important;
+    margin-top: 20px; }
     div#top-news ul.nav-justified li {
-      border-right: 1px solid white;
-      width: 100%; }
+      border-right: 1px solid white; }
       div#top-news ul.nav-justified li a {
-        border-radius: 0;
-        background-color: #CEDFFA;
-        font-weight: bold;
         font-size: 0.95rem;
-        text-transform: uppercase;
-        color: #12305C;
         height: 39px;
-        border: 0;
-        padding: 13px 8px 8px;
-        width: 100%; }
-        div#top-news ul.nav-justified li a span {
-          -moz-transform: translateY(-50%);
-          -o-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-          -webkit-transform: translateY(-50%);
-          position: absolute;
-          top: 50%;
-          left: 0;
-          width: 100%; }
-      div#top-news ul.nav-justified li.active a, div#top-news ul.nav-justified li:hover a {
-        background-color: #12305C;
-        color: white; }
-      div#top-news ul.nav-justified li:last-child {
-        border-right: 0 !important; }
+        padding: 13px 8px 8px; }
   div#top-news div.tab-content {
     margin-top: 2rem; }
     div#top-news div.tab-content .mod-news {
@@ -2393,7 +2371,7 @@ div#reviews article {
     margin-left: 193px; }
     div#reviews article div.col-details h6 {
       font-family: "ArnhemPro", Georgia, "Times New Roman", Times, serif;
-      font-weight: bold;
+      font-weight: 500;
       font-style: italic;
       font-size: 2.4rem;
       margin-top: 0;
@@ -2636,7 +2614,7 @@ div.suscription div.others div.left div.price1year {
   position: relative; }
   div.suscription div.others div.left div.price1year p {
     font-family: "AlrightSans", Helvetica, Arial, sans-serif;
-    font-weight: bold; }
+    font-weight: 500; }
     div.suscription div.others div.left div.price1year p.plan {
       font-size: 1.35rem;
       color: #CEDFFA;
@@ -2774,7 +2752,7 @@ div.otherSubjects, div.relatedQuestions {
 /*----------------------------------------------------*/
 /*----------------------------------------------------*/
 div.termsBody p.title {
-  font-weight: bold;
+  font-weight: 500;
   margin-top: 2rem;
   margin-bottom: 2rem; }
 div.termsBody li {
@@ -2785,6 +2763,9 @@ div.termsBody li {
 div.advPromotion h5.description {
   color: #25559F;
   line-height: 1.5; }
+div.advPromotion ul.ajTabs li {
+  width: 20% !important;
+  margin-bottom: 0; }
 
 /*----------------------------------------------------*/
 /*----------------------------------------------------*/
@@ -2796,6 +2777,8 @@ div.userAccount div.userName .name {
   margin-left: 80px;
   font-weight: 100;
   color: #445b7F; }
+div.userAccount ul.ajTabs li {
+  width: 20% !important; }
 div.userAccount div.tab-content {
   padding-top: 4rem; }
   div.userAccount div.tab-content div#profile h3 {
