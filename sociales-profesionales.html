@@ -217,4 +217,15 @@ include "_footer.html"
 
 include "_scripts.html"
 
+<script src="js/jquery.bxslider.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.bxslider').bxSlider({
+			pagerCustom: '#bx-pager',
+			//mode: 'fade',
+			captions: true
+		});
+	});
+</script>
+
 include "_close_tags.html"

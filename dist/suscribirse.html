@@ -1463,18 +1463,6 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/select.js"></script>
-<script type="text/javascript">
-    $(function () {
-
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-            $('.selectpicker').selectpicker('mobile');
-        }
-        $('.selectpicker').on('change', function(){
-            var optionSel = $('option:selected', this).attr('data-tab');
-            activeTab(optionSel);
-        });
-    });
-</script>
 <script src="//localhost:35729/livereload.js"></script>
 
 </body>

@@ -957,4 +957,23 @@ include "_footer.html"
 
 include "_scripts.html"
 
+<script src="js/bootstrap-switch.min.js"></script>
+<script src="js/select.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("[name*='User']").bootstrapSwitch();
+
+		//$('.selectpicker').selectpicker();
+
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+			$('.selectpicker').selectpicker('mobile');
+		}
+
+		$('.selectpicker').on('change', function(){
+			var optionSel = $('option:selected', this).attr('data-tab');
+			activeTab(optionSel);
+		});
+	});
+</script>
+
 include "_close_tags.html"
