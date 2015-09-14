@@ -1,0 +1,19 @@
+{
+  "name": "AJ-project",
+  "version": "0.0.0",
+  "homepage": "https://github.com/oskamaya/AJ-project",
+  "authors": [
+    "Cristian Rojas <cristianguillermorojas@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "webcomponentsjs": "~0.7.12"
+  }
+}
