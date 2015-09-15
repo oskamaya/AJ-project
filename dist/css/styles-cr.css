@@ -1,0 +1,16 @@
+.selectpicker-popover {
+    display: none;
+}
+
+.popover {
+
+}
+
+.popover .popover-title {
+    background-color: #cfe0fb;
+    color: #3e5683;
+}
+
+.popover .close {
+    line-height: 16px;
+}
