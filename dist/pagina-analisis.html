@@ -40,11 +40,11 @@
 					<div class="form-group">
 						<input type="text" class="form-control" placeholder="Contraseña">
 					</div>
-					<a href="#" class="btn btn-primary">Ingresar</a>
+					<a href="ingreso.html" class="btn btn-primary">Ingresar</a>
 					<hr>
 					<h4>¿No tiene una cuenta aún?</h4>
 					<p>Cree su cuenta gratuita y obtenga más acceso a contenido y muchos beneficios.</p>
-					<a href="#" class="btn btn-primary">Registrarse</a>
+					<a href="registro.html" class="btn btn-primary">Registrarse</a>
 				</form>
 			</div>
 		</div>
@@ -68,6 +68,40 @@
 	</div>
 </div>
 
+<div class="popover share-popover">
+	<div class="arrow"></div>
+	<h3 class="popover-title">Compartir por<span class="close">&times;</span></h3>
+	<div class="popover-content">
+		<div class="share-popover-content">
+			<nav class="share-popover-buttons">
+				<a href="#" class="twitter">
+					<i class="fa fa-twitter"></i>
+				</a>
+				<a href="#" class="google-plus">
+					<i class="fa fa-google-plus"></i>
+				</a>
+				<a href="#" class="linkedin">
+					<i class="fa fa-linkedin"></i>
+				</a>
+				<a href="#" class="facebook">
+					<i class="fa fa-facebook"></i>
+				</a>
+			</nav>
+			<hr>
+			<h5>Correo electrónico</h5>
+			<form novalidate>
+				<div class="form-group">
+					<input type="email" class="form-control" placeholder="Ingrese direcciones de correo">
+				</div>
+				<div class="form-group">
+					<textarea class="form-control" rows="3"></textarea>
+				</div>
+			</form>
+			<a href="#" class="btn btn-primary">Enviar correo</a>
+		</div>
+	</div>
+</div>
+
 <!-- MENU FOR DESKTOP -->
 <!-- top navigation -->
 <nav class="navbar-aj navbar-fixed-top visible-lg visible-md">
@@ -77,8 +111,8 @@
 			<span class="date-upload">02 de mayo de 2015 - Actualizado hace 10 min</span>
 			<ul id="user-menu">
 				<li class="suscription"><a href="#" data-toggle="modal" data-target=".bs-example-modal-lg">Suscribirse</a></li>
-				<li class="signup"><a href="#">Registrarse</a></li>
-				<li class="login"><a href="#">Ingresar</a></li>
+				<li class="signup"><a href="registro.html">Registrarse</a></li>
+				<li class="login"><a href="ingreso.html">Ingresar</a></li>
 			</ul>
 		</div>
 	</div>
@@ -1761,6 +1795,7 @@
 <script src="js/modernizr.js" type="text/javascript"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/misc/bootstrap.extras.js"></script>
 <script src="bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
 <script src="js/misc/close.popovers.js"></script>
 <script src="//localhost:35729/livereload.js"></script>

@@ -2,8 +2,12 @@
     display: none;
 }
 
-.popover {
+[data-toggle="popover"] {
+    cursor: pointer;
+}
 
+.popover {
+    max-width: 100%;
 }
 
 .popover .popover-title {
@@ -13,4 +17,39 @@
 
 .popover .close {
     line-height: 16px;
+}
+
+.share-popover-content {
+    width: 330px;
+}
+
+nav.share-popover-buttons {
+
+}
+
+nav.share-popover-buttons a {
+    display: inline-block;
+    width: 57px;
+    height: 57px;
+    margin-right: 20px;
+    border-radius: 100%;
+}
+
+nav.share-popover-buttons a:last-child {
+    margin-right: 0;
+}
+
+nav.share-popover-buttons a.twitter { background-color: #00cff8; }
+nav.share-popover-buttons a.google-plus { background-color: #ff0000; }
+nav.share-popover-buttons a.linkedin { background-color: #0070bb; }
+nav.share-popover-buttons a.facebook { background-color: #3e4b9c; }
+
+nav.share-popover-buttons a i {
+    color: white;
+    line-height: 57px;
+    text-align: center;
+    width: 57px;
+    height: 57px;
+    display: block;
+    font-size: 30px;
 }
