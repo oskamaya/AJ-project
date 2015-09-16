@@ -1,0 +1,21 @@
+{
+  "name": "boost-bootstrap",
+  "version": "0.0.5",
+  "description": "A collection of mixins, variables and class-names for html elements that makes my daily bootstrap front-end development easier.",
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cristiangrojas/boost-bootstrap.git"
+  },
+  "author": "Cristian Rojas <cristianguillermorojas@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cristiangrojas/boost-bootstrap/issues"
+  },
+  "homepage": "https://github.com/cristiangrojas/boost-bootstrap",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-less": "^0.11.4",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}

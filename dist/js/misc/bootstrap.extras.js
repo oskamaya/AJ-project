@@ -1,3 +1,22 @@
+// NAVIGATION FOR TABLET AND MOBILE DEVICES
+
+(function($){
+  'use strict';
+  $(function(){
+    var sideslider = $('[data-toggle=collapse-side]');
+    var sel = sideslider.attr('data-target');
+    var sel2 = sideslider.attr('data-target-2');
+    sideslider.click(function(event){
+      $(sel).toggleClass('in');
+      $(sel2).toggleClass('out');
+    });
+    $(".menu-link").on('click', function(){
+      $("#menu").toggleClass("active");
+      $(".side-collapse-container").toggleClass("active");
+    });
+  });
+})(jQuery);
+
 
 /* HERE BEGINS EXTRA FUNCTIONS */
 
@@ -24,92 +43,65 @@ window.addEventListener('resize', orderTop, true);
 
 $(document).ready(function() {
 
-  // Construct popover
-  $('[rel="savePop"]').popover({
-    html: true,
-    container: 'body',
-    content: function() {
-      return $('.savePop .popover-content').html();
-    },
-    title: function() {
-      return $('.savePop .popover-title').html();
-    }
-  });
+  var popovers = [
+    'savePop',
+    'sizeFont',
+    'share-popover',
+    'send-email-to-columnist',
+    'save-search',
+    'create-folder',
+    'delete-folder',
+    'organize-contents',
+    'delete-contents',
+    'edit-alert',
+    'delete-alert',
+    'delete-alerts'
+  ];
 
-  // Construct popover
-  $('[rel="share-popover"]').popover({
-    html: true,
-    container: 'body',
-    content: function() {
-      return $('.share-popover .popover-content').html();
-    },
-    title: function() {
-      return $('.share-popover .popover-title').html();
-    }
-  });
-
-  // Construct popover
-  $('[rel="send-email-to-columnist"]').popover({
-    html: true,
-    container: 'body',
-    content: function() {
-      return $('.send-email-to-columnist .popover-content').html();
-    },
-    title: function() {
-      return $('.send-email-to-columnist .popover-title').html();
-    }
-  });
-
-  // Construct popover
-  $('[rel="save-search"]').popover({
-    html: true,
-    container: 'body',
-    content: function() {
-      return $('.save-search .popover-content').html();
-    },
-    title: function() {
-      return $('.save-search .popover-title').html();
-    }
-  });
-
-  // Construct popover for font-size
-  $('[rel="sizeFont"]').popover({
+  popovers.forEach(function(popover){
+    $('[rel="' + popover + '"]').popover({
       html: true,
       container: 'body',
-      content : '<div class="text-center"><a class="btn btn-primary" href="#" id="incfont"><i class="fa fa-plus"></i></a>' +
-      '<a class="btn btn-primary" href="#" id="decfont"><i class="fa fa-minus"></i></a></div>'
-});
+      content: function() {
+        return $('.' + popover + ' .popover-content').html();
+      },
+      title: function() {
+        return $('.' + popover + ' .popover-title').html();
+      }
+    });
+  });
+
 
 // INCREASE FONT SIZE ON ARTICLES
 
-$('#incfont').click(function(){
-  curSize= parseInt($('.article-body p').css('font-size')) + 2;
-  if(curSize<=20)
-    $('.article-body p').css('font-size', curSize);
-});
-$('#decfont').click(function(){
-  curSize= parseInt($('.article-body p').css('font-size')) - 2;
-  if(curSize>=12)
-    $('.article-body p').css('font-size', curSize);
-});
+  $('#incfont').click(function(){
+    curSize= parseInt($('.article-body p').css('font-size')) + 2;
+    if(curSize<=20)
+      $('.article-body p').css('font-size', curSize);
+  });
+  $('#decfont').click(function(){
+    curSize= parseInt($('.article-body p').css('font-size')) - 2;
+    if(curSize>=12)
+      $('.article-body p').css('font-size', curSize);
+  });
 
 // Main article change position
-if ( $(window).width() > 768) {
-  $('.top-article .top').insertBefore('.top-article .bottom');
-}
-else {
-  $('.top-article .bottom').insertBefore('.top-article .top');
-}
+  if ( $(window).width() > 768) {
+    $('.top-article .top').insertBefore('.top-article .bottom');
+  }
+  else {
+    $('.top-article .bottom').insertBefore('.top-article .top');
+  }
 
 // Change order in tablets and mobiles for Analisis jurisprudencial template
 
-if ( $(window).width() < 922) {
-  $('#jurisprudential').insertBefore('#right-column');
+  if ( $(window).width() < 922) {
+    $('#jurisprudential').insertBefore('#right-column');
 
-}
-else {
-  $('#right-column').insertBefore('#jurisprudential');
-}
+  }
+  else {
+    $('#right-column').insertBefore('#jurisprudential');
+  }
 
 });
 
@@ -117,31 +109,13 @@ else {
 
 function activeTab(tab){
   $('.nav-tabs a[href="#' + tab + '"]').tab('show');
-};
+}
 
 // MEGADROP FUNCTIONS
 
 $(document).on('click', 'li.yamm-fw > ul.dropdown-menu', function(e) {
   e.stopPropagation()
 });
-
-// NAVIGATION FOR TABLET AND MOBILE DEVICES
-
-+function ($ ) {
-  // 'use strict'
-  var sideslider = $('[data-toggle=collapse-side]');
-  var sel = sideslider.attr('data-target');
-  var sel2 = sideslider.attr('data-target-2');
-  sideslider.click(function(event){
-    $(sel).toggleClass('in');
-    $(sel2).toggleClass('out');
-  });
-  $(".menu-link").click(function(){
-    $("#menu").toggleClass("active");
-    $(".side-collapse-container").toggleClass("active");
-  });
-
-}(jQuery);
 
 // FUNCTION FOR PRINT ARTICLES
 

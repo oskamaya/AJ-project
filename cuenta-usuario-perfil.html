@@ -54,13 +54,82 @@ include "_header.html"
 
 									<!-- User info -->
 									<h3>Datos del usuario</h3>
+									<div id="user-upload-picture" class="bottom-buffer-4">
+										<div class="image">
+											<img src="http://placehold.it/64x64" class="img-circle"/>
+										</div>
+										<div class="button">
+											<div class="vcw">
+												<div class="vci">
+													<div class="btn btn-primary btn-xs fileupload">
+														<input type="file" />
+														Cargar imagen
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 									<div class="row userInfo">
 										<div class="col-md-3 col-sm-6"><label for="userName">Nombres</label><input type="text" id="userName"></div>
 										<div class="col-md-3 col-sm-6"><label for="userSurname">Apellidos</label><input type="text" id="userSurname"></div>
 										<div class="col-md-3 col-sm-6"><label for="userEmail">Correo electrónico</label><input type="text" id="userEmail"></div>
 										<div class="col-md-3 col-sm-6 changePass"><a href="#">Cambiar contraseña</a></div>
-										<div class="col-md-12 col-sm-12"><a href="#" class="addInfo"> Agregar información</a></div>
 									</div>
+									<div id="user-more-info" style="display: none;">
+										<div class="row userInfo">
+											<div class="col-md-3 col-sm-6">
+												<label>Género</label>
+												<select class="selectpicker form-control">
+													<option>Masculino</option>
+													<option>Femenino</option>
+												</select>
+											</div>
+											<div class="col-md-3 col-sm-6">
+												<label>Fecha de nacimiento</label>
+												<input type="text">
+											</div>
+											<div class="col-md-3 col-sm-6">
+												<label>Teléfono celular</label>
+												<input type="text">
+											</div>
+										</div>
+										<div class="row userInfo">
+											<div class="col-md-3 col-sm-6">
+												<label>Documento de identificación</label>
+												<select class="selectpicker form-control">
+													<option>Cédula de ciudadanía</option>
+												</select>
+											</div>
+											<div class="col-md-3 col-sm-6">
+												<label>Número de documento</label>
+												<input type="text">
+											</div>
+											<div class="col-md-3 col-sm-6">
+												<label>Dirección</label>
+												<input type="text">
+											</div>
+										</div>
+										<div class="row userInfo">
+											<div class="col-md-3 col-sm-6">
+												<label>País</label>
+												<select class="selectpicker form-control">
+													<option>Colombia</option>
+												</select>
+											</div>
+											<div class="col-md-3 col-sm-6">
+												<label>Ocupación</label>
+												<input type="text">
+											</div>
+											<div class="col-md-3 col-sm-6">
+												<label>Profesión</label>
+												<input type="text">
+											</div>
+										</div>
+									</div>
+									<a href="#" id="btn-add-info">
+										<i class="fa fa-plus-circle"></i>
+										Agregar información
+									</a>
 
 									<div class="clearfix bottom-buffer-4"></div>
 
@@ -113,7 +182,7 @@ include "_header.html"
 							<div class="tab-pane fade" id="saveContents">
 								<div class="row filter bottom-buffer-5">
 									<div class="col-md-4 col-sm-5">
-										<select name="" id="filterBy" class="selectpicker">
+										<select name="" id="filterBy" class="selectpicker form-control">
 											<option value="opt1">Ver todos mis contenidos</option>
 											<option value="opt2">Option 2</option>
 											<option value="opt3">Option 3</option>
@@ -121,8 +190,12 @@ include "_header.html"
 										</select>
 									</div>
 									<div class="col-md-4 col-sm-2">
-										<a href="#" class="createFolder" title="Crear carpetas">Crear carpetas</a>
-										<a href="#" class="removeFolder" title="Eliminar carpetas">Eliminar carpetas</a>
+										<a class="createFolder" title="Crear carpetas" data-toggle="popover" rel="create-folder" data-placement="bottom" tabindex="0" data-trigger="click">
+											Crear carpetas
+										</a>
+										<a class="removeFolder" title="Eliminar carpetas" data-toggle="popover" rel="delete-folder" data-placement="bottom" tabindex="0" data-trigger="click">
+											Eliminar carpetas
+										</a>
 									</div>
 									<div class="clearfix visible-xs bottom-buffer-1"></div>
 									<div class="col-md-4 col-sm-5">
@@ -138,10 +211,14 @@ include "_header.html"
 								<div class="row results">
 									<div class="col-md-12 bottom-buffer-3">
 										<div class="checkboxCol buttons">
-											<input type="checkbox" aria-label="result">
+											<input type="checkbox" aria-label="result" onclick="$('input.select-item').trigger('click');">
 										</div>
-										<a href="#" class="btn btn-primary">Organizar</a>
-										<a href="#" class="btn btn-primary">Eliminar</a>
+										<a class="btn btn-primary" data-toggle="popover" rel="organize-contents" data-placement="bottom" tabindex="0" data-trigger="click">
+											Organizar
+										</a>
+										<a class="btn btn-primary" data-toggle="popover" rel="delete-contents" data-placement="bottom" tabindex="0" data-trigger="click">
+											Eliminar
+										</a>
 									</div>
 
 									<!-- Result list -->
@@ -151,7 +228,7 @@ include "_header.html"
 												<!-- Result -->
 												<li class="col-xs-12 pd0 news">
 													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
+														<input type="checkbox" aria-label="result" class="select-item">
 													</div>
 													<figure><img src="images/jpg/img-th-topnews.jpg" alt="Título de la noticia"></figure>
 													<div class="resultDetail">
@@ -172,7 +249,7 @@ include "_header.html"
 												<!-- Result -->
 												<li class="col-xs-12 pd0 news">
 													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
+														<input type="checkbox" aria-label="result" class="select-item">
 													</div>
 													<figure><img src="images/jpg/img-th-topnews.jpg" alt="Título de la noticia"></figure>
 													<div class="resultDetail">
@@ -193,7 +270,7 @@ include "_header.html"
 												<!-- Result -->
 												<li class="col-xs-12 pd0 news">
 													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
+														<input type="checkbox" aria-label="result" class="select-item">
 													</div>
 													<figure><img src="images/jpg/img-th-topnews.jpg" alt="Título de la noticia"></figure>
 													<div class="resultDetail">
@@ -214,7 +291,7 @@ include "_header.html"
 												<!-- Result -->
 												<li class="col-xs-12 pd0 news">
 													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
+														<input type="checkbox" aria-label="result" class="select-item">
 													</div>
 													<figure><img src="images/jpg/img-th-topnews.jpg" alt="Título de la noticia"></figure>
 													<div class="resultDetail">
@@ -235,7 +312,7 @@ include "_header.html"
 												<!-- Result -->
 												<li class="col-xs-12 pd0 news">
 													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
+														<input type="checkbox" aria-label="result" class="select-item">
 													</div>
 													<figure><img src="images/jpg/img-th-topnews.jpg" alt="Título de la noticia"></figure>
 													<div class="resultDetail">
@@ -256,7 +333,7 @@ include "_header.html"
 												<!-- Result -->
 												<li class="col-xs-12 pd0 editorial">
 													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
+														<input type="checkbox" aria-label="result" class="select-item">
 													</div>
 													<div class="resultDetail">
 														<h2><a href="#" alt="">Contratos a término fijo deben extenderse hasta finalizar licencia de maternidad</a></h2>
@@ -276,7 +353,7 @@ include "_header.html"
 												<!-- Result -->
 												<li class="col-xs-12 pd0 columnist">
 													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
+														<input type="checkbox" aria-label="result" class="select-item">
 													</div>
 													<figure class="th-pic"><a href="#"><img src="images/png/vasquez.png" width="107" height="107" alt="" class="img-responsive"></a></figure>
 													<div class="resultDetail">
@@ -298,7 +375,7 @@ include "_header.html"
 												<!-- Result -->
 												<li class="col-xs-12 pd0 news">
 													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
+														<input type="checkbox" aria-label="result" class="select-item">
 													</div>
 													<figure><img src="images/jpg/img-th-topnews.jpg" alt="Título de la noticia"></figure>
 													<div class="resultDetail">
@@ -319,7 +396,7 @@ include "_header.html"
 												<!-- Result -->
 												<li class="col-xs-12 pd0 news">
 													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
+														<input type="checkbox" aria-label="result" class="select-item">
 													</div>
 													<figure><img src="images/jpg/img-th-topnews.jpg" alt="Título de la noticia"></figure>
 													<div class="resultDetail">
@@ -340,7 +417,7 @@ include "_header.html"
 												<!-- Result -->
 												<li class="col-xs-12 pd0 editorial">
 													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
+														<input type="checkbox" aria-label="result" class="select-item">
 													</div>
 													<div class="resultDetail">
 														<h2><a href="#" alt="">Contratos a término fijo deben extenderse hasta finalizar licencia de maternidad</a></h2>
@@ -360,7 +437,7 @@ include "_header.html"
 												<!-- Result -->
 												<li class="col-xs-12 pd0 news">
 													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
+														<input type="checkbox" aria-label="result" class="select-item">
 													</div>
 													<figure><img src="images/jpg/img-th-topnews.jpg" alt="Título de la noticia"></figure>
 													<div class="resultDetail">
@@ -381,7 +458,7 @@ include "_header.html"
 												<!-- Result -->
 												<li class="col-xs-12 pd0 columnist">
 													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
+														<input type="checkbox" aria-label="result" class="select-item">
 													</div>
 													<figure class="th-pic"><a href="#"><img src="images/png/vasquez.png" width="107" height="107" alt="" class="img-responsive"></a></figure>
 													<div class="resultDetail">
@@ -704,12 +781,12 @@ include "_header.html"
 								<div class="row filter bottom-buffer-3">
 									<div class="col-md-4 col-sm-4 col-xs-12">
 										<div class="checkboxCol buttons">
-											<input type="checkbox" aria-label="result">
+											<input type="checkbox" aria-label="result" onclick="$('input.select-alert').trigger('click');">
 										</div>
-										<a href="#" class="btn btn-primary">Eliminar</a>
+										<a class="btn btn-primary" data-toggle="popover" rel="delete-alerts" data-placement="bottom" tabindex="0" data-trigger="click">Eliminar</a>
 									</div>
 									<div class="col-md-4 col-md-offset-4 col-sm-5 col-sm-offset-3 col-xs-12">
-										<select name="" id="sortBy" class="selectpicker">
+										<select name="" id="sortBy" class="selectpicker form-control">
 											<option value="opt1">Ordenar por los más recientes</option>
 											<option value="opt2">Option 2</option>
 											<option value="opt3">Option 3</option>
@@ -722,197 +799,26 @@ include "_header.html"
 									<div class="col-md-12">
 										<form action="filterResults">
 											<ol class="searchResultsList checkOpt">
-												<!-- Result -->
-												<li class="col-xs-12 pd0 alerts">
-													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
-													</div>
-													<div class="resultDetail">
-														<h2><a href="#" alt="">Demanda Laboral</a></h2>
-														<p class="createDate"><b>Fecha de creación:</b> 02 mayo - 11:10 a.m</p>
-														<p class="notifyPeriod"><b>Envío de notificiones:</b> Semanal</p>
-														<div class="actions">
-															<a href="#" class="edit">Editar</a>
-															<a href="#" class="delete">Eliminar</a>
-														</div>
-													</div>
-												</li>
-
-												<!-- Result -->
-												<li class="col-xs-12 pd0 alerts">
-													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
-													</div>
-													<div class="resultDetail">
-														<h2><a href="#" alt="">Demanda Laboral</a></h2>
-														<p class="createDate"><b>Fecha de creación:</b> 02 mayo - 11:10 a.m</p>
-														<p class="notifyPeriod"><b>Envío de notificiones:</b> Semanal</p>
-														<div class="actions">
-															<a href="#" class="edit">Editar</a>
-															<a href="#" class="delete">Eliminar</a>
-														</div>
-													</div>
-												</li>
-
-												<!-- Result -->
-												<li class="col-xs-12 pd0 alerts">
-													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
-													</div>
-													<div class="resultDetail">
-														<h2><a href="#" alt="">Demanda Laboral</a></h2>
-														<p class="createDate"><b>Fecha de creación:</b> 02 mayo - 11:10 a.m</p>
-														<p class="notifyPeriod"><b>Envío de notificiones:</b> Semanal</p>
-														<div class="actions">
-															<a href="#" class="edit">Editar</a>
-															<a href="#" class="delete">Eliminar</a>
-														</div>
-													</div>
-												</li>
-
-												<!-- Result -->
-												<li class="col-xs-12 pd0 alerts">
-													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
-													</div>
-													<div class="resultDetail">
-														<h2><a href="#" alt="">Demanda Laboral</a></h2>
-														<p class="createDate"><b>Fecha de creación:</b> 02 mayo - 11:10 a.m</p>
-														<p class="notifyPeriod"><b>Envío de notificiones:</b> Semanal</p>
-														<div class="actions">
-															<a href="#" class="edit">Editar</a>
-															<a href="#" class="delete">Eliminar</a>
-														</div>
-													</div>
-												</li>
-
-												<!-- Result -->
-												<li class="col-xs-12 pd0 alerts">
-													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
-													</div>
-													<div class="resultDetail">
-														<h2><a href="#" alt="">Demanda Laboral</a></h2>
-														<p class="createDate"><b>Fecha de creación:</b> 02 mayo - 11:10 a.m</p>
-														<p class="notifyPeriod"><b>Envío de notificiones:</b> Semanal</p>
-														<div class="actions">
-															<a href="#" class="edit">Editar</a>
-															<a href="#" class="delete">Eliminar</a>
-														</div>
-													</div>
-												</li>
-
-												<!-- Result -->
-												<li class="col-xs-12 pd0 alerts">
-													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
-													</div>
-													<div class="resultDetail">
-														<h2><a href="#" alt="">Demanda Laboral</a></h2>
-														<p class="createDate"><b>Fecha de creación:</b> 02 mayo - 11:10 a.m</p>
-														<p class="notifyPeriod"><b>Envío de notificiones:</b> Semanal</p>
-														<div class="actions">
-															<a href="#" class="edit">Editar</a>
-															<a href="#" class="delete">Eliminar</a>
-														</div>
-													</div>
-												</li>
-
-												<!-- Result -->
-												<li class="col-xs-12 pd0 alerts">
-													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
-													</div>
-													<div class="resultDetail">
-														<h2><a href="#" alt="">Demanda Laboral</a></h2>
-														<p class="createDate"><b>Fecha de creación:</b> 02 mayo - 11:10 a.m</p>
-														<p class="notifyPeriod"><b>Envío de notificiones:</b> Semanal</p>
-														<div class="actions">
-															<a href="#" class="edit">Editar</a>
-															<a href="#" class="delete">Eliminar</a>
-														</div>
-													</div>
-												</li>
-
-												<!-- Result -->
-												<li class="col-xs-12 pd0 alerts">
-													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
-													</div>
-													<div class="resultDetail">
-														<h2><a href="#" alt="">Demanda Laboral</a></h2>
-														<p class="createDate"><b>Fecha de creación:</b> 02 mayo - 11:10 a.m</p>
-														<p class="notifyPeriod"><b>Envío de notificiones:</b> Semanal</p>
-														<div class="actions">
-															<a href="#" class="edit">Editar</a>
-															<a href="#" class="delete">Eliminar</a>
-														</div>
-													</div>
-												</li>
-
-												<!-- Result -->
-												<li class="col-xs-12 pd0 alerts">
-													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
-													</div>
-													<div class="resultDetail">
-														<h2><a href="#" alt="">Demanda Laboral</a></h2>
-														<p class="createDate"><b>Fecha de creación:</b> 02 mayo - 11:10 a.m</p>
-														<p class="notifyPeriod"><b>Envío de notificiones:</b> Semanal</p>
-														<div class="actions">
-															<a href="#" class="edit">Editar</a>
-															<a href="#" class="delete">Eliminar</a>
-														</div>
-													</div>
-												</li>
-
-												<!-- Result -->
-												<li class="col-xs-12 pd0 alerts">
-													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
-													</div>
-													<div class="resultDetail">
-														<h2><a href="#" alt="">Demanda Laboral</a></h2>
-														<p class="createDate"><b>Fecha de creación:</b> 02 mayo - 11:10 a.m</p>
-														<p class="notifyPeriod"><b>Envío de notificiones:</b> Semanal</p>
-														<div class="actions">
-															<a href="#" class="edit">Editar</a>
-															<a href="#" class="delete">Eliminar</a>
-														</div>
-													</div>
-												</li>
-
-												<!-- Result -->
-												<li class="col-xs-12 pd0 alerts">
-													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
-													</div>
-													<div class="resultDetail">
-														<h2><a href="#" alt="">Demanda Laboral</a></h2>
-														<p class="createDate"><b>Fecha de creación:</b> 02 mayo - 11:10 a.m</p>
-														<p class="notifyPeriod"><b>Envío de notificiones:</b> Semanal</p>
-														<div class="actions">
-															<a href="#" class="edit">Editar</a>
-															<a href="#" class="delete">Eliminar</a>
-														</div>
-													</div>
-												</li>
-
-												<!-- Result -->
-												<li class="col-xs-12 pd0 alerts">
-													<div class="checkboxCol">
-														<input type="checkbox" aria-label="result">
-													</div>
-													<div class="resultDetail">
-														<h2><a href="#" alt="">Demanda Laboral</a></h2>
-														<p class="createDate"><b>Fecha de creación:</b> 02 mayo - 11:10 a.m</p>
-														<p class="notifyPeriod"><b>Envío de notificiones:</b> Semanal</p>
-														<div class="actions">
-															<a href="#" class="edit">Editar</a>
-															<a href="#" class="delete">Eliminar</a>
-														</div>
-													</div>
-												</li>
+												include "cuenta-usuario-perfil__alert.html"
+												include "cuenta-usuario-perfil__alert.html"
+												include "cuenta-usuario-perfil__alert.html"
+												include "cuenta-usuario-perfil__alert.html"
+												include "cuenta-usuario-perfil__alert.html"
+												include "cuenta-usuario-perfil__alert.html"
+												include "cuenta-usuario-perfil__alert.html"
+												include "cuenta-usuario-perfil__alert.html"
+												include "cuenta-usuario-perfil__alert.html"
+												include "cuenta-usuario-perfil__alert.html"
+												include "cuenta-usuario-perfil__alert.html"
+												include "cuenta-usuario-perfil__alert.html"
+												include "cuenta-usuario-perfil__alert.html"
+												include "cuenta-usuario-perfil__alert.html"
+												include "cuenta-usuario-perfil__alert.html"
+												include "cuenta-usuario-perfil__alert.html"
+												include "cuenta-usuario-perfil__alert.html"
+												include "cuenta-usuario-perfil__alert.html"
+												include "cuenta-usuario-perfil__alert.html"
+												include "cuenta-usuario-perfil__alert.html"
 											</ol>
 											<div class="text-center col-xs-12">
 												<a href="#" class="btn btn-primary btn-md wrap">Mostrar más alertas</a>
@@ -957,6 +863,7 @@ include "_footer.html"
 
 include "_scripts.html"
 
+<script src="js/misc/cuenta.usuario.perfil.js"></script>
 <script src="js/bootstrap-switch.min.js"></script>
 <script src="js/select.js"></script>
 <script type="text/javascript">

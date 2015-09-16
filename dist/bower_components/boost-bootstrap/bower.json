@@ -1,0 +1,20 @@
+{
+  "name": "boost-bootstrap",
+  "version": "0.0.3",
+  "homepage": "https://github.com/cristiangrojas/boost-bootstrap",
+  "authors": [
+    "Cristian Rojas <cristianguillermorojas@gmail.com>"
+  ],
+  "description": "A collection of mixins, variables and class-names for html elements that makes my daily bootstrap front-end development easier.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}

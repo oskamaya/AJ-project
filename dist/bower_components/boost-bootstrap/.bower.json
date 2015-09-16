@@ -1,0 +1,29 @@
+{
+  "name": "boost-bootstrap",
+  "homepage": "https://github.com/cristiangrojas/boost-bootstrap",
+  "authors": [
+    "Cristian Rojas <cristianguillermorojas@gmail.com>"
+  ],
+  "description": "A collection of mixins, variables and class-names for html elements that makes my daily bootstrap front-end development easier.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  },
+  "_release": "4b886629e3",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "4b886629e3e6df16142335a5a995e7be0da29700"
+  },
+  "_source": "git://github.com/cristiangrojas/boost-bootstrap.git",
+  "_target": "*",
+  "_originalSource": "boost-bootstrap",
+  "_direct": true
+}

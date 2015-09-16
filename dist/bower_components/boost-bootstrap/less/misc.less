@@ -1,0 +1,266 @@
+/*
+A lot of very useful class names for html elements
+when working with bootstrap.
+*/
+
+// Remove the f#@%king dotted line for links
+a,
+a:hover,
+a:visited,
+a:focus,
+a:active {
+  outline: none;
+}
+
+/*
+Remove margins and paddings
+---------------------------
+*/
+.nm  { margin: 0 !important; }
+.nmt { margin-top: 0 !important; }
+.nmr { margin-right: 0 !important; }
+.nmb { margin-bottom: 0 !important; }
+.nml { margin-left: 0 !important; }
+.npt { padding-top: 0 !important; }
+.npr { padding-right: 0 !important; }
+.npb { padding-bottom: 0 !important; }
+.npl { padding-left: 0 !important; }
+
+/*
+Gutter width based margins and paddings
+---------------------------------------
+*/
+// single gutter width
+.mtgw { margin-top: @grid-gutter-width !important; }
+.mrgw { margin-right: @grid-gutter-width !important; }
+.mbgw { margin-bottom: @grid-gutter-width !important; }
+.mlgw { margin-left: @grid-gutter-width !important; }
+
+// half gutter width
+.mtgw-05x { margin-top: @grid-gutter-width * 0.5 !important; }
+.mrgw-05x { margin-right: @grid-gutter-width * 0.5 !important; }
+.mbgw-05x { margin-bottom: @grid-gutter-width * 0.5 !important; }
+.mlgw-05x { margin-left: @grid-gutter-width * 0.5 !important; }
+
+// gutter width and a half
+.mtgw-andhalf { margin-top: @grid-gutter-width * 1.5 !important; }
+.mrgw-andhalf { margin-right: @grid-gutter-width * 1.5 !important; }
+.mbgw-andhalf { margin-bottom: @grid-gutter-width * 1.5 !important; }
+.mlgw-andhalf { margin-left: @grid-gutter-width * 1.5 !important; }
+
+// double, triple, quadruple and quintuple gutter width
+#spacing > .margin(@x: 1);
+#spacing > .margin(@x: 2);
+#spacing > .margin(@x: 3);
+#spacing > .margin(@x: 4);
+#spacing > .margin(@x: 5);
+
+@media (max-width: @screen-xs-max){
+  .xs-mtgw { margin-top: @grid-gutter-width !important; }
+  .xs-mrgw { margin-right: @grid-gutter-width !important; }
+  .xs-mbgw { margin-bottom: @grid-gutter-width !important; }
+  .xs-mlgw { margin-left: @grid-gutter-width !important; }
+
+  // half gutter width
+  .xs-mtgw-05x { margin-top: @grid-gutter-width * 0.5 !important; }
+  .xs-mrgw-05x { margin-right: @grid-gutter-width * 0.5 !important; }
+  .xs-mbgw-05x { margin-bottom: @grid-gutter-width * 0.5 !important; }
+  .xs-mlgw-05x { margin-left: @grid-gutter-width * 0.5 !important; }
+
+  // gutter width and a half
+  .mtgw-andhalf { margin-top: @grid-gutter-width * 1.5 !important; }
+  .mrgw-andhalf { margin-right: @grid-gutter-width * 1.5 !important; }
+  .mbgw-andhalf { margin-bottom: @grid-gutter-width * 1.5 !important; }
+  .mlgw-andhalf { margin-left: @grid-gutter-width * 1.5 !important; }
+
+  // double gutter width
+  .xs-mtgw-2x { margin-top: @grid-gutter-width * 2 !important; }
+  .xs-mrgw-2x { margin-right: @grid-gutter-width * 2 !important; }
+  .xs-mbgw-2x { margin-bottom: @grid-gutter-width * 2 !important; }
+  .xs-mlgw-2x { margin-left: @grid-gutter-width * 2 !important; }
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
+  .sm-mtgw { margin-top: @grid-gutter-width !important; }
+  .sm-mrgw { margin-right: @grid-gutter-width !important; }
+  .sm-mbgw { margin-bottom: @grid-gutter-width !important; }
+  .sm-mlgw { margin-left: @grid-gutter-width !important; }
+
+  // half gutter width
+  .sm-mtgw-05x { margin-top: @grid-gutter-width * 0.5 !important; }
+  .sm-mrgw-05x { margin-right: @grid-gutter-width * 0.5 !important; }
+  .sm-mbgw-05x { margin-bottom: @grid-gutter-width * 0.5 !important; }
+  .sm-mlgw-05x { margin-left: @grid-gutter-width * 0.5 !important; }
+
+  // gutter width and a half
+  .mtgw-andhalf { margin-top: @grid-gutter-width * 1.5 !important; }
+  .mrgw-andhalf { margin-right: @grid-gutter-width * 1.5 !important; }
+  .mbgw-andhalf { margin-bottom: @grid-gutter-width * 1.5 !important; }
+  .mlgw-andhalf { margin-left: @grid-gutter-width * 1.5 !important; }
+
+  // double gutter width
+  .sm-mtgw-2x { margin-top: @grid-gutter-width * 2 !important; }
+  .sm-mrgw-2x { margin-right: @grid-gutter-width * 2 !important; }
+  .sm-mbgw-2x { margin-bottom: @grid-gutter-width * 2 !important; }
+  .sm-mlgw-2x { margin-left: @grid-gutter-width * 2 !important; }
+}
+
+// single gutter width
+.ptgw { padding-top: @grid-gutter-width !important; }
+.prgw { padding-right: @grid-gutter-width !important; }
+.pbgw { padding-bottom: @grid-gutter-width !important; }
+.plgw { padding-left: @grid-gutter-width !important; }
+
+// half gutter width
+.ptgw-05x { padding-top: @grid-gutter-width * 0.5 !important; }
+.prgw-05x { padding-right: @grid-gutter-width * 0.5 !important; }
+.pbgw-05x { padding-bottom: @grid-gutter-width * 0.5 !important; }
+.plgw-05x { padding-left: @grid-gutter-width * 0.5 !important; }
+
+// gutter width and a half
+.ptgw-andhalf { padding-top: @grid-gutter-width * 1.5 !important; }
+.prgw-andhalf { padding-right: @grid-gutter-width * 1.5 !important; }
+.pbgw-andhalf { padding-bottom: @grid-gutter-width * 1.5 !important; }
+.plgw-andhalf { padding-left: @grid-gutter-width * 1.5 !important; }
+
+// double, triple, quadruple and quintuple gutter width
+#spacing > .padding(@x: 1);
+#spacing > .padding(@x: 2);
+#spacing > .padding(@x: 3);
+#spacing > .padding(@x: 4);
+#spacing > .padding(@x: 5);
+
+@media (max-width: @screen-xs-max){
+  // single gutter width
+  .xs-ptgw { padding-top: @grid-gutter-width !important; }
+  .xs-prgw { padding-right: @grid-gutter-width !important; }
+  .xs-pbgw { padding-bottom: @grid-gutter-width !important; }
+  .xs-plgw { padding-left: @grid-gutter-width !important; }
+
+  // half gutter width
+  .xs-ptgw-05x { padding-top: @grid-gutter-width * 0.5 !important; }
+  .xs-prgw-05x { padding-right: @grid-gutter-width * 0.5 !important; }
+  .xs-pbgw-05x { padding-bottom: @grid-gutter-width * 0.5 !important; }
+  .xs-plgw-05x { padding-left: @grid-gutter-width * 0.5 !important; }
+
+  // gutter width and a half
+  .ptgw-andhalf { padding-top: @grid-gutter-width * 1.5 !important; }
+  .prgw-andhalf { padding-right: @grid-gutter-width * 1.5 !important; }
+  .pbgw-andhalf { padding-bottom: @grid-gutter-width * 1.5 !important; }
+  .plgw-andhalf { padding-left: @grid-gutter-width * 1.5 !important; }
+
+  // double gutter width
+  .xs-ptgw-2x { padding-top: @grid-gutter-width * 2 !important; }
+  .xs-prgw-2x { padding-right: @grid-gutter-width * 2 !important; }
+  .xs-pbgw-2x { padding-bottom: @grid-gutter-width * 2 !important; }
+  .xs-plgw-2x { padding-left: @grid-gutter-width * 2 !important; }
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
+  // single gutter width
+  .sm-ptgw { padding-top: @grid-gutter-width !important; }
+  .sm-prgw { padding-right: @grid-gutter-width !important; }
+  .sm-pbgw { padding-bottom: @grid-gutter-width !important; }
+  .sm-plgw { padding-left: @grid-gutter-width !important; }
+
+  // half gutter width
+  .sm-ptgw-05x { padding-top: @grid-gutter-width * 0.5 !important; }
+  .sm-prgw-05x { padding-right: @grid-gutter-width * 0.5 !important; }
+  .sm-pbgw-05x { padding-bottom: @grid-gutter-width * 0.5 !important; }
+  .sm-plgw-05x { padding-left: @grid-gutter-width * 0.5 !important; }
+
+  // gutter width and a half
+  .ptgw-andhalf { padding-top: @grid-gutter-width * 1.5 !important; }
+  .prgw-andhalf { padding-right: @grid-gutter-width * 1.5 !important; }
+  .pbgw-andhalf { padding-bottom: @grid-gutter-width * 1.5 !important; }
+  .plgw-andhalf { padding-left: @grid-gutter-width * 1.5 !important; }
+
+  // double gutter width
+  .sm-ptgw-2x { padding-top: @grid-gutter-width * 2 !important; }
+  .sm-prgw-2x { padding-right: @grid-gutter-width * 2 !important; }
+  .sm-pbgw-2x { padding-bottom: @grid-gutter-width * 2 !important; }
+  .sm-plgw-2x { padding-left: @grid-gutter-width * 2 !important; }
+}
+
+/*
+Remove borders
+--------------
+*/
+.nbt { border-top: none !important; }
+.nbl { border-left: none !important; }
+.nbr { border-right: none !important; }
+.nbb { border-bottom: none !important; }
+
+/*
+Utilities for various elements
+------------------------------
+*/
+.block { display: block; }
+.inline-block { display: inline-block; }
+.centered {
+  display: inline-block;
+  float: none;
+  margin: 0 auto;
+}
+
+/*
+Soft hide and show
+-----------------------------------------------------------------------------
+*/
+.hide-soft {
+  display: none;
+}
+
+.hide-show {
+  display: block;
+}
+
+// Vertically centered elements
+// -----------------------------------------------------------------------------
+// Example markup
+// <div class="vcw">
+//     <div class="vci">
+//         <p>I'm vertically centered</p>
+//     </div>
+// </div>
+.vcw { .vertically-centered-wrapper(); } // wrapper
+.vci { .vertically-centered-wrapped(); } // inner
+
+@media (min-width: @screen-xs-min) and (max-width: @screen-xs-max){
+  .xs-vcw { .vertically-centered-wrapper(); }
+  .xs-vci { .vertically-centered-wrapped(); }
+}
+
+@media (min-width: @screen-sm-min){
+  .sm-vcw { .vertically-centered-wrapper(); }
+  .sm-vci { .vertically-centered-wrapped(); }
+}
+
+@media (min-width: @screen-md-min){
+  .md-vcw { .vertically-centered-wrapper(); }
+  .md-vci { .vertically-centered-wrapped(); }
+}
+
+@media (min-width: @screen-lg-min){
+  .lg-vcw { .vertically-centered-wrapper(); }
+  .lg-vci { .vertically-centered-wrapped(); }
+}
+
+/*
+Text align
+----------
+*/
+.ta-left      { text-align: left; }
+.ta-center    { text-align: center; }
+.ta-right     { text-align: right; }
+.ta-justify   { text-align: justify; }
+
+/*
+Vertical align
+--------------
+*/
+.va-middle    { vertical-align: middle; }
+
+.upper {
+  text-transform: uppercase;
+}

@@ -10,6 +10,8 @@
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="bower_components/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="bower_components/boost-bootstrap/dist/boost-bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-switch.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
 	<link href="css/styles-cr.css" rel="stylesheet">
 	<!-- Icons -->
@@ -150,6 +152,146 @@
 					</select>
 				</div>
 				<button type="submit" class="btn btn-primary">Crear alerta</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="popover create-folder">
+	<div class="arrow"></div>
+	<h3 class="popover-title">Crear carpeta<span class="close">&times;</span></h3>
+	<div class="popover-content">
+		<div class="save-search-popover">
+			<form novalidate>
+				<div class="form-group">
+					<label class="h5">Nombre de carpeta</label>
+					<input type="text" class="form-control" placeholder="Justicia en Colombia">
+				</div>
+				<button type="submit" class="btn btn-primary">Crear carpeta</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="popover delete-folder">
+	<div class="arrow"></div>
+	<h3 class="popover-title">Crear carpeta<span class="close">&times;</span></h3>
+	<div class="popover-content">
+		<div class="save-search-popover">
+			<h5 class="light">Los contenidos que estén almacenados en carpetas que se eliminen pasarán a la carpeta general.</h5>
+			<form novalidate>
+				<div class="form-group">
+					<label class="h5">Seleccione las carpetas</label>
+					<select class="selectpicker-popover" multiple data-selected-text-format="count">
+						<option value="one">Una carpeta</option>
+						<option value="two">Otra carpeta</option>
+					</select>
+				</div>
+				<button type="submit" class="btn btn-primary">Eliminar carpetas</button>
+			</form>
+			<div id="alert-email-sent" class="alert alert-success top-buffer-2" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<i class="fa fa-check fa-2x pull-left"></i>
+				Carpetas eliminadas
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="popover organize-contents">
+	<div class="arrow"></div>
+	<h3 class="popover-title">Organizar carpeta<span class="close">&times;</span></h3>
+	<div class="popover-content">
+		<div class="save-search-popover">
+			<h5 class="light">Organize en sus carpetas los contenidos seleccionados.</h5>
+			<form novalidate>
+				<div class="form-group">
+					<label class="h5">Seleccione las carpetas</label>
+					<select class="selectpicker-popover" multiple data-selected-text-format="count">
+						<option value="one">Una carpeta</option>
+						<option value="two">Otra carpeta</option>
+					</select>
+				</div>
+				<button type="submit" class="btn btn-primary">Organizar carpetas</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="popover delete-contents">
+	<div class="arrow"></div>
+	<h3 class="popover-title">Eliminar contenidos<span class="close">&times;</span></h3>
+	<div class="popover-content">
+		<div class="save-search-popover">
+			<h5 class="light">¿Está seguro de que quiere eliminar los contenidos seleccionados?</h5>
+			<form novalidate>
+				<a class="btn btn-primary">Sí, eliminar</a>
+				<a class="btn btn-primary">No, cancelar</a>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="popover edit-alert">
+	<div class="arrow"></div>
+	<h3 class="popover-title">Editar alerta<span class="close">&times;</span></h3>
+	<div class="popover-content">
+		<div class="save-search-popover">
+			<form novalidate>
+				<div class="form-group">
+					<label class="h5">Término de búsqueda</label>
+					<input type="text" class="form-control" placeholder="Justicia en Colombia">
+				</div>
+				<div class="form-group">
+					<label class="h5">Correo electrónico</label>
+					<input type="email" class="form-control" placeholder="maocandamil@gmail.com">
+				</div>
+				<div class="form-group">
+					<label class="h5">Periodicidad de envío</label>
+					<select class="selectpicker-popover" data-selected-text-format="count">
+						<option value="weekly">Semanal</option>
+						<option value="monthly">Mensual</option>
+						<option value="yearly">Anual</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label class="h5">Cantidad de resultados</label>
+					<select class="selectpicker-popover" data-selected-text-format="count">
+						<option value="10">10 resultados</option>
+						<option value="20">20 resultados</option>
+					</select>
+				</div>
+				<button type="submit" class="btn btn-primary">Guardar cambios</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="popover delete-alert">
+	<div class="arrow"></div>
+	<h3 class="popover-title">Eliminar alerta<span class="close">&times;</span></h3>
+	<div class="popover-content">
+		<div class="save-search-popover">
+			<h5 class="light">¿Está seguro de que quiere eliminar esta alerta?</h5>
+			<form novalidate>
+				<a class="btn btn-primary">Sí, eliminar</a>
+				<a class="btn btn-primary">No, cancelar</a>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="popover delete-alerts">
+	<div class="arrow"></div>
+	<h3 class="popover-title">Eliminar alertas seleccionadas<span class="close">&times;</span></h3>
+	<div class="popover-content">
+		<div class="save-search-popover">
+			<h5 class="light">¿Está seguro de que quiere eliminar las alertas seleccionadas?</h5>
+			<form novalidate>
+				<a class="btn btn-primary">Sí, eliminar</a>
+				<a class="btn btn-primary">No, cancelar</a>
 			</form>
 		</div>
 	</div>
@@ -1627,7 +1769,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/modernizr.js" type="text/javascript"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.js"></script>
 <script src="js/misc/bootstrap.extras.js"></script>
 <script src="bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
 <script src="js/misc/close.popovers.js"></script>

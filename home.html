@@ -35,7 +35,10 @@ include "_header.html"
 								<input type="text" placeholder="Ingrese su correo electrónico">
 								<button type="button" class="btn btn-secondary" onclick="$('#alert-email-sent').show('fast');">Enviar</button>
 							</form>
-							<div id="alert-email-sent" class="alert alert-success" role="alert" style="display: none;">
+							<div id="alert-email-sent" class="alert alert-success" role="alert">
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							    	<span aria-hidden="true">&times;</span>
+								</button>
 								<i class="fa fa-check fa-2x pull-left"></i>
 								Hemos enviado un correo a <strong>pedro@correo.com</strong> para validar su suscripción al
 								boletín de noticias.
