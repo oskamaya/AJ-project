@@ -102,6 +102,59 @@
 	</div>
 </div>
 
+<div class="popover send-email-to-columnist">
+	<div class="arrow"></div>
+	<h3 class="popover-title">Enviar correo a columnista<span class="close">&times;</span></h3>
+	<div class="popover-content">
+		<div class="share-popover-content">
+			<form novalidate>
+				<div class="form-group">
+					<input type="email" class="form-control" placeholder="Ingrese su correo electrónico">
+				</div>
+				<div class="form-group">
+					<textarea class="form-control" rows="3" placeholder="Escriba su mensaje"></textarea>
+				</div>
+			</form>
+			<a href="#" class="btn btn-primary">Enviar correo</a>
+		</div>
+	</div>
+</div>
+
+<div class="popover save-search">
+	<div class="arrow"></div>
+	<h3 class="popover-title">Crear alerta<span class="close">&times;</span></h3>
+	<div class="popover-content">
+		<div class="save-search-popover">
+			<form novalidate>
+				<div class="form-group">
+					<label class="h5">Término de búsqueda</label>
+					<input type="text" class="form-control" placeholder="Justicia en Colombia">
+				</div>
+				<div class="form-group">
+					<label class="h5">Correo electrónico</label>
+					<input type="email" class="form-control" placeholder="maocandamil@gmail.com">
+				</div>
+				<div class="form-group">
+					<label class="h5">Periodicidad de envío</label>
+					<select class="selectpicker-popover" data-selected-text-format="count">
+						<option value="weekly">Semanal</option>
+						<option value="monthly">Mensual</option>
+						<option value="yearly">Anual</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label class="h5">Cantidad de resultados</label>
+					<select class="selectpicker-popover" data-selected-text-format="count">
+						<option value="10">10 resultados</option>
+						<option value="20">20 resultados</option>
+					</select>
+				</div>
+				<button type="submit" class="btn btn-primary">Crear alerta</button>
+			</form>
+		</div>
+	</div>
+</div>
+
 <!-- MENU FOR DESKTOP -->
 <!-- top navigation -->
 <nav class="navbar-aj navbar-fixed-top visible-lg visible-md">
@@ -1296,21 +1349,351 @@
                             <!-- Comments -->
                             <div class="comments">
                                 <span class="indicator"></span>
-                                <a href="" class="btn btn-primary btn-sm">Mostrar 10 comentarios</a>
+                                <a href="#" id="show-comments" class="btn btn-primary btn-sm"
+                                   onclick="$('#comments-container').show('fast'); $('a#hide-comments').show(); $('a#show-comments').hide(); return false;">
+                                    Mostrar 10 comentarios
+                                </a>
+                                <a href="#" id="hide-comments" class="btn btn-primary btn-sm" style="display: none;"
+                                   onclick="$('#comments-container').hide('fast'); $('a#hide-comments').hide(); $('a#show-comments').show(); return false;">
+                                    Ocultar 10 comentarios
+                                </a>
                                 <div class="listComments top-buffer-3">
                                     <div class="alert alert-warning" role="alert" id="unregisterUser"><i class="fa fa-exclamation-circle fa-2x pull-left"></i>Para poder comentar los artículos usted deber ser usuario registrado de ámbitojurídico.com <a href="#">Ingrese con us cuenta de usuario</a>. Si no tiene una cuenta puede crear una nueva <a href="#">registrándose</a></div>
-                                    <!-- Insert here comments list -->
+                                </div>
+
+                                <div id="comments-container" style="display: none;">
+                                    <form novalidate>
+                                        <div class="form-group">
+                                            <textarea id="id_comment" name="comment" class="form-control" rows="3" placeholder="Ingrese aquí su comentario"></textarea>
+                                        </div>
+                                    </form>
+                                    <div class="comment">
+                                        <div class="photo">
+                                            <img src="http://placehold.it/64x64" class="img-circle"/>
+                                        </div>
+                                        <div class="text">
+                                            <h5 class="name">Pedro García</h5>
+                                            <h5 class="date"><small>20 de Septiembre de 2015</small></h5>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                            </p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                            </p>
+                                            <div class="actions">
+                                                <a href="#" class="reply">Responder a este comentario</a>
+                                                <a href="#" class="like">Me gusta</a>
+                                            </div>
+
+                                            <div class="comment child">
+                                                <div class="photo">
+                                                    <img src="http://placehold.it/64x64" class="img-circle"/>
+                                                </div>
+                                                <div class="text">
+                                                    <h5 class="name">Pedro García</h5>
+                                                    <h5 class="date"><small>20 de Septiembre de 2015</small></h5>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <div class="actions">
+                                                        <a href="#" class="reply">Responder a este comentario</a>
+                                                        <a href="#" class="like">Me gusta</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="comment child">
+                                                <div class="photo">
+                                                    <img src="http://placehold.it/64x64" class="img-circle"/>
+                                                </div>
+                                                <div class="text">
+                                                    <h5 class="name">Pedro García</h5>
+                                                    <h5 class="date"><small>20 de Septiembre de 2015</small></h5>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <div class="actions">
+                                                        <a href="#" class="reply">Responder a este comentario</a>
+                                                        <a href="#" class="like">Me gusta</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="comment child">
+                                                <div class="photo">
+                                                    <img src="http://placehold.it/64x64" class="img-circle"/>
+                                                </div>
+                                                <div class="text">
+                                                    <h5 class="name">Pedro García</h5>
+                                                    <h5 class="date"><small>20 de Septiembre de 2015</small></h5>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <div class="actions">
+                                                        <a href="#" class="reply">Responder a este comentario</a>
+                                                        <a href="#" class="like">Me gusta</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment">
+                                        <div class="photo">
+                                            <img src="http://placehold.it/64x64" class="img-circle"/>
+                                        </div>
+                                        <div class="text">
+                                            <h5 class="name">Pedro García</h5>
+                                            <h5 class="date"><small>20 de Septiembre de 2015</small></h5>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                            </p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                            </p>
+                                            <div class="actions">
+                                                <a href="#" class="reply">Responder a este comentario</a>
+                                                <a href="#" class="like">Me gusta</a>
+                                            </div>
+
+                                            <div class="comment child">
+                                                <div class="photo">
+                                                    <img src="http://placehold.it/64x64" class="img-circle"/>
+                                                </div>
+                                                <div class="text">
+                                                    <h5 class="name">Pedro García</h5>
+                                                    <h5 class="date"><small>20 de Septiembre de 2015</small></h5>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <div class="actions">
+                                                        <a href="#" class="reply">Responder a este comentario</a>
+                                                        <a href="#" class="like">Me gusta</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="comment child">
+                                                <div class="photo">
+                                                    <img src="http://placehold.it/64x64" class="img-circle"/>
+                                                </div>
+                                                <div class="text">
+                                                    <h5 class="name">Pedro García</h5>
+                                                    <h5 class="date"><small>20 de Septiembre de 2015</small></h5>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <div class="actions">
+                                                        <a href="#" class="reply">Responder a este comentario</a>
+                                                        <a href="#" class="like">Me gusta</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="comment child">
+                                                <div class="photo">
+                                                    <img src="http://placehold.it/64x64" class="img-circle"/>
+                                                </div>
+                                                <div class="text">
+                                                    <h5 class="name">Pedro García</h5>
+                                                    <h5 class="date"><small>20 de Septiembre de 2015</small></h5>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <div class="actions">
+                                                        <a href="#" class="reply">Responder a este comentario</a>
+                                                        <a href="#" class="like">Me gusta</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment">
+                                        <div class="photo">
+                                            <img src="http://placehold.it/64x64" class="img-circle"/>
+                                        </div>
+                                        <div class="text">
+                                            <h5 class="name">Pedro García</h5>
+                                            <h5 class="date"><small>20 de Septiembre de 2015</small></h5>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                            </p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                            </p>
+                                            <div class="actions">
+                                                <a href="#" class="reply">Responder a este comentario</a>
+                                                <a href="#" class="like">Me gusta</a>
+                                            </div>
+
+                                            <div class="comment child">
+                                                <div class="photo">
+                                                    <img src="http://placehold.it/64x64" class="img-circle"/>
+                                                </div>
+                                                <div class="text">
+                                                    <h5 class="name">Pedro García</h5>
+                                                    <h5 class="date"><small>20 de Septiembre de 2015</small></h5>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <div class="actions">
+                                                        <a href="#" class="reply">Responder a este comentario</a>
+                                                        <a href="#" class="like">Me gusta</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="comment child">
+                                                <div class="photo">
+                                                    <img src="http://placehold.it/64x64" class="img-circle"/>
+                                                </div>
+                                                <div class="text">
+                                                    <h5 class="name">Pedro García</h5>
+                                                    <h5 class="date"><small>20 de Septiembre de 2015</small></h5>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <div class="actions">
+                                                        <a href="#" class="reply">Responder a este comentario</a>
+                                                        <a href="#" class="like">Me gusta</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="comment child">
+                                                <div class="photo">
+                                                    <img src="http://placehold.it/64x64" class="img-circle"/>
+                                                </div>
+                                                <div class="text">
+                                                    <h5 class="name">Pedro García</h5>
+                                                    <h5 class="date"><small>20 de Septiembre de 2015</small></h5>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <div class="actions">
+                                                        <a href="#" class="reply">Responder a este comentario</a>
+                                                        <a href="#" class="like">Me gusta</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment">
+                                        <div class="photo">
+                                            <img src="http://placehold.it/64x64" class="img-circle"/>
+                                        </div>
+                                        <div class="text">
+                                            <h5 class="name">Pedro García</h5>
+                                            <h5 class="date"><small>20 de Septiembre de 2015</small></h5>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                            </p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                            </p>
+                                            <div class="actions">
+                                                <a href="#" class="reply">Responder a este comentario</a>
+                                                <a href="#" class="like">Me gusta</a>
+                                            </div>
+
+                                            <div class="comment child">
+                                                <div class="photo">
+                                                    <img src="http://placehold.it/64x64" class="img-circle"/>
+                                                </div>
+                                                <div class="text">
+                                                    <h5 class="name">Pedro García</h5>
+                                                    <h5 class="date"><small>20 de Septiembre de 2015</small></h5>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <div class="actions">
+                                                        <a href="#" class="reply">Responder a este comentario</a>
+                                                        <a href="#" class="like">Me gusta</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="comment child">
+                                                <div class="photo">
+                                                    <img src="http://placehold.it/64x64" class="img-circle"/>
+                                                </div>
+                                                <div class="text">
+                                                    <h5 class="name">Pedro García</h5>
+                                                    <h5 class="date"><small>20 de Septiembre de 2015</small></h5>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <div class="actions">
+                                                        <a href="#" class="reply">Responder a este comentario</a>
+                                                        <a href="#" class="like">Me gusta</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="comment child">
+                                                <div class="photo">
+                                                    <img src="http://placehold.it/64x64" class="img-circle"/>
+                                                </div>
+                                                <div class="text">
+                                                    <h5 class="name">Pedro García</h5>
+                                                    <h5 class="date"><small>20 de Septiembre de 2015</small></h5>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                                                    </p>
+                                                    <div class="actions">
+                                                        <a href="#" class="reply">Responder a este comentario</a>
+                                                        <a href="#" class="like">Me gusta</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                             <!-- Banner sm, md-->
                             <div class="col-md-12 adv bottom-buffer-5 visible-lg">
-                                <img src="http://placehold.it/728x90?text=banner+728+90">
+                                <img src="http://placehold.it/728x90">
                             </div>
 
                             <!-- Banner xs-->
                             <div class="col-md-12 adv bottom-buffer-5 visible-xs">
-                                <img src="http://placehold.it/300x100?text=banner+300+100">
+                                <img src="http://placehold.it/300x100">
                             </div>
 
                             <!-- Related news -->
@@ -1393,17 +1776,17 @@
 
                             <!-- Banner -->
                             <div class="adv bottom-buffer-3 visible-md visible-lg">
-                                <img src="http://placehold.it/300x600?text=banner+300+x+600">
+                                <img src="http://placehold.it/300x600">
                             </div>
 
                             <!-- Banners for tablet  -->
 
                             <div class="adv bottom-buffer-3 visible-sm col-sm-6">
-                                <img src="http://placehold.it/320x250?text=banner+320+x+250">
+                                <img src="http://placehold.it/320x250">
                             </div>
 
                             <div class="adv bottom-buffer-3 visible-sm col-sm-6">
-                                <img src="http://placehold.it/320x250?text=banner+320+x+250">
+                                <img src="http://placehold.it/320x250">
                             </div>
 
                             <!-- Newsletter -->
@@ -1585,7 +1968,7 @@
                             </div>
                             <!-- Banner -->
                             <div class="adv bottom-buffer-3 col-md-12 col-sm-6 visible-lg visible-md">
-                                <img src="http://placehold.it/300x250?text=banner+300+x+250">
+                                <img src="http://placehold.it/300x250">
                             </div>
                         </div>
                     </div>

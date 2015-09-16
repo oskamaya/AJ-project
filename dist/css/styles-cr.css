@@ -23,6 +23,18 @@
     width: 330px;
 }
 
+.save-search-popover {
+    width: 330px;
+}
+
+.save-search-popover label {
+    color: #3e5683;
+}
+
+.save-search-popover .bootstrap-select {
+    width: 100% !important;
+}
+
 nav.share-popover-buttons {
 
 }
@@ -52,4 +64,56 @@ nav.share-popover-buttons a i {
     height: 57px;
     display: block;
     font-size: 30px;
+}
+
+
+
+
+div.alert i.fa {
+    margin-top: -6px;
+}
+
+
+
+
+div.comments div.comment {
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+div.comments div.comment:last-child {
+    border-bottom: none;
+}
+
+div.comments div.comment.child {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+div.comments div.comment.child:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+div.comments div.comment div.photo {
+    width: 64px;
+    display: block;
+    float: left;
+}
+
+div.comments div.comment div.text {
+    display: block;
+    margin-left: 79px;
+    float: none;
+}
+
+div.comments div.comment div.text h5.name {
+    margin: 0;
+    color: #345ad3;
+}
+
+div.comments div.comment div.text h5.date {
+    margin-top: 0;
 }

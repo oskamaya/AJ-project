@@ -102,6 +102,59 @@
 	</div>
 </div>
 
+<div class="popover send-email-to-columnist">
+	<div class="arrow"></div>
+	<h3 class="popover-title">Enviar correo a columnista<span class="close">&times;</span></h3>
+	<div class="popover-content">
+		<div class="share-popover-content">
+			<form novalidate>
+				<div class="form-group">
+					<input type="email" class="form-control" placeholder="Ingrese su correo electrónico">
+				</div>
+				<div class="form-group">
+					<textarea class="form-control" rows="3" placeholder="Escriba su mensaje"></textarea>
+				</div>
+			</form>
+			<a href="#" class="btn btn-primary">Enviar correo</a>
+		</div>
+	</div>
+</div>
+
+<div class="popover save-search">
+	<div class="arrow"></div>
+	<h3 class="popover-title">Crear alerta<span class="close">&times;</span></h3>
+	<div class="popover-content">
+		<div class="save-search-popover">
+			<form novalidate>
+				<div class="form-group">
+					<label class="h5">Término de búsqueda</label>
+					<input type="text" class="form-control" placeholder="Justicia en Colombia">
+				</div>
+				<div class="form-group">
+					<label class="h5">Correo electrónico</label>
+					<input type="email" class="form-control" placeholder="maocandamil@gmail.com">
+				</div>
+				<div class="form-group">
+					<label class="h5">Periodicidad de envío</label>
+					<select class="selectpicker-popover" data-selected-text-format="count">
+						<option value="weekly">Semanal</option>
+						<option value="monthly">Mensual</option>
+						<option value="yearly">Anual</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label class="h5">Cantidad de resultados</label>
+					<select class="selectpicker-popover" data-selected-text-format="count">
+						<option value="10">10 resultados</option>
+						<option value="20">20 resultados</option>
+					</select>
+				</div>
+				<button type="submit" class="btn btn-primary">Crear alerta</button>
+			</form>
+		</div>
+	</div>
+</div>
+
 <!-- MENU FOR DESKTOP -->
 <!-- top navigation -->
 <nav class="navbar-aj navbar-fixed-top visible-lg visible-md">
@@ -1367,14 +1420,28 @@
 				<h2 class="text-center">¿ACTUALMENTE ES SUSCRIPTOR DE ÁMBITO JURÍDICO?<small><br>Use la cuenta de correo de su suscripción para validar sus datos y obtener su suscripción al plan Ambito Jurídico impreso + online.</small></h2>
 			</div>
 			<div class="col-md-8 col-xs-12 col-md-offset-2 col-sm-12 col-sm-offset-0">
-				<form class="form-inline">
+				<form class="form-inline bottom-buffer-1">
 					<div class="form-group">
 						<div class="input-group">
 							<input type="email" class="form-control" id="emailSuscriber" placeholder="Ingrese su correo electrónico">
 						</div>
-						<button type="submit" class="btn btn-secondary wrap">Validar suscripción</button>
+						<button type="submit" class="btn btn-secondary wrap" onclick="$('#alert-email-sent').show('fast'); return false;">Validar suscripción</button>
 					</div>
 				</form>
+				<div id="alert-email-sent" class="alert alert-success" role="alert" style="display: none;">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<i class="fa fa-check fa-2x pull-left"></i>
+					Le enviamos un mensaje a su correo para validar su plan de suscripción.
+				</div>
+				<div class="alert alert-danger" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<i class="fa fa-times fa-2x pull-left"></i>
+					Su correo no está asociado a una suscripción de Ámbito Jurídico.
+				</div>
 			</div>
 			<!-- </div> -->
 		</div>

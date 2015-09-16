@@ -90,21 +90,39 @@ include "_header.html"
                             <!-- Comments -->
                             <div class="comments">
                                 <span class="indicator"></span>
-                                <a href="" class="btn btn-primary btn-sm">Mostrar 10 comentarios</a>
+                                <a href="#" id="show-comments" class="btn btn-primary btn-sm"
+                                   onclick="$('#comments-container').show('fast'); $('a#hide-comments').show(); $('a#show-comments').hide(); return false;">
+                                    Mostrar 10 comentarios
+                                </a>
+                                <a href="#" id="hide-comments" class="btn btn-primary btn-sm" style="display: none;"
+                                   onclick="$('#comments-container').hide('fast'); $('a#hide-comments').hide(); $('a#show-comments').show(); return false;">
+                                    Ocultar 10 comentarios
+                                </a>
                                 <div class="listComments top-buffer-3">
                                     <div class="alert alert-warning" role="alert" id="unregisterUser"><i class="fa fa-exclamation-circle fa-2x pull-left"></i>Para poder comentar los artículos usted deber ser usuario registrado de ámbitojurídico.com <a href="#">Ingrese con us cuenta de usuario</a>. Si no tiene una cuenta puede crear una nueva <a href="#">registrándose</a></div>
-                                    <!-- Insert here comments list -->
+                                </div>
+
+                                <div id="comments-container" style="display: none;">
+                                    <form novalidate>
+                                        <div class="form-group">
+                                            <textarea id="id_comment" name="comment" class="form-control" rows="3" placeholder="Ingrese aquí su comentario"></textarea>
+                                        </div>
+                                    </form>
+                                    include "detalle-noticia__comment.html"
+                                    include "detalle-noticia__comment.html"
+                                    include "detalle-noticia__comment.html"
+                                    include "detalle-noticia__comment.html"
                                 </div>
                             </div>
 
                             <!-- Banner sm, md-->
                             <div class="col-md-12 adv bottom-buffer-5 visible-lg">
-                                <img src="http://placehold.it/728x90?text=banner+728+90">
+                                <img src="http://placehold.it/728x90">
                             </div>
 
                             <!-- Banner xs-->
                             <div class="col-md-12 adv bottom-buffer-5 visible-xs">
-                                <img src="http://placehold.it/300x100?text=banner+300+100">
+                                <img src="http://placehold.it/300x100">
                             </div>
 
                             <!-- Related news -->
@@ -187,17 +205,17 @@ include "_header.html"
 
                             <!-- Banner -->
                             <div class="adv bottom-buffer-3 visible-md visible-lg">
-                                <img src="http://placehold.it/300x600?text=banner+300+x+600">
+                                <img src="http://placehold.it/300x600">
                             </div>
 
                             <!-- Banners for tablet  -->
 
                             <div class="adv bottom-buffer-3 visible-sm col-sm-6">
-                                <img src="http://placehold.it/320x250?text=banner+320+x+250">
+                                <img src="http://placehold.it/320x250">
                             </div>
 
                             <div class="adv bottom-buffer-3 visible-sm col-sm-6">
-                                <img src="http://placehold.it/320x250?text=banner+320+x+250">
+                                <img src="http://placehold.it/320x250">
                             </div>
 
                             <!-- Newsletter -->
@@ -379,7 +397,7 @@ include "_header.html"
                             </div>
                             <!-- Banner -->
                             <div class="adv bottom-buffer-3 col-md-12 col-sm-6 visible-lg visible-md">
-                                <img src="http://placehold.it/300x250?text=banner+300+x+250">
+                                <img src="http://placehold.it/300x250">
                             </div>
                         </div>
                     </div>

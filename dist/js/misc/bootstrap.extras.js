@@ -48,6 +48,30 @@ $(document).ready(function() {
     }
   });
 
+  // Construct popover
+  $('[rel="send-email-to-columnist"]').popover({
+    html: true,
+    container: 'body',
+    content: function() {
+      return $('.send-email-to-columnist .popover-content').html();
+    },
+    title: function() {
+      return $('.send-email-to-columnist .popover-title').html();
+    }
+  });
+
+  // Construct popover
+  $('[rel="save-search"]').popover({
+    html: true,
+    container: 'body',
+    content: function() {
+      return $('.save-search .popover-content').html();
+    },
+    title: function() {
+      return $('.save-search .popover-title').html();
+    }
+  });
+
   // Construct popover for font-size
   $('[rel="sizeFont"]').popover({
       html: true,
