@@ -2284,6 +2284,11 @@ div.article div.comments {
       background-repeat: no-repeat;
       background-image: url(../images/svg/sprite-aj.svg);
       background-position: -67px -49px; }
+  div.article div.comments div.comment div.actions a {
+    font-size: 1.2rem;
+    margin-right: 1rem; }
+    div.article div.comments div.comment div.actions a i {
+      margin-right: 0.7rem; }
 
 /*----------------------------------------------------*/
 /*----------------------------------------------------*/
