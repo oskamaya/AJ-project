@@ -1,3 +1,87 @@
+#mobile-header {
+    position: relative;
+}
+
+#mobile-header a.menu-link {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 0 !important;
+}
+
+#mobile-header a.menu-link:first-child {
+    left: 0;
+}
+
+#mobile-header a.menu-link.search {
+    right: 0;
+}
+
+#mobile-header a.menu-link i {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+#mobile-header div#search {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 50px;
+    left: 0;
+    z-index: 100;
+    margin: 0;
+    background-color: white;
+}
+
+#mobile-header div#search form input {
+    height: 50px;
+    width: 100%;
+    max-width: 100%;
+    border: none;
+}
+
+
+
+
+#menu {
+    position: fixed;
+}
+
+#menu > ul > li > ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+}
+
+#menu > ul > li > ul li a.back:after {
+    content: "";
+    float: none;
+    width: 11px;
+    height: 21px;
+    background-repeat: no-repeat;
+    background-image: url("../images/svg/sprite-aj.svg");
+    background-position: -93px -50px;
+    position: absolute;
+    left: 2px;
+    margin-top: 3px;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+
+
 .light {
     font-weight: 100;
 }

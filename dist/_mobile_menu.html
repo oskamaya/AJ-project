@@ -1,7 +1,7 @@
 <!-- LEFT MENU -->
-<div class="menu-sm visible-xs visible-sm">
+<div id="mobile-header" class="menu-sm visible-xs visible-sm">
     <div class="container-fluid">
-        <a href="#menu" class="menu-link"><i class="fa fa-bars fa-2x"></i></a>
+        <a href="#menu" class="menu-link menu"><i class="fa fa-bars fa-2x"></i></a>
         <a href="www.ambitojuridico.com" class="navbar-brand">
             <svg class="visible-sm" viewbox="0 0 249 31" width="249" height="31" role="img" aria-label="'Ámbito Jurídico'">
                 <image width="249" height="31" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/svg/logo.svg" src="images/png/logo.png" alt="Ámbito Jurídico" border="0"></image>
@@ -10,9 +10,12 @@
                 <image width="160" height="20" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/svg/logo.svg" src="images/png/logo.png" alt="Ámbito Jurídico" border="0"></image>
             </svg>
         </a>
-        <div id="search" class="hidden-xs">
-            <form action="/search" id="search" method="get" autocomplete="">
-                <input type="text" name="q" maxlength="240">
+        <a href="#search" class="menu-link search" onclick="$('div#search').toggle('fast'); $('input#search_query').focus(); return false;">
+            <i class="fa fa-search"></i>
+        </a>
+        <div id="search" style="display: none;">
+            <form action="/search" id="search_form" method="get" autocomplete="">
+                <input type="text" name="q" id="search_query" maxlength="240" placeholder="Buscar...">
             </form>
         </div>
     </div>

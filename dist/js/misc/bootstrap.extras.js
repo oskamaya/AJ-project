@@ -10,7 +10,7 @@
       $(sel).toggleClass('in');
       $(sel2).toggleClass('out');
     });
-    $(".menu-link").on('click', function(){
+    $(".menu-link.menu").on('click', function(){
       $("#menu").toggleClass("active");
       $(".side-collapse-container").toggleClass("active");
     });
