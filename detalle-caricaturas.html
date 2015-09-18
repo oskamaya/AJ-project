@@ -64,352 +64,376 @@ include "_header.html"
 								<!-- Comments -->
 								<div class="comments">
 									<span class="indicator"></span>
-									<a href="" class="btn btn-primary btn-sm">Mostrar 10 comentarios</a>
-									<div class="listComments top-buffer-3">
-										<div class="alert alert-warning" role="alert" id="unregisterUser"><i class="fa fa-exclamation-circle fa-2x pull-left"></i>Para poder comentar los artículos usted deber ser usuario registrado de ámbitojurídico.com <a href="#">Ingrese con us cuenta de usuario</a>. Si no tiene una cuenta puede crear una nueva <a href="#">registrándose</a></div>
-										<!-- Insert here comments list -->
-									</div>
-								</div>
+									<a href="#" id="show-comments" class="btn btn-primary btn-sm"
+									onclick="$('#comments-container').show('fast'); $('a#hide-comments').show(); $('a#show-comments').hide(); return false;">
+									Mostrar 10 comentarios
+								</a>
+								<a href="#" id="hide-comments" class="btn btn-primary btn-sm" style="display: none;"
+								onclick="$('#comments-container').hide('fast'); $('a#hide-comments').hide(); $('a#show-comments').show(); return false;">
+								Ocultar 10 comentarios
+							</a>
+							<div class="listComments top-buffer-3">
+								<div class="alert alert-warning" role="alert" id="unregisterUser"><i class="fa fa-exclamation-circle fa-2x pull-left"></i>Para poder comentar los artículos usted deber ser usuario registrado de ámbitojurídico.com <a href="#">Ingrese con us cuenta de usuario</a>. Si no tiene una cuenta puede crear una nueva <a href="#">registrándose</a></div>
 							</div>
 
-							<!-- Banner lg, md-->
-							<div class="col-md-12 adv bottom-buffer-5 visible-lg">
-								<img src="http://placehold.it/728x90?text=banner+728+90">
+							<div id="comments-container" style="display: none;">
+								<form novalidate>
+									<div class="form-group">
+										<textarea id="id_comment" name="comment" class="form-control" rows="3" placeholder="Ingrese aquí su comentario"></textarea>
+									</div>
+								</form>
+								include "detalle-noticia__comment.html"
+								include "detalle-noticia__comment.html"
+								include "detalle-noticia__comment.html"
+								include "detalle-noticia__comment.html"
 							</div>
-
-							<!-- Banner xs-->
-							<div class="col-md-12 adv bottom-buffer-5 visible-xs">
-								<img src="http://placehold.it/300x100?text=banner+300+100">
-							</div>
-
-							<!-- More cartoons -->
-							<div class="col-md-12 bottom-buffer-3">
-								<div class="row related">
-									<div class="col-md-12">
-										<h3 class="opinion">Más caricaturas de este autor</h3>
-									</div>
-
-									<!-- Cartoon -->
-									<div class="col-md-6 col-sm-6 bottom-buffer-3 cartoon">
-										<figure class="th-pic"><a href="#"><img src="images/jpg/img-cartoon-list.jpg" width="472" height="315" alt="" class="img-responsive"></a></figure>
-										<div class="col-details">
-											<h6 class="subject">Matador</h6>
-											<h2><a href="#">Crisis del gobierno institucional o corporativo</a></h2>
-											<p class="releaseDate">02 mayo - 11:10 am</p>
-											<div class="actions">
-												<a href="#" class="save">Guardar</a>
-												<a href="#" class="share">Compartir</a>
-											</div>
-										</div>
-									</div>
-
-									<!-- Cartoon -->
-									<div class="col-md-6 col-sm-6 bottom-buffer-3 cartoon">
-										<figure class="th-pic"><a href="#"><img src="images/jpg/img-cartoon-list.jpg" width="472" height="315" alt="" class="img-responsive"></a></figure>
-										<div class="col-details">
-											<h6 class="subject">Matador</h6>
-											<h2><a href="#">Crisis del gobierno institucional o corporativo</a></h2>
-											<p class="releaseDate">02 mayo - 11:10 am</p>
-											<div class="actions">
-												<a href="#" class="save">Guardar</a>
-												<a href="#" class="share">Compartir</a>
-											</div>
-										</div>
-									</div>
-
-									<!-- Cartoon -->
-									<div class="col-md-6 col-sm-6 bottom-buffer-3 cartoon">
-										<figure class="th-pic"><a href="#"><img src="images/jpg/img-cartoon-list.jpg" width="472" height="315" alt="" class="img-responsive"></a></figure>
-										<div class="col-details">
-											<h6 class="subject">Matador</h6>
-											<h2><a href="#">Crisis del gobierno institucional o corporativo</a></h2>
-											<p class="releaseDate">02 mayo - 11:10 am</p>
-											<div class="actions">
-												<a href="#" class="save">Guardar</a>
-												<a href="#" class="share">Compartir</a>
-											</div>
-										</div>
-									</div>
-
-									<!-- Cartoon -->
-									<div class="col-md-6 col-sm-6 bottom-buffer-3 cartoon">
-										<figure class="th-pic"><a href="#"><img src="images/jpg/img-cartoon-list.jpg" width="472" height="315" alt="" class="img-responsive"></a></figure>
-										<div class="col-details">
-											<h6 class="subject">Matador</h6>
-											<h2><a href="#">Crisis del gobierno institucional o corporativo</a></h2>
-											<p class="releaseDate">02 mayo - 11:10 am</p>
-											<div class="actions">
-												<a href="#" class="save">Guardar</a>
-												<a href="#" class="share">Compartir</a>
-											</div>
-										</div>
-									</div>
-
-									<!-- Cartoon -->
-									<div class="col-md-6 col-sm-6 bottom-buffer-3 cartoon">
-										<figure class="th-pic"><a href="#"><img src="images/jpg/img-cartoon-list.jpg" width="472" height="315" alt="" class="img-responsive"></a></figure>
-										<div class="col-details">
-											<h6 class="subject">Matador</h6>
-											<h2><a href="#">Crisis del gobierno institucional o corporativo</a></h2>
-											<p class="releaseDate">02 mayo - 11:10 am</p>
-											<div class="actions">
-												<a href="#" class="save">Guardar</a>
-												<a href="#" class="share">Compartir</a>
-											</div>
-										</div>
-									</div>
-
-									<!-- Cartoon -->
-									<div class="col-md-6 col-sm-6 bottom-buffer-3 cartoon">
-										<figure class="th-pic"><a href="#"><img src="images/jpg/img-cartoon-list.jpg" width="472" height="315" alt="" class="img-responsive"></a></figure>
-										<div class="col-details">
-											<h6 class="subject">Matador</h6>
-											<h2><a href="#">Crisis del gobierno institucional o corporativo</a></h2>
-											<p class="releaseDate">02 mayo - 11:10 am</p>
-											<div class="actions">
-												<a href="#" class="save">Guardar</a>
-												<a href="#" class="share">Compartir</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Recommended news -->
-							<div class="col-md-12 related">
-								<div class="row">
-									<div class="col-md-12">
-										<h3 class="section specials">Lecturas recomendadas</h3>
-									</div>
-									<article class="col-md-6 col-sm-6">
-										<b class="tag-specials">Informe</b>
-										<div class="actions">
-											<a href="#" class="save">Guardar</a>
-											<a href="#" class="share">Compartir</a>
-										</div>
-										<figure><img src="images/jpg/img-recom-articles.jpg" alt="" class="img-responsive"></figure>
-										<h2>Justicia en jaque: ¿Cómo recuperar la credibilidad?</h2>
-										<p>Expertos consultados proponen fórmulas para recuperar el prestigio de la justicia, tras las acusaciones de corrupción que involucran a la Corte Constitucional.</p>
-									</article>
-									<article class="col-md-6 col-sm-6">
-										<b class="tag-specials">Informe</b>
-										<div class="actions">
-											<a href="#" class="save">Guardar</a>
-											<a href="#" class="share">Compartir</a>
-										</div>
-										<figure><img src="images/jpg/img-recom-articles.jpg" alt="" class="img-responsive"></figure>
-										<h2>Justicia en jaque: ¿Cómo recuperar la credibilidad?</h2>
-										<p>Expertos consultados proponen fórmulas para recuperar el prestigio de la justicia, tras las acusaciones de corrupción que involucran a la Corte Constitucional.</p>
-									</article>
-								</div>
-							</div>
-							<div class="clearfix visible-sm bottom-buffer-3"></div>
 						</div>
 					</div>
 
-					<!-- Right column -->
-					<div class="col-md-4 col-ms-12">
+					<!-- Banner lg, md-->
+					<div class="col-md-12 adv bottom-buffer-5 visible-lg">
+						<img src="http://placehold.it/728x90?text=banner+728+90">
+					</div>
 
+					<!-- Banner xs-->
+					<div class="col-md-12 adv bottom-buffer-5 visible-xs">
+						<img src="http://placehold.it/300x100?text=banner+300+100">
+					</div>
+
+					<!-- More cartoons -->
+					<div class="col-md-12 bottom-buffer-3">
+						<div class="row related">
+							<div class="col-md-12">
+								<h3 class="opinion">Más caricaturas de este autor</h3>
+							</div>
+
+							<!-- Cartoon -->
+							<div class="col-md-6 col-sm-6 bottom-buffer-3 cartoon">
+								<figure class="th-pic"><a href="#"><img src="images/jpg/img-cartoon-list.jpg" width="472" height="315" alt="" class="img-responsive"></a></figure>
+								<div class="col-details">
+									<h6 class="subject">Matador</h6>
+									<h2><a href="#">Crisis del gobierno institucional o corporativo</a></h2>
+									<p class="releaseDate">02 mayo - 11:10 am</p>
+									<div class="actions">
+										<a href="#" class="save">Guardar</a>
+										<a href="#" class="share">Compartir</a>
+									</div>
+								</div>
+							</div>
+
+							<!-- Cartoon -->
+							<div class="col-md-6 col-sm-6 bottom-buffer-3 cartoon">
+								<figure class="th-pic"><a href="#"><img src="images/jpg/img-cartoon-list.jpg" width="472" height="315" alt="" class="img-responsive"></a></figure>
+								<div class="col-details">
+									<h6 class="subject">Matador</h6>
+									<h2><a href="#">Crisis del gobierno institucional o corporativo</a></h2>
+									<p class="releaseDate">02 mayo - 11:10 am</p>
+									<div class="actions">
+										<a href="#" class="save">Guardar</a>
+										<a href="#" class="share">Compartir</a>
+									</div>
+								</div>
+							</div>
+
+							<!-- Cartoon -->
+							<div class="col-md-6 col-sm-6 bottom-buffer-3 cartoon">
+								<figure class="th-pic"><a href="#"><img src="images/jpg/img-cartoon-list.jpg" width="472" height="315" alt="" class="img-responsive"></a></figure>
+								<div class="col-details">
+									<h6 class="subject">Matador</h6>
+									<h2><a href="#">Crisis del gobierno institucional o corporativo</a></h2>
+									<p class="releaseDate">02 mayo - 11:10 am</p>
+									<div class="actions">
+										<a href="#" class="save">Guardar</a>
+										<a href="#" class="share">Compartir</a>
+									</div>
+								</div>
+							</div>
+
+							<!-- Cartoon -->
+							<div class="col-md-6 col-sm-6 bottom-buffer-3 cartoon">
+								<figure class="th-pic"><a href="#"><img src="images/jpg/img-cartoon-list.jpg" width="472" height="315" alt="" class="img-responsive"></a></figure>
+								<div class="col-details">
+									<h6 class="subject">Matador</h6>
+									<h2><a href="#">Crisis del gobierno institucional o corporativo</a></h2>
+									<p class="releaseDate">02 mayo - 11:10 am</p>
+									<div class="actions">
+										<a href="#" class="save">Guardar</a>
+										<a href="#" class="share">Compartir</a>
+									</div>
+								</div>
+							</div>
+
+							<!-- Cartoon -->
+							<div class="col-md-6 col-sm-6 bottom-buffer-3 cartoon">
+								<figure class="th-pic"><a href="#"><img src="images/jpg/img-cartoon-list.jpg" width="472" height="315" alt="" class="img-responsive"></a></figure>
+								<div class="col-details">
+									<h6 class="subject">Matador</h6>
+									<h2><a href="#">Crisis del gobierno institucional o corporativo</a></h2>
+									<p class="releaseDate">02 mayo - 11:10 am</p>
+									<div class="actions">
+										<a href="#" class="save">Guardar</a>
+										<a href="#" class="share">Compartir</a>
+									</div>
+								</div>
+							</div>
+
+							<!-- Cartoon -->
+							<div class="col-md-6 col-sm-6 bottom-buffer-3 cartoon">
+								<figure class="th-pic"><a href="#"><img src="images/jpg/img-cartoon-list.jpg" width="472" height="315" alt="" class="img-responsive"></a></figure>
+								<div class="col-details">
+									<h6 class="subject">Matador</h6>
+									<h2><a href="#">Crisis del gobierno institucional o corporativo</a></h2>
+									<p class="releaseDate">02 mayo - 11:10 am</p>
+									<div class="actions">
+										<a href="#" class="save">Guardar</a>
+										<a href="#" class="share">Compartir</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Recommended news -->
+					<div class="col-md-12 related">
 						<div class="row">
-
-							<!-- Banner 320 x 250 -->
-							<div class="adv bottom-buffer-3 visible-md visible-lg">
-								<img src="http://placehold.it/320x250?text=banner+320+x+250">
+							<div class="col-md-12">
+								<h3 class="section specials">Lecturas recomendadas</h3>
 							</div>
-
-							<!-- Banner 300 x 100 -->
-
-							<div class="adv bottom-buffer-3 visible-md visible-lg">
-								<img src="http://placehold.it/300x100?text=banner+300+x+100">
-							</div>
-
-							<!-- Newsletter -->
-							<div class="col-md-12 bottom-buffer-3 pd0-sm pd0-xs">
-								<div id="get-newsletter">
-									<i class="fa fa-envelope-o fa-4x visible-lg visible-md"></i>
-									<h2 class="visible-sm visible-xs">Reciba nuestro boletín de noticias</h2>
-									<h2 class="visible-lg visible-md"><small>Reciba nuestro</small><br>boletín de noticias</h2>
-									<form action="/suscription">
-										<input type="text" placeholder="Ingrese su correo electrónico">
-										<button type="button" class="btn btn-secondary">Enviar</button>
-									</form>
-									<div class="social">
-										<p>Síganos</p>
-										<a href="http://www.facebook.com"><i class="fa fa-facebook fa-2x"></i></a>
-										<a href="#"><i class="fa fa-twitter fa-2x"></i></a>
-										<a href="#"><i class="fa fa-youtube-play fa-2x"></i></a>
-										<a href="#"><i class="fa fa-rss fa-2x"></i></a>
-									</div>
+							<article class="col-md-6 col-sm-6">
+								<b class="tag-specials">Informe</b>
+								<div class="actions">
+									<a href="#" class="save">Guardar</a>
+									<a href="#" class="share">Compartir</a>
 								</div>
+								<figure><img src="images/jpg/img-recom-articles.jpg" alt="" class="img-responsive"></figure>
+								<h2>Justicia en jaque: ¿Cómo recuperar la credibilidad?</h2>
+								<p>Expertos consultados proponen fórmulas para recuperar el prestigio de la justicia, tras las acusaciones de corrupción que involucran a la Corte Constitucional.</p>
+							</article>
+							<article class="col-md-6 col-sm-6">
+								<b class="tag-specials">Informe</b>
+								<div class="actions">
+									<a href="#" class="save">Guardar</a>
+									<a href="#" class="share">Compartir</a>
+								</div>
+								<figure><img src="images/jpg/img-recom-articles.jpg" alt="" class="img-responsive"></figure>
+								<h2>Justicia en jaque: ¿Cómo recuperar la credibilidad?</h2>
+								<p>Expertos consultados proponen fórmulas para recuperar el prestigio de la justicia, tras las acusaciones de corrupción que involucran a la Corte Constitucional.</p>
+							</article>
+						</div>
+					</div>
+					<div class="clearfix visible-sm bottom-buffer-3"></div>
+				</div>
+			</div>
+
+			<!-- Right column -->
+			<div class="col-md-4 col-sm-12">
+
+				<div class="row">
+
+					<!-- Banner -->
+					<div class="adv bottom-buffer-3 visible-md visible-lg">
+						<img src="http://placehold.it/300x600?text=banner+300+x+600">
+					</div>
+
+					<!-- Banners for tablet  -->
+
+					<div class="adv bottom-buffer-3 visible-sm col-sm-6">
+						<img src="http://placehold.it/320x250?text=banner+320+x+250">
+					</div>
+
+					<div class="adv bottom-buffer-3 visible-sm col-sm-6">
+						<img src="http://placehold.it/320x250?text=banner+320+x+250">
+					</div>
+
+					<!-- Newsletter -->
+					<div class="col-md-12 bottom-buffer-3 pd0-xs">
+						<div id="get-newsletter">
+							<i class="fa fa-envelope-o fa-4x visible-lg visible-md"></i>
+							<h2 class="visible-sm visible-xs">Reciba nuestro boletín de noticias</h2>
+							<h2 class="visible-lg visible-md"><small>Reciba nuestro</small><br>boletín de noticias</h2>
+							<form action="/suscription">
+								<input type="text" placeholder="Ingrese su correo electrónico">
+								<button type="button" class="btn btn-secondary">Enviar</button>
+							</form>
+							<div class="social">
+								<p>Síganos</p>
+								<a href="http://www.facebook.com"><i class="fa fa-facebook fa-2x"></i></a>
+								<a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+								<a href="#"><i class="fa fa-youtube-play fa-2x"></i></a>
+								<a href="#"><i class="fa fa-rss fa-2x"></i></a>
 							</div>
+						</div>
+					</div>
 
-							<!-- Top news -->
-							<div class="col-md-12 bottom-buffer-3 pd0">
-								<div id="top-news">
-									<h3 class="section">Top 10 más popular</h3>
-									<ul class="nav nav-tabs nav-justified ajTabs" role="tablist">
-										<li role="presentation" class="active"><a href="#tab1"aria-controls="most-viewed" role="tab" data-toggle="tab"><span>Más visto</span></a></li>
-										<li role="presentation"><a href="#tab2"aria-controls="most-shared" role="tab" data-toggle="tab"><span>Más compartido</span></a></li>
-										<li role="presentation"><a href="#tab3"aria-controls="most-commented" role="tab" data-toggle="tab"><span>Más comentado</span></a></li>
-									</ul>
-									<div class="tab-content">
-										<div class="tab-pane fade in active" id="tab1">
+					<!-- Top news -->
+					<div class="col-md-12 bottom-buffer-3 pd0-xs">
+						<div id="top-news">
+							<h3 class="section">Top 10 más popular</h3>
+							<div id="tabs-top-news">
+								<ul class="nav nav-tabs nav-justified ajTabs" role="tablist">
+									<li role="presentation" class="active"><a href="#tab1"aria-controls="most-viewed" role="tab" data-toggle="tab">Más visto</a></li>
+									<li role="presentation"><a href="#tab2"aria-controls="most-shared" role="tab" data-toggle="tab">Más compartido</a></li>
+									<li role="presentation"><a href="#tab3"aria-controls="most-commented" role="tab" data-toggle="tab">Más comentado</a></li>
+								</ul>
+								<div class="tab-content">
+									<div class="tab-pane fade in active" id="tab1">
 
-											<div class="row">
-												<!-- News module -->
-												<div class="mod-news col-md-12 col-sm-6 col-xs-12">
-													<figure class="th-pic"><a href="#"><img src="images/jpg/img-th-topnews.jpg" alt="" class="img-responsive"></a></figure>
-													<div class="col-details">
-														<h2><a href="#">Cada bien lesionado constituye un daño diferente</a></h2>
-														<p class="releaseDate">02 mayo - 11:10 am</p>
-														<span class="viewed">Visto 123 veces</span>
-														<div class="actions">
-															<a href="#" class="save">Guardar</a>
-															<a href="#" class="share">Compartir</a>
-														</div>
-													</div>
-												</div>
-												<!-- News module -->
-												<div class="mod-news col-md-12 col-sm-6 col-xs-12">
-													<figure class="th-pic"><a href="#"><img src="images/jpg/img-th-topnews.jpg" alt="" class="img-responsive"></a></figure>
-													<div class="col-details">
-														<h2><a href="#">Cada bien lesionado constituye un daño diferente</a></h2>
-														<p class="releaseDate">02 mayo - 11:10 am</p>
-														<span class="viewed">Visto 123 veces</span>
-														<div class="actions">
-															<a href="#" class="save">Guardar</a>
-															<a href="#" class="share">Compartir</a>
-														</div>
-													</div>
-												</div>
-												<!-- News module -->
-												<div class="mod-news col-md-12 col-sm-6 col-xs-12">
-													<figure class="th-pic"><a href="#"><img src="images/jpg/img-th-topnews.jpg" alt="" class="img-responsive"></a></figure>
-													<div class="col-details">
-														<h2><a href="#">Cada bien lesionado constituye un daño diferente</a></h2>
-														<p class="releaseDate">02 mayo - 11:10 am</p>
-														<span class="viewed">Visto 123 veces</span>
-														<div class="actions">
-															<a href="#" class="save">Guardar</a>
-															<a href="#" class="share">Compartir</a>
-														</div>
-													</div>
-												</div>
-												<!-- News module -->
-												<div class="mod-news col-md-12 col-sm-6 col-xs-12">
-													<figure class="th-pic"><a href="#"><img src="images/jpg/img-th-topnews.jpg" alt="" class="img-responsive"></a></figure>
-													<div class="col-details">
-														<h2><a href="#">Cada bien lesionado constituye un daño diferente</a></h2>
-														<p class="releaseDate">02 mayo - 11:10 am</p>
-														<span class="viewed">Visto 123 veces</span>
-														<div class="actions">
-															<a href="#" class="save">Guardar</a>
-															<a href="#" class="share">Compartir</a>
-														</div>
-													</div>
-												</div>
-												<!-- News module -->
-												<div class="mod-news col-md-12 col-sm-6 col-xs-12">
-													<figure class="th-pic"><a href="#"><img src="images/jpg/img-th-topnews.jpg" alt="" class="img-responsive"></a></figure>
-													<div class="col-details">
-														<h2><a href="#">Cada bien lesionado constituye un daño diferente</a></h2>
-														<p class="releaseDate">02 mayo - 11:10 am</p>
-														<span class="viewed">Visto 123 veces</span>
-														<div class="actions">
-															<a href="#" class="save">Guardar</a>
-															<a href="#" class="share">Compartir</a>
-														</div>
-													</div>
-												</div>
-												<!-- News module -->
-												<div class="mod-news col-md-12 col-sm-6 col-xs-12">
-													<figure class="th-pic"><a href="#"><img src="images/jpg/img-th-topnews.jpg" alt="" class="img-responsive"></a></figure>
-													<div class="col-details">
-														<h2><a href="#">Cada bien lesionado constituye un daño diferente</a></h2>
-														<p class="releaseDate">02 mayo - 11:10 am</p>
-														<span class="viewed">Visto 123 veces</span>
-														<div class="actions">
-															<a href="#" class="save">Guardar</a>
-															<a href="#" class="share">Compartir</a>
-														</div>
-													</div>
-												</div>
-												<!-- News module -->
-												<div class="mod-news col-md-12 col-sm-6 col-xs-12">
-													<figure class="th-pic"><a href="#"><img src="images/jpg/img-th-topnews.jpg" alt="" class="img-responsive"></a></figure>
-													<div class="col-details">
-														<h2><a href="#">Cada bien lesionado constituye un daño diferente</a></h2>
-														<p class="releaseDate">02 mayo - 11:10 am</p>
-														<span class="viewed">Visto 123 veces</span>
-														<div class="actions">
-															<a href="#" class="save">Guardar</a>
-															<a href="#" class="share">Compartir</a>
-														</div>
-													</div>
-												</div>
-												<!-- News module -->
-												<div class="mod-news col-md-12 col-sm-6 col-xs-12">
-													<figure class="th-pic"><a href="#"><img src="images/jpg/img-th-topnews.jpg" alt="" class="img-responsive"></a></figure>
-													<div class="col-details">
-														<h2><a href="#">Cada bien lesionado constituye un daño diferente</a></h2>
-														<p class="releaseDate">02 mayo - 11:10 am</p>
-														<span class="viewed">Visto 123 veces</span>
-														<div class="actions">
-															<a href="#" class="save">Guardar</a>
-															<a href="#" class="share">Compartir</a>
-														</div>
-													</div>
-												</div>
-												<!-- News module -->
-												<div class="mod-news col-md-12 col-sm-6 col-xs-12">
-													<figure class="th-pic"><a href="#"><img src="images/jpg/img-th-topnews.jpg" alt="" class="img-responsive"></a></figure>
-													<div class="col-details">
-														<h2><a href="#">Cada bien lesionado constituye un daño diferente</a></h2>
-														<p class="releaseDate">02 mayo - 11:10 am</p>
-														<span class="viewed">Visto 123 veces</span>
-														<div class="actions">
-															<a href="#" class="save">Guardar</a>
-															<a href="#" class="share">Compartir</a>
-														</div>
-													</div>
-												</div>
-												<!-- News module -->
-												<div class="mod-news col-md-12 col-sm-6 col-xs-12">
-													<figure class="th-pic"><a href="#"><img src="images/jpg/img-th-topnews.jpg" alt="" class="img-responsive"></a></figure>
-													<div class="col-details">
-														<h2><a href="#">Cada bien lesionado constituye un daño diferente</a></h2>
-														<p class="releaseDate">02 mayo - 11:10 am</p>
-														<span class="viewed">Visto 123 veces</span>
-														<div class="actions">
-															<a href="#" class="save">Guardar</a>
-															<a href="#" class="share">Compartir</a>
-														</div>
+										<div class="row">
+											<!-- News module -->
+											<div class="mod-news col-md-12 col-sm-6 col-xs-12">
+												<figure class="th-pic"><a href="#"><img src="images/jpg/img-th-topnews.jpg" alt="" class="img-responsive"></a></figure>
+												<div class="col-details">
+													<h2><a href="#">Cada bien lesionado constituye un daño diferente</a></h2>
+													<p class="releaseDate">02 mayo - 11:10 am</p>
+													<span class="viewed">Visto 123 veces</span>
+													<div class="actions">
+														<a href="#" class="save">Guardar</a>
+														<a href="#" class="share">Compartir</a>
 													</div>
 												</div>
 											</div>
+											<!-- News module -->
+											<div class="mod-news col-md-12 col-sm-6 col-xs-12">
+												<figure class="th-pic"><a href="#"><img src="images/jpg/img-th-topnews.jpg" alt="" class="img-responsive"></a></figure>
+												<div class="col-details">
+													<h2><a href="#">Cada bien lesionado constituye un daño diferente</a></h2>
+													<p class="releaseDate">02 mayo - 11:10 am</p>
+													<span class="viewed">Visto 123 veces</span>
+													<div class="actions">
+														<a href="#" class="save">Guardar</a>
+														<a href="#" class="share">Compartir</a>
+													</div>
+												</div>
+											</div>
+											<!-- News module -->
+											<div class="mod-news col-md-12 col-sm-6 col-xs-12">
+												<figure class="th-pic"><a href="#"><img src="images/jpg/img-th-topnews.jpg" alt="" class="img-responsive"></a></figure>
+												<div class="col-details">
+													<h2><a href="#">Cada bien lesionado constituye un daño diferente</a></h2>
+													<p class="releaseDate">02 mayo - 11:10 am</p>
+													<span class="viewed">Visto 123 veces</span>
+													<div class="actions">
+														<a href="#" class="save">Guardar</a>
+														<a href="#" class="share">Compartir</a>
+													</div>
+												</div>
+											</div>
+											<!-- News module -->
+											<div class="mod-news col-md-12 col-sm-6 col-xs-12">
+												<figure class="th-pic"><a href="#"><img src="images/jpg/img-th-topnews.jpg" alt="" class="img-responsive"></a></figure>
+												<div class="col-details">
+													<h2><a href="#">Cada bien lesionado constituye un daño diferente</a></h2>
+													<p class="releaseDate">02 mayo - 11:10 am</p>
+													<span class="viewed">Visto 123 veces</span>
+													<div class="actions">
+														<a href="#" class="save">Guardar</a>
+														<a href="#" class="share">Compartir</a>
+													</div>
+												</div>
+											</div>
+											<!-- News module -->
+											<div class="mod-news col-md-12 col-sm-6 col-xs-12">
+												<figure class="th-pic"><a href="#"><img src="images/jpg/img-th-topnews.jpg" alt="" class="img-responsive"></a></figure>
+												<div class="col-details">
+													<h2><a href="#">Cada bien lesionado constituye un daño diferente</a></h2>
+													<p class="releaseDate">02 mayo - 11:10 am</p>
+													<span class="viewed">Visto 123 veces</span>
+													<div class="actions">
+														<a href="#" class="save">Guardar</a>
+														<a href="#" class="share">Compartir</a>
+													</div>
+												</div>
+											</div>
+											<!-- News module -->
+											<div class="mod-news col-md-12 col-sm-6 col-xs-12">
+												<figure class="th-pic"><a href="#"><img src="images/jpg/img-th-topnews.jpg" alt="" class="img-responsive"></a></figure>
+												<div class="col-details">
+													<h2><a href="#">Cada bien lesionado constituye un daño diferente</a></h2>
+													<p class="releaseDate">02 mayo - 11:10 am</p>
+													<span class="viewed">Visto 123 veces</span>
+													<div class="actions">
+														<a href="#" class="save">Guardar</a>
+														<a href="#" class="share">Compartir</a>
+													</div>
+												</div>
+											</div>
+											<!-- News module -->
+											<div class="mod-news col-md-12 col-sm-6 col-xs-12">
+												<figure class="th-pic"><a href="#"><img src="images/jpg/img-th-topnews.jpg" alt="" class="img-responsive"></a></figure>
+												<div class="col-details">
+													<h2><a href="#">Cada bien lesionado constituye un daño diferente</a></h2>
+													<p class="releaseDate">02 mayo - 11:10 am</p>
+													<span class="viewed">Visto 123 veces</span>
+													<div class="actions">
+														<a href="#" class="save">Guardar</a>
+														<a href="#" class="share">Compartir</a>
+													</div>
+												</div>
+											</div>
+											<!-- News module -->
+											<div class="mod-news col-md-12 col-sm-6 col-xs-12">
+												<figure class="th-pic"><a href="#"><img src="images/jpg/img-th-topnews.jpg" alt="" class="img-responsive"></a></figure>
+												<div class="col-details">
+													<h2><a href="#">Cada bien lesionado constituye un daño diferente</a></h2>
+													<p class="releaseDate">02 mayo - 11:10 am</p>
+													<span class="viewed">Visto 123 veces</span>
+													<div class="actions">
+														<a href="#" class="save">Guardar</a>
+														<a href="#" class="share">Compartir</a>
+													</div>
+												</div>
+											</div>
+											<!-- News module -->
+											<div class="mod-news col-md-12 col-sm-6 col-xs-12">
+												<figure class="th-pic"><a href="#"><img src="images/jpg/img-th-topnews.jpg" alt="" class="img-responsive"></a></figure>
+												<div class="col-details">
+													<h2><a href="#">Cada bien lesionado constituye un daño diferente</a></h2>
+													<p class="releaseDate">02 mayo - 11:10 am</p>
+													<span class="viewed">Visto 123 veces</span>
+													<div class="actions">
+														<a href="#" class="save">Guardar</a>
+														<a href="#" class="share">Compartir</a>
+													</div>
+												</div>
+											</div>
+											<!-- News module -->
+											<div class="mod-news col-md-12 col-sm-6 col-xs-12">
+												<figure class="th-pic"><a href="#"><img src="images/jpg/img-th-topnews.jpg" alt="" class="img-responsive"></a></figure>
+												<div class="col-details">
+													<h2><a href="#">Cada bien lesionado constituye un daño diferente</a></h2>
+													<p class="releaseDate">02 mayo - 11:10 am</p>
+													<span class="viewed">Visto 123 veces</span>
+													<div class="actions">
+														<a href="#" class="save">Guardar</a>
+														<a href="#" class="share">Compartir</a>
+													</div>
+												</div>
+											</div>
+										</div>
 
-										</div>
-										<div class="tab-pane fade" id="tab2">
-											Acá va el listado de los más compartidos
-										</div>
-										<div class="tab-pane fade" id="tab3">
-											Acá va el listado de los más comentados
-										</div>
+									</div>
+									<div class="tab-pane fade" id="tab2">
+										Acá va el listado de los más compartidos
+									</div>
+									<div class="tab-pane fade" id="tab3">
+										Acá va el listado de los más comentados
 									</div>
 								</div>
 							</div>
-
-							<!-- Banner -->
-							<div class="adv bottom-buffer-3 col-md-12 col-sm-6 visible-lg visible-md">
-								<img src="http://placehold.it/300x250?text=banner+300+x+250">
-							</div>
-
 						</div>
 					</div>
+
+					<!-- Banner -->
+					<div class="adv bottom-buffer-3 col-md-12 col-sm-6 visible-lg visible-md">
+						<img src="http://placehold.it/300x250?text=banner+300+x+250">
+					</div>
+
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
+</div>
 </div>
 
 include "_footer.html"

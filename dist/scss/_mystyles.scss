@@ -2093,6 +2093,18 @@ div.comments {
 			@include cssSprite ($open-comments);
 		}	
 	}
+	div.comment {
+		div.actions{
+			a {
+				font-size: 1.2rem;
+				margin-right: 1rem;
+				i {
+					margin-right: 0.7rem;
+				}
+			}
+			
+		}
+	}
 }
 }
 
