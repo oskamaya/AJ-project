@@ -974,6 +974,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/dist\/bower_components\/bootstrap-select\/dist\/js\/min\/bootstrap-select-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dist\/bower_components\/bootstrap-select\/dist\/js\/min\/bootstrap-select-min.js",
+		"outputAbbreviatedPath": "\/dist\/bower_components\/bootstrap-select\/dist\/js\/min\/min\/bootstrap-select-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/dist\/bower_components\/bootstrap-select\/js\/bootstrap-select.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -1255,6 +1266,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/dist\/bower_components\/bootstrap-select\/js\/i18n\/defaults-zh_TW.js",
 		"outputAbbreviatedPath": "\/dist\/bower_components\/bootstrap-select\/js\/i18n\/min\/defaults-zh_TW-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/dist\/bower_components\/bootstrap-select\/js\/min\/bootstrap-select-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dist\/bower_components\/bootstrap-select\/js\/min\/bootstrap-select-min.js",
+		"outputAbbreviatedPath": "\/dist\/bower_components\/bootstrap-select\/js\/min\/min\/bootstrap-select-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -4938,8 +4960,8 @@
 		},
 	"\/dist\/js\/misc\/bootstrap.extras.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/dist\/js\/misc\/bootstrap.extras.js",
 		"outputAbbreviatedPath": "\/dist\/js\/misc\/min\/bootstrap.extras-min.js",
 		"outputPathIsOutsideProject": 0,

@@ -129,3 +129,34 @@ function printDiv(divName) {
 
   document.body.innerHTML = originalContents;
 }
+
+
+
+$('#headersearchicon').click(function (e){
+  e.preventDefault();
+
+  if($(this).hasClass("clicked")){
+
+    $('#hiddensearchform').stop().animate({height:0}, 200, function(){
+      $(this).removeAttr('style');
+      $('#hiddensearchform').hide();
+    });
+
+    $(this).removeClass("clicked")
+  }
+  else{
+    $('#hiddenreadinglist').hide();
+    $("#header #readinglist").removeClass("clicked");
+
+    $('#hiddensearchform').show();
+    var temph = $('#hiddensearchform').height();
+
+    $('#hiddensearchform').height(0);
+    $('#hiddensearchform').stop().animate({height:temph}, 200, function(){
+      $(this).removeAttr('style');
+      $(this).show();
+    });
+
+    $(this).addClass("clicked")
+  }
+});
